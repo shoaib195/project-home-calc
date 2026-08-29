@@ -1,0 +1,249 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------
+   Design tokens — Project Home Calc
+   Source of truth: Phase 1 design specification.
+   Light theme is the primary experience; dark is a complete,
+   deliberately-tuned second palette, not an inversion.
+----------------------------------------------------------------*/
+
+:root {
+  /* Blueprint — primary brand blue */
+  --brand-50: #eef3fa;
+  --brand-100: #d9e5f4;
+  --brand-200: #b4cceb;
+  --brand-300: #86adda;
+  --brand-400: #5589c9;
+  --brand-500: #2f68af;
+  --brand-600: #23508d;
+  --brand-700: #1d4074;
+  --brand-800: #1a3660;
+  --brand-900: #172d4f;
+  --brand-950: #0e1b32;
+
+  /* Site Amber — secondary / construction accent */
+  --amber-50: #fff8ec;
+  --amber-100: #feecc9;
+  --amber-200: #fcd68c;
+  --amber-300: #fabb55;
+  --amber-400: #f3a226;
+  --amber-500: #db8a0f;
+  --amber-600: #b66f09;
+  --amber-700: #92580b;
+  --amber-800: #78470f;
+  --amber-900: #633b10;
+
+  /* Concrete — neutral scale, faint cool bias */
+  --ink-50: #f8f9fb;
+  --ink-100: #f1f3f6;
+  --ink-200: #e5e9ed;
+  --ink-300: #d2d8df;
+  --ink-400: #a9b2bd;
+  --ink-500: #7b8592;
+  --ink-600: #5a6472;
+  --ink-700: #424b57;
+  --ink-800: #2d3541;
+  --ink-900: #1b212b;
+  --ink-950: #10141b;
+
+  /* Semantic */
+  --success: #1c8a5b;
+  --success-bg: #eafbf3;
+  --warning: #b15b0a;
+  --warning-bg: #fff3e8;
+  --danger: #c23b2e;
+  --danger-bg: #fdecea;
+  --info: #2568ac;
+  --info-bg: #eaf2fb;
+
+  /* Semantic roles (light) */
+  --bg: #ffffff;
+  --surface: #ffffff;
+  --surface-2: var(--ink-50);
+  --surface-3: var(--ink-100);
+  --border: var(--ink-200);
+  --border-strong: var(--ink-300);
+  --text: var(--ink-900);
+  --text-2: var(--ink-700);
+  --text-3: var(--ink-500);
+  --text-disabled: var(--ink-400);
+  --accent: var(--brand-600);
+  --accent-strong: var(--brand-700);
+  --accent-tint: var(--brand-50);
+  --accent-2: var(--amber-600);
+  --accent-2-tint: var(--amber-50);
+  --focus-ring: var(--brand-600);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #12151c;
+    --surface: #171b23;
+    --surface-2: #1d222c;
+    --surface-3: #252b36;
+    --border: #2c333f;
+    --border-strong: #3a4351;
+    --text: #edeff3;
+    --text-2: #c4cbd5;
+    --text-3: #8a93a2;
+    --text-disabled: #5a6472;
+    --accent: var(--brand-400);
+    --accent-strong: var(--brand-300);
+    --accent-tint: #182a42;
+    --accent-2: var(--amber-400);
+    --accent-2-tint: #2e2312;
+    --success: #3fbe8b;
+    --success-bg: #0f2a21;
+    --warning: #e0954a;
+    --warning-bg: #2e1f0f;
+    --danger: #e5766b;
+    --danger-bg: #2e1614;
+    --info: #5f9fdb;
+    --info-bg: #12222f;
+    --focus-ring: var(--brand-400);
+  }
+}
+
+:root[data-theme="dark"] {
+  --bg: #12151c;
+  --surface: #171b23;
+  --surface-2: #1d222c;
+  --surface-3: #252b36;
+  --border: #2c333f;
+  --border-strong: #3a4351;
+  --text: #edeff3;
+  --text-2: #c4cbd5;
+  --text-3: #8a93a2;
+  --text-disabled: #5a6472;
+  --accent: var(--brand-400);
+  --accent-strong: var(--brand-300);
+  --accent-tint: #182a42;
+  --accent-2: var(--amber-400);
+  --accent-2-tint: #2e2312;
+  --success: #3fbe8b;
+  --success-bg: #0f2a21;
+  --warning: #e0954a;
+  --warning-bg: #2e1f0f;
+  --danger: #e5766b;
+  --danger-bg: #2e1614;
+  --info: #5f9fdb;
+  --info-bg: #12222f;
+  --focus-ring: var(--brand-400);
+}
+
+@theme inline {
+  /* fonts */
+  --font-display: var(--font-public-sans);
+  --font-sans: var(--font-inter);
+  --font-mono: var(--font-plex-mono);
+
+  /* brand color scale exposed as utilities: bg-brand-600, text-brand-700, etc. */
+  --color-brand-50: var(--brand-50);
+  --color-brand-100: var(--brand-100);
+  --color-brand-200: var(--brand-200);
+  --color-brand-300: var(--brand-300);
+  --color-brand-400: var(--brand-400);
+  --color-brand-500: var(--brand-500);
+  --color-brand-600: var(--brand-600);
+  --color-brand-700: var(--brand-700);
+  --color-brand-800: var(--brand-800);
+  --color-brand-900: var(--brand-900);
+  --color-brand-950: var(--brand-950);
+
+  --color-amber-50: var(--amber-50);
+  --color-amber-100: var(--amber-100);
+  --color-amber-200: var(--amber-200);
+  --color-amber-300: var(--amber-300);
+  --color-amber-400: var(--amber-400);
+  --color-amber-500: var(--amber-500);
+  --color-amber-600: var(--amber-600);
+  --color-amber-700: var(--amber-700);
+  --color-amber-800: var(--amber-800);
+  --color-amber-900: var(--amber-900);
+
+  --color-ink-50: var(--ink-50);
+  --color-ink-100: var(--ink-100);
+  --color-ink-200: var(--ink-200);
+  --color-ink-300: var(--ink-300);
+  --color-ink-400: var(--ink-400);
+  --color-ink-500: var(--ink-500);
+  --color-ink-600: var(--ink-600);
+  --color-ink-700: var(--ink-700);
+  --color-ink-800: var(--ink-800);
+  --color-ink-900: var(--ink-900);
+  --color-ink-950: var(--ink-950);
+
+  /* semantic role utilities: bg-bg, bg-surface, text-text-2, border-border, etc. */
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-surface-3: var(--surface-3);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-2: var(--text-2);
+  --color-text-3: var(--text-3);
+  --color-text-disabled: var(--text-disabled);
+  --color-accent: var(--accent);
+  --color-accent-strong: var(--accent-strong);
+  --color-accent-tint: var(--accent-tint);
+  --color-accent-2: var(--accent-2);
+  --color-accent-2-tint: var(--accent-2-tint);
+
+  --color-success: var(--success);
+  --color-success-bg: var(--success-bg);
+  --color-warning: var(--warning);
+  --color-warning-bg: var(--warning-bg);
+  --color-danger: var(--danger);
+  --color-danger-bg: var(--danger-bg);
+  --color-info: var(--info);
+  --color-info-bg: var(--info-bg);
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  html {
+    color-scheme: light;
+  }
+  html[data-theme="dark"] {
+    color-scheme: dark;
+  }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  }
+  h1, h2, h3, h4 {
+    font-family: var(--font-display), var(--font-sans), sans-serif;
+    text-wrap: balance;
+  }
+  ::selection {
+    background: var(--accent-tint);
+    color: var(--accent-strong);
+  }
+  :focus-visible {
+    outline: 2px solid var(--focus-ring);
+    outline-offset: 2px;
+    border-radius: 2px;
+  }
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
