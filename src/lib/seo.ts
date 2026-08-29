@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import type { FaqItem } from "@/lib/types";
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL, absoluteUrl } from "@/lib/site";
+import { CONTACT_EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, absoluteUrl } from "@/lib/site";
 
 export function pageMetadata({
   title,
@@ -49,6 +49,13 @@ export function organizationJsonLd() {
     name: SITE_NAME,
     url: SITE_URL,
     description: SITE_DESCRIPTION,
+    email: CONTACT_EMAIL,
+    contactPoint: {
+      "@type": "ContactPoint",
+      email: CONTACT_EMAIL,
+      contactType: "customer support",
+      availableLanguage: ["English"],
+    },
   };
 }
 
@@ -140,10 +147,13 @@ export function articleJsonLd({
     author: {
       "@type": "Organization",
       name: SITE_NAME,
+      url: SITE_URL,
+      email: CONTACT_EMAIL,
     },
     publisher: {
       "@type": "Organization",
       name: SITE_NAME,
+      url: SITE_URL,
     },
     url: absoluteUrl(path),
   };

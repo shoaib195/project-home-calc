@@ -6,7 +6,6 @@ import { AdSlot } from "@/components/ui/AdSlot";
 import { ToolCard } from "@/components/ui/ToolCard";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { articleJsonLd, breadcrumbJsonLd, faqJsonLd, pageMetadata } from "@/lib/seo";
-import { SITE_NAME } from "@/lib/site";
 import { guides as seedGuides } from "@/lib/data/guides";
 import { getCatalog } from "@/lib/cms/catalog";
 
@@ -63,9 +62,7 @@ export default async function GuidePage({ params }: { params: Promise<{ slug: st
       />
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Guides", href: "/guides" }, { label: guide.title }]} />
       <h1 className="mt-3 text-[32px] font-extrabold tracking-[-0.015em] text-text sm:text-[38px]">{guide.title}</h1>
-      <p className="mt-2 text-[13px] text-text-3">
-        {SITE_NAME} editorial · Updated {guide.updated}
-      </p>
+      <p className="mt-2 text-[13px] text-text-3">Updated {guide.updated}</p>
       <p className="mt-4 text-[17px] leading-relaxed text-text-2">{guide.intro}</p>
 
       {guide.sections.length > 2 && (

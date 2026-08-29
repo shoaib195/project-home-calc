@@ -47,7 +47,7 @@ export const tools: Tool[] = [
       },
     ],
     relatedTools: ["gravel-calculator"],
-    relatedGuides: ["how-much-does-a-concrete-patio-cost"],
+    relatedGuides: ["how-much-does-a-concrete-patio-cost", "concrete-slab-thickness-what-matters"],
     updated: "2026-07-01",
   },
   {
@@ -96,7 +96,7 @@ export const tools: Tool[] = [
       },
     ],
     relatedTools: ["concrete-calculator", "cost-estimator"],
-    relatedGuides: ["how-much-does-a-concrete-patio-cost"],
+    relatedGuides: ["how-much-gravel-for-a-driveway", "patio-base-gravel-before-concrete"],
     updated: "2026-07-01",
   },
   {
@@ -146,7 +146,7 @@ export const tools: Tool[] = [
       },
     ],
     relatedTools: ["gravel-calculator"],
-    relatedGuides: [],
+    relatedGuides: ["how-much-mulch-do-you-need"],
     updated: "2026-06-15",
   },
   {
@@ -196,7 +196,7 @@ export const tools: Tool[] = [
       },
     ],
     relatedTools: ["flooring-calculator", "drywall-calculator"],
-    relatedGuides: ["how-much-paint-for-a-room"],
+    relatedGuides: ["how-much-paint-for-a-room", "interior-painting-cost-breakdown"],
     updated: "2026-06-20",
   },
   {
@@ -244,7 +244,7 @@ export const tools: Tool[] = [
       },
     ],
     relatedTools: ["paint-calculator"],
-    relatedGuides: ["planning-a-home-improvement-budget"],
+    relatedGuides: ["how-to-estimate-flooring-with-waste", "waste-factors-explained"],
     updated: "2026-06-10",
   },
   {
@@ -293,7 +293,7 @@ export const tools: Tool[] = [
       },
     ],
     relatedTools: ["gravel-calculator", "concrete-calculator"],
-    relatedGuides: ["planning-a-home-improvement-budget"],
+    relatedGuides: ["how-to-estimate-decking-boards"],
     updated: "2026-05-28",
   },
   {
@@ -391,7 +391,7 @@ export const tools: Tool[] = [
       },
     ],
     relatedTools: ["paint-calculator", "cost-estimator"],
-    relatedGuides: ["planning-a-home-improvement-budget"],
+    relatedGuides: ["how-much-drywall-for-a-room"],
     updated: "2026-08-01",
   },
   {
@@ -440,7 +440,7 @@ export const tools: Tool[] = [
       },
     ],
     relatedTools: ["concrete-calculator", "roofing-calculator", "paint-calculator"],
-    relatedGuides: ["planning-a-home-improvement-budget"],
+    relatedGuides: ["planning-a-home-improvement-budget", "how-to-compare-contractor-quotes"],
     updated: "2026-08-01",
   },
 ];

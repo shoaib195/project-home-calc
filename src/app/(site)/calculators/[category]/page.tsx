@@ -78,7 +78,7 @@ export default async function CategoryPage({
 
       {relatedGuides.length > 0 && (
         <section className="mt-10">
-          <h2 className="text-[20px] font-bold tracking-[-0.01em] text-text">Helpful guides</h2>
+          <h2 className="text-[20px] font-bold tracking-[-0.01em] text-text">Related guides</h2>
           <div className="mt-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
             {relatedGuides.map((g) => (
               <GuideCard key={g.slug} guide={g} />

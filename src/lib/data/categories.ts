@@ -5,49 +5,42 @@ export const categories: Category[] = [
   {
     slug: "construction",
     name: "Construction",
-    description:
-      "Concrete, gravel, and other core building-material calculators for foundations, slabs, and footings.",
+    description: "Concrete volume and gravel for slabs, pads, and footings — formula on each tool page.",
   },
   {
     slug: "landscaping",
     name: "Landscaping",
-    description:
-      "Mulch, soil, and yard-material calculators for garden beds, borders, and outdoor projects.",
+    description: "Mulch and yard material volumes from bed area and depth.",
   },
   {
     slug: "flooring",
     name: "Flooring",
-    description:
-      "Work out how much flooring material to order for any room, with waste allowance built in.",
+    description: "Room area to pack count, with a waste allowance for cuts.",
   },
   {
     slug: "painting",
     name: "Painting",
-    description:
-      "Estimate paint quantity by room size, coat count, and door or window deductions.",
+    description: "Wall paint from perimeter, height, coats, and door/window deductions.",
   },
   {
     slug: "roofing",
     name: "Roofing",
-    description:
-      "Roofing-material calculators for shingles, underlayment, and pitch-adjusted coverage.",
+    description: "Footprint and pitch to approximate squares or packs for planning.",
   },
   {
     slug: "deck-fence",
     name: "Deck & Fence",
-    description:
-      "Decking boards, fence panels, and post spacing for outdoor structure projects.",
+    description: "Decking board count with width and gap — framing is a separate takeoff.",
   },
   {
     slug: "home-improvement",
     name: "Home Improvement",
-    description: "General-purpose calculators for everyday renovation and repair projects.",
+    description: "Room jobs such as drywall sheet counts for simple rectangles.",
   },
   {
     slug: "cost-estimation",
     name: "Cost Estimation",
-    description:
-      "Combine materials, labor, and markup into a full project cost estimate.",
+    description: "Materials, labour, and markup rolled into a planning cost range.",
   },
 ];
 

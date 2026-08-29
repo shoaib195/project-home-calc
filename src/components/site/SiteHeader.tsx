@@ -122,8 +122,11 @@ export function SiteHeader({ tools, categories }: { tools?: Tool[]; categories?:
           <Link href="/guides" className="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] font-semibold text-text-2 hover:bg-surface-2 hover:text-text">
             Guides
           </Link>
-          <Link href="/projects" className="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] font-semibold text-text-2 hover:bg-surface-2 hover:text-text">
-            Projects
+          <Link href="/about" className="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] font-semibold text-text-2 hover:bg-surface-2 hover:text-text">
+            About
+          </Link>
+          <Link href="/contact" className="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] font-semibold text-text-2 hover:bg-surface-2 hover:text-text">
+            Contact
           </Link>
         </nav>
 
@@ -133,14 +136,11 @@ export function SiteHeader({ tools, categories }: { tools?: Tool[]; categories?:
 
         <div className="ml-auto hidden items-center gap-1 lg:flex">
           <ThemeToggle />
-          <Link href="/account/sign-in" className="rounded-[var(--radius-sm)] px-3 py-2 text-[14px] font-semibold text-text-2 hover:bg-surface-2 hover:text-text">
-            Sign in
-          </Link>
           <Link
-            href="/projects"
+            href="/calculators"
             className="rounded-[var(--radius-sm)] bg-accent px-4 py-2.5 text-[14px] font-semibold text-white hover:bg-accent-strong"
           >
-            Save a project
+            Browse calculators
           </Link>
         </div>
 
@@ -243,27 +243,24 @@ export function SiteHeader({ tools, categories }: { tools?: Tool[]; categories?:
                 <Link href="/guides" onClick={() => setDrawerOpen(false)} className="py-3 text-[15px] font-semibold text-text">
                   Guides
                 </Link>
-                <Link href="/projects" onClick={() => setDrawerOpen(false)} className="py-3 text-[15px] font-semibold text-text">
-                  Projects
-                </Link>
                 <Link href="/about" onClick={() => setDrawerOpen(false)} className="py-3 text-[15px] font-semibold text-text">
                   About
                 </Link>
                 <Link href="/contact" onClick={() => setDrawerOpen(false)} className="py-3 text-[15px] font-semibold text-text">
                   Contact
                 </Link>
-                <Link href="/account/sign-in" onClick={() => setDrawerOpen(false)} className="py-3 text-[15px] font-semibold text-text">
-                  Sign in
+                <Link href="/legal/privacy" onClick={() => setDrawerOpen(false)} className="py-3 text-[15px] font-semibold text-text">
+                  Privacy
                 </Link>
               </div>
             </div>
             <div className="border-t border-border p-5 pb-[max(1.25rem,env(safe-area-inset-bottom))]">
               <Link
-                href="/projects"
+                href="/calculators"
                 onClick={() => setDrawerOpen(false)}
                 className="flex min-h-11 w-full items-center justify-center rounded-[var(--radius-sm)] bg-accent px-4 py-3 text-[15px] font-semibold text-white"
               >
-                Save a project
+                Browse calculators
               </Link>
             </div>
           </div>

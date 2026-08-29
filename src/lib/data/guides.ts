@@ -1,6 +1,7 @@
 import type { Guide } from "@/lib/types";
+import { extraGuides } from "@/lib/data/guides-extra";
 
-export const guides: Guide[] = [
+const coreGuides: Guide[] = [
   {
     slug: "how-much-does-a-concrete-patio-cost",
     title: "How Much Does a Concrete Patio Cost?",
@@ -9,7 +10,7 @@ export const guides: Guide[] = [
     updated: "2026-08-01",
     relatedTools: ["concrete-calculator", "gravel-calculator", "cost-estimator"],
     intro:
-      "Concrete patio pricing swings more than most homeowners expect — a basic broom-finish slab and a stamped, colored one can differ by two to three times per square foot. This guide walks through what actually makes up that number so a quote makes sense before you get one.",
+      "Concrete patio pricing swings more than most homeowners expect — a basic broom-finish slab and a stamped, colored one can differ by two to three times per square foot. Here’s what usually makes up that number before you compare quotes.",
     sections: [
       {
         heading: "What's included in the price",
@@ -21,7 +22,7 @@ export const guides: Guide[] = [
       {
         heading: "Typical thickness and why it matters",
         body: [
-          "A patio people walk on is commonly 4 inches (about 100 mm) thick. Driveways and slabs that take vehicles are thicker. Thickness is the quiet multiplier in a materials quote: going from 4 inches to 6 inches is a 50% increase in concrete volume for the same footprint.",
+          "A patio people walk on is commonly 4 inches (about 100 mm) thick. Driveways and slabs that take vehicles are thicker. Going from 4 inches to 6 inches is a 50% increase in concrete volume for the same footprint — that shows up fast on a materials line.",
           "Use the Concrete Calculator with your actual length, width, and depth before you compare quotes. If two contractors propose different thicknesses, the material line will not match even when the patio looks the same on a plan.",
         ],
       },
@@ -62,13 +63,13 @@ export const guides: Guide[] = [
   },
   {
     slug: "planning-a-home-improvement-budget",
-    title: "Planning a Home Improvement Budget That Survives Contact With Reality",
+    title: "How to Budget a Home Improvement Project",
     description:
-      "A practical framework for budgeting a renovation project, including how much contingency to actually set aside.",
+      "Materials first, then labour, then a contingency you don’t spend on upgrades — a budget that survives mid-project surprises.",
     updated: "2026-08-01",
     relatedTools: ["cost-estimator", "paint-calculator", "flooring-calculator", "drywall-calculator"],
     intro:
-      "Most renovation budgets don't fail because the homeowner didn't plan — they fail because the plan didn't leave room for what planning can't predict. This guide covers how to structure a project budget so a surprise doesn't become a crisis.",
+      "Budgets usually break when there’s no room for what you can’t see yet — rotten substrate, wiring, a thicker slab than the drawing. Start with materials you can calculate, add labour, then protect a contingency you don’t touch for nicer fixtures.",
     sections: [
       {
         heading: "Start with materials, not the whole project",
@@ -119,7 +120,7 @@ export const guides: Guide[] = [
     updated: "2026-08-01",
     relatedTools: ["paint-calculator", "drywall-calculator"],
     intro:
-      "Buying too little paint means a mid-wall delay and a possible batch mismatch. Buying far too much wastes money. This guide explains the same method the Paint Calculator uses, so you can check a tin's coverage claim against a real room.",
+      "Buying too little paint means a mid-wall delay and a possible batch mismatch. Buying far too much wastes money. Measure wall area (not floor area), pick coats and a realistic coverage rate, then round up to whole tins.",
     sections: [
       {
         heading: "Measure walls, not floor area",
@@ -171,7 +172,7 @@ export const guides: Guide[] = [
     updated: "2026-08-01",
     relatedTools: ["roofing-calculator", "cost-estimator"],
     intro:
-      "Roofing quotes are easier to read when you already know roughly how much field area you have. You can estimate that from the plan footprint and pitch without walking the roof. This is a planning method, not a substitute for a measured survey on a complex roof.",
+      "Roofing quotes are easier to read when you already know roughly how much field area you have. You can estimate that from the plan footprint and pitch without walking the roof. Use it for planning — not as a substitute for a measured survey on a complex roof.",
     sections: [
       {
         heading: "Footprint first, then pitch",
@@ -215,6 +216,8 @@ export const guides: Guide[] = [
     ],
   },
 ];
+
+export const guides: Guide[] = [...coreGuides, ...extraGuides];
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);

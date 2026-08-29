@@ -3,7 +3,7 @@ import { CONTACT_EMAIL, SITE_DESCRIPTION, SITE_NAME } from "@/lib/site";
 import type { ContentStatus, PageRow } from "@/lib/cms/types";
 
 function page(row: Omit<PageRow, "updated_at"> & { updated_at?: string }): PageRow {
-  return { ...row, updated_at: row.updated_at ?? "2026-08-17" };
+  return { ...row, updated_at: row.updated_at ?? "2026-08-29" };
 }
 
 const STATIC: PageRow[] = [
@@ -12,7 +12,7 @@ const STATIC: PageRow[] = [
     path: "/",
     title: "Home",
     body: "",
-    meta_title: "Plan your project with confidence",
+    meta_title: "Material & cost calculators for home projects",
     meta_description: SITE_DESCRIPTION,
     meta_keywords: "home improvement calculator, material estimator, concrete calculator, paint calculator",
     robots_index: true,
@@ -35,7 +35,8 @@ const STATIC: PageRow[] = [
     title: "Guides",
     body: "",
     meta_title: "Guides",
-    meta_description: "Practical guides to home improvement quantities, costs, and planning — written to sit next to the calculators.",
+    meta_description:
+      "How to measure waste, slab thickness, paint quantity, and contractor quote lines — notes that go with the calculators.",
     meta_keywords: "home improvement guides, material estimating",
     robots_index: true,
     status: "published",
@@ -44,27 +45,29 @@ const STATIC: PageRow[] = [
     slug: "about",
     path: "/about",
     title: "About",
-    body: `${SITE_NAME} builds free, straightforward calculators for home improvement and construction projects — the kind of tools you reach for once, get an answer from, and don't have to think about again. No account, no app to install. The product is for homeowners, DIY users, and tradespeople in the United States and United Kingdom first, with other English-speaking users welcome.
+    body: `${SITE_NAME} is a free set of material and planning-cost calculators for homeowners and small projects in the US and UK. No account. Pick a tool, enter dimensions, read the quantity — and the formula sits on the same page.
 
-## How the numbers work
+## Who runs it
 
-Every calculator on this site states its formula in plain text on the tool's own page — you can see exactly how a result was produced, not just the number itself. Where a calculator produces a cost estimate, that estimate is based on typical national material pricing you can override, always shown as a range rather than a single confident figure, because real prices vary by supplier and region.
+We write and maintain the calculators and guides ourselves. If a number looks wrong, email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with the tool URL and the inputs you used. We don’t invent fake reviews, fake credentials, or fake user counts.
 
-We do not invent expert credentials, fake reviews, or user counts. Trust comes from showing the math, dating content when it is updated, and labelling estimates as estimates.
+## How a result is produced
 
-## What our estimates don't cover
+Each tool page shows the formula, a worked example, and the assumptions behind any cost range. Cost defaults are typical national prices you can override. Treat them as planning bands, not a supplier quote.
 
-These calculators estimate materials and rough costs — they don't replace a site visit, a structural assessment, or a local contractor's quote. Always confirm quantities and pricing before ordering materials for a real project, and check local building code for anything structural. Read the [disclaimer](/legal/disclaimer).
+## What we don’t claim
 
-## How the site is funded
+These tools don’t replace a site visit, a structural design, or a local contractor’s price. Confirm quantities before you order, and check code for anything structural. See the [disclaimer](/legal/disclaimer).
 
-${SITE_NAME} is supported by advertising and, later, labelled links to relevant products from retail partners. Those links are kept separate from the calculator itself — they never affect what a calculator tells you. Partner recommendation blocks stay hidden until a real destination URL exists.
+## Funding
+
+The site may show labelled ads (for example Google AdSense) and, later, labelled partner links. Ads stay off calculator controls and results. We don’t ask anyone to click ads. Partner blocks stay hidden until a real URL exists.
 
 ## Contact
 
-Found an error or want a tool that isn't here yet? [Contact us](/contact) or email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}).`,
+Bugs, missing tools, or privacy requests: [contact](/contact) or [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}).`,
     meta_title: "About",
-    meta_description: `How ${SITE_NAME} calculators work: transparent formulas, labelled estimates, and no account required.`,
+    meta_description: `What ${SITE_NAME} is: free calculators with formulas on the page, labelled estimates, no account.`,
     meta_keywords: "about, methodology, home improvement calculators",
     robots_index: true,
     status: "published",
@@ -73,7 +76,19 @@ Found an error or want a tool that isn't here yet? [Contact us](/contact) or ema
     slug: "contact",
     path: "/contact",
     title: "Contact",
-    body: `Found an error in a calculator, or have a tool you'd like to see built? Email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) or use the form — it opens your email app with the message filled in. We do not store form contents on a server.`,
+    body: `Use this page for calculator corrections, guide feedback, missing-tool requests, and privacy questions.
+
+## Email
+
+Write to [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}). We aim to reply to clear, actionable messages. The form below opens your email app with the subject and body filled in — we do not store form contents on a server.
+
+## What to include
+
+- The calculator or guide URL
+- The inputs you used (if reporting a calculation issue)
+- What you expected versus what you saw
+
+For privacy or data requests, say so in the subject line so we can prioritise them.`,
     meta_title: "Contact",
     meta_description: `Get in touch with ${SITE_NAME} about calculator errors, missing tools, or privacy requests.`,
     meta_keywords: "contact, support",
@@ -88,7 +103,7 @@ Found an error or want a tool that isn't here yet? [Contact us](/contact) or ema
 
 ## Who we are
 
-${SITE_NAME} provides free home-improvement calculators and guides. We do not currently operate user accounts. Signing in is a placeholder for a future save-project feature.
+${SITE_NAME} provides free home-improvement calculators and guides. Calculators work entirely in your browser without creating an account.
 
 ## What we collect
 
@@ -99,7 +114,13 @@ ${SITE_NAME} provides free home-improvement calculators and guides. We do not cu
 
 ## Cookies and advertising
 
-We may use cookies or similar technology for essential site function and, when advertising is enabled, for ads served by Google AdSense or a similar partner. Advertising partners may collect identifiers and usage data according to their own policies. See our [Cookie Policy](/legal/cookies) for more detail. We do not sell your personal information.
+We may use cookies or similar technology for essential site function and, when advertising is enabled, for ads served by **Google AdSense** (or a similar partner). Third-party vendors, including Google, use cookies to serve ads based on a user's prior visits to this website or other websites.
+
+- Google's use of advertising cookies is described in [How Google uses information from sites or apps that use our services](https://policies.google.com/technologies/partner-sites) and [Google's Advertising Technologies](https://policies.google.com/technologies/ads).
+- You can opt out of personalised Google ads at [Google Ads Settings](https://adssettings.google.com).
+- You can also visit [aboutads.info](https://www.aboutads.info) for industry opt-out tools where available.
+
+We use a cookie banner and Google Consent Mode so advertising cookies stay off until you choose **Accept**. Choosing **Essential only** keeps advertising storage denied. See our [Cookie Policy](/legal/cookies). We do not sell your personal information. We do not encourage visitors to click ads.
 
 ## Affiliate links
 
@@ -107,7 +128,7 @@ Some pages may include labelled partner recommendations. Those links are optiona
 
 ## Your rights
 
-Depending on where you live (including the UK GDPR and similar US state laws), you may have rights to access, correct, or delete personal information we hold about you. Because calculators do not create an account, the main personal data we might hold is email you send us. Write to ${CONTACT_EMAIL} to make a request.
+Depending on where you live (including the UK GDPR and similar US state laws), you may have rights to access, correct, or delete personal information we hold about you. Because calculators do not create an account, the main personal data we might hold is email you send us. Write to ${CONTACT_EMAIL} to make a request. For privacy or data requests, mark the subject clearly.
 
 ## Children
 
@@ -130,7 +151,7 @@ We will update this page when our practices change. The date at the top is the l
 
 ## The service
 
-We publish free calculators, guides, and related pages to help you plan home improvement work. You may use the tools without creating an account. Features such as saved projects are described as coming soon and are not a live service yet.
+We publish free calculators, guides, and related pages to help you plan home improvement work. You may use every calculator and guide without creating an account.
 
 ## Estimates only
 
@@ -172,13 +193,23 @@ We may update these terms. Continued use after a change means you accept the upd
 - **Theme preference** — stored in your browser via localStorage (not a third-party cookie) so light or dark mode stays as you left it.
 - **Essential hosting cookies** — our hosting or CDN provider may set cookies required to deliver the site securely.
 
+## Consent (Consent Mode)
+
+On first visit we show a cookie banner so you can accept optional advertising cookies or continue with essential storage only. Your choice is stored in your browser under the localStorage key phc-cookie-consent. Clear site data to see the banner again.
+
+We implement Google Consent Mode defaults with advertising storage denied until you choose **Accept**. **Essential only** keeps ad_storage, ad_user_data, and ad_personalization denied. The AdSense script loads only after Accept when a publisher ID is configured.
+
 ## Advertising cookies (when enabled)
 
-If Google AdSense or another ad network is connected, that partner may set cookies or use advertising identifiers to serve and measure ads. Those cookies are controlled by the partner. We will not enable personalised advertising in the UK/EEA without an appropriate consent mechanism.
+When Google AdSense is connected and you have accepted optional cookies, Google may use cookies or advertising identifiers to serve and measure ads, including personalised ads based on prior visits to this or other sites.
+
+- Google may use cookies as described in [How Google uses cookies in advertising](https://policies.google.com/technologies/ads).
+- Opt out of personalised ads via [Google Ads Settings](https://adssettings.google.com).
+- Additional opt-out tools: [aboutads.info](https://www.aboutads.info).
 
 ## How to control cookies
 
-You can delete cookies and site data in your browser settings, and you can use browser controls or industry opt-out tools for advertising cookies. Blocking all cookies may affect how some sites remember preferences.
+You can delete cookies and site data in your browser settings, choose **Essential only** on our banner, or use browser and industry opt-out tools for advertising cookies. Blocking all cookies may affect how some sites remember preferences.
 
 ## Changes
 
@@ -193,7 +224,7 @@ We will update this page if we add analytics or advertising cookies. The date at
     slug: "disclaimer",
     path: "/legal/disclaimer",
     title: "Disclaimer",
-    body: `${SITE_NAME} publishes calculators and editorial guides for planning home improvement and construction work. Nothing on this site is professional engineering, architectural, surveying, or legal advice.
+    body: `${SITE_NAME} publishes calculators and written guides for planning home improvement work. Nothing here is professional engineering, architectural, surveying, or legal advice.
 
 ## Estimates are not quotes
 

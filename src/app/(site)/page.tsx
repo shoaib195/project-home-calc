@@ -9,6 +9,7 @@ import { Faq } from "@/components/ui/Faq";
 import { LinkButton } from "@/components/ui/Button";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqJsonLd } from "@/lib/seo";
+import { adsEnabled } from "@/lib/ads";
 import { getCatalog, liveCategoriesFrom, pageSeoMetadata } from "@/lib/cms/catalog";
 import { bundles } from "@/lib/data/bundles";
 
@@ -28,23 +29,22 @@ const popularSlugs = [
 const homeFaq = [
   {
     question: "Do I need to create an account to use a calculator?",
-    answer:
-      "No. Every calculator on Project Home Calc works without signing in. Accounts are only needed if you want to save a project later — that feature is not live yet.",
+    answer: "No. Open a tool, enter dimensions, and read the result. Nothing here requires a login.",
   },
   {
     question: "How accurate are the cost estimates?",
     answer:
-      "Cost estimates are planning figures based on typical national pricing, shown as a range rather than a single number. Local material and labor costs vary, so always confirm pricing with a local supplier or contractor before buying.",
+      "They’re planning ranges from typical national prices you can override. Confirm with a local supplier or contractor before you buy — regional pricing moves a lot.",
   },
   {
     question: "Can I use these tools for both US and UK measurements?",
     answer:
-      "Yes — every calculator has a unit toggle for feet/inches (US-style) or metres/centimetres (UK-style), and cost estimates switch currency to match. Switching units converts the dimensions you already entered.",
+      "Yes. Each calculator has a unit toggle (feet/inches or metres/centimetres). Switching converts what you already typed; it doesn’t wipe the form. Cost currency follows the unit system.",
   },
   {
     question: "Is this site free to use?",
     answer:
-      "Yes, every calculator and guide is free. The site may be supported by advertising. Ads are labelled and kept away from calculator controls.",
+      "Yes. Calculators and guides are free. If ads are turned on later, they’re labelled and kept off the Calculate controls.",
   },
 ];
 
@@ -70,10 +70,11 @@ export default async function HomePage() {
               Free calculators for the US &amp; UK
             </p>
             <h1 className="mt-4 text-[clamp(32px,5vw,52px)] font-extrabold leading-[1.08] tracking-[-0.02em] text-text">
-              Plan your project with confidence.
+              Work out materials before you order.
             </h1>
             <p className="mt-5 max-w-xl text-[18px] leading-relaxed text-text-2">
-              Estimate materials, quantities, and planning costs for the next patio, room, roof, or garden bed — then see the formula behind the number.
+              Concrete, paint, flooring, roofing, gravel, and more — quantity plus a planning cost range, with the
+              formula on the same page so you can check it.
             </p>
             <div className="mt-8 max-w-xl">
               <SearchBox size="lg" placeholder="Search calculators — try “concrete”, “paint”, or “roof”" />
@@ -119,7 +120,7 @@ export default async function HomePage() {
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
           <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Browse by project</h2>
           <p className="mt-2 max-w-xl text-[15px] text-text-2">
-            Most projects need more than one calculator. These bundles group the tools people typically use together.
+            A patio usually needs concrete and gravel. A room redo often needs paint and flooring. Pick a bundle and open the tools you need.
           </p>
           <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
             {bundles.map((bundle) => (
@@ -148,9 +149,9 @@ export default async function HomePage() {
       </section>
 
       <section className="mx-auto max-w-[1280px] px-4 py-16 sm:px-6">
-        <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Home improvement categories</h2>
+        <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Browse by trade</h2>
         <p className="mt-2 max-w-xl text-[15px] text-text-2">
-          Every calculator lives inside one of these categories, so it stays easy to find as the toolset grows.
+          Construction, painting, flooring, roofing, landscaping, and cost — open a category or search from the header.
         </p>
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {liveCategories.map((cat) => (
@@ -165,12 +166,12 @@ export default async function HomePage() {
 
       <section className="border-y border-border bg-surface-2 py-16">
         <div className="mx-auto max-w-[1280px] px-4 sm:px-6">
-          <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">How it works</h2>
+          <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Three steps</h2>
           <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3">
             {[
-              { step: "1", title: "Choose a tool", body: "Search, or browse by category or project type." },
-              { step: "2", title: "Enter your measurements", body: "Feet or metres — switch units any time. Dimensions convert; they are not reset." },
-              { step: "3", title: "Get an instant estimate", body: "A material quantity and an estimated cost range, with the formula underneath." },
+              { step: "1", title: "Pick a calculator", body: "Search “concrete” or “paint”, or open a category." },
+              { step: "2", title: "Enter dimensions", body: "Use feet or metres. Switching units converts what you typed." },
+              { step: "3", title: "Read the estimate", body: "Quantity, optional cost range, and the formula underneath." },
             ].map((s) => (
               <div key={s.step}>
                 <span className="flex h-9 w-9 items-center justify-center rounded-[var(--radius-sm)] bg-accent font-mono text-[15px] font-bold text-white">
@@ -184,18 +185,19 @@ export default async function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6">
-        <AdSlot placement="leaderboard" />
-      </section>
+      {adsEnabled() ? (
+        <section className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6">
+          <AdSlot placement="leaderboard" />
+        </section>
+      ) : null}
 
       <section className="mx-auto max-w-[1280px] px-4 py-6 sm:px-6">
         <div className="grid grid-cols-1 items-center gap-8 lg:grid-cols-[1fr_1fr]">
           <div>
-            <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Why trust these numbers</h2>
+            <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">What’s on each tool page</h2>
             <p className="mt-3 max-w-lg text-[15px] leading-relaxed text-text-2">
-              Every calculator on this site states its formula in plain text — nothing is a black box. Each tool page shows the exact
-              methodology, a worked example, and the assumptions behind any cost estimate, so you can check the math yourself before
-              you order materials.
+              The calculator, the formula in plain text, a worked example, and the assumptions behind any cost range.
+              If the number looks odd, you can see why — then change an input or ask a supplier.
             </p>
             <Link href="/about" className="mt-4 inline-block text-[14px] font-semibold text-accent-strong hover:underline">
               How we calculate →
@@ -205,15 +207,21 @@ export default async function HomePage() {
             <ul className="flex flex-col gap-4">
               <li className="flex gap-3">
                 <CheckIcon />
-                <span className="text-[14.5px] text-text-2"><strong className="text-text">Formulas shown in full</strong> on every calculator page — never just a number.</span>
+                <span className="text-[14.5px] text-text-2">
+                  <strong className="text-text">Formula on the page</strong> — not only a result.
+                </span>
               </li>
               <li className="flex gap-3">
                 <CheckIcon />
-                <span className="text-[14.5px] text-text-2"><strong className="text-text">Estimates are labeled as estimates</strong>, with ranges instead of false precision.</span>
+                <span className="text-[14.5px] text-text-2">
+                  <strong className="text-text">Costs shown as ranges</strong> — local prices won’t match a national default.
+                </span>
               </li>
               <li className="flex gap-3">
                 <CheckIcon />
-                <span className="text-[14.5px] text-text-2"><strong className="text-text">No account required</strong> to use any calculator on the site.</span>
+                <span className="text-[14.5px] text-text-2">
+                  <strong className="text-text">No account</strong> — tools work in the browser.
+                </span>
               </li>
             </ul>
           </div>
@@ -222,16 +230,19 @@ export default async function HomePage() {
 
       <section className="mx-auto max-w-[1280px] px-4 py-16 sm:px-6">
         <div className="flex items-end justify-between gap-4">
-          <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Helpful guides</h2>
+          <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Guides on materials &amp; budgets</h2>
           <Link href="/guides" className="hidden text-[14px] font-semibold text-accent-strong hover:underline sm:block">
             View all guides →
           </Link>
         </div>
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {guides.map((g) => (
+          {guides.slice(0, 4).map((g) => (
             <GuideCard key={g.slug} guide={g} />
           ))}
         </div>
+        <Link href="/guides" className="mt-4 inline-block text-[14px] font-semibold text-accent-strong hover:underline sm:hidden">
+          View all guides →
+        </Link>
       </section>
 
       <section className="mx-auto max-w-[720px] px-4 py-16 sm:px-6">
@@ -243,12 +254,15 @@ export default async function HomePage() {
 
       <section className="border-t border-border bg-accent-tint">
         <div className="mx-auto max-w-[1280px] px-4 py-16 text-center sm:px-6">
-          <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Ready to start planning?</h2>
+          <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Need a quantity?</h2>
           <p className="mx-auto mt-2 max-w-md text-[15px] text-text-2">
-            Browse the full calculator library and get your first estimate in under a minute.
+            Start with concrete or paint — most people do — or browse the full list.
           </p>
-          <div className="mt-6">
-            <LinkButton href="/calculators">Browse all calculators</LinkButton>
+          <div className="mt-6 flex flex-wrap justify-center gap-3">
+            <LinkButton href="/calculators/construction/concrete-calculator">Concrete calculator</LinkButton>
+            <LinkButton href="/calculators" variant="secondary">
+              All calculators
+            </LinkButton>
           </div>
         </div>
       </section>

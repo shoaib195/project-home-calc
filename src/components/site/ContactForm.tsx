@@ -118,7 +118,11 @@ export function ContactForm() {
         Open email to send
       </Button>
       <p className="text-[13px] text-text-3">
-        This opens your email app addressed to {CONTACT_EMAIL}. We do not collect the form contents on our servers.
+        Prefer email directly? Write to{" "}
+        <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-accent-strong underline">
+          {CONTACT_EMAIL}
+        </a>
+        . The button opens your email app with this message filled in. We do not collect form contents on our servers.
       </p>
     </form>
   );

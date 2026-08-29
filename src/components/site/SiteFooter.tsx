@@ -22,7 +22,7 @@ export function SiteFooter({ tools, categories }: { tools?: Tool[]; categories?:
               Project Home Calc
             </Link>
             <p className="mt-3 max-w-[28ch] text-[13.5px] leading-snug text-text-3">
-              Simple, accurate tools for planning your next home project.
+              Free calculators for material quantities and planning costs.
             </p>
           </div>
 
@@ -61,7 +61,6 @@ export function SiteFooter({ tools, categories }: { tools?: Tool[]; categories?:
             <p className="text-[12px] font-bold uppercase tracking-[0.04em] text-text-3">Resources</p>
             <ul className="mt-3 flex flex-col gap-2">
               <li><Link href="/guides" className="text-[13.5px] text-text-2 hover:text-accent-strong">Guides</Link></li>
-              <li><Link href="/projects" className="text-[13.5px] text-text-2 hover:text-accent-strong">Project planner</Link></li>
               <li><Link href="/about" className="text-[13.5px] text-text-2 hover:text-accent-strong">How estimates work</Link></li>
               <li><Link href="/sitemap" className="text-[13.5px] text-text-2 hover:text-accent-strong">Sitemap</Link></li>
             </ul>

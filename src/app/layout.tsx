@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Public_Sans, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeScript } from "@/components/site/ThemeScript";
+import { ConsentDefaultsScript } from "@/components/site/ConsentDefaultsScript";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
@@ -27,7 +28,7 @@ const plexMono = IBM_Plex_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: `${SITE_NAME} — Calculate. Plan. Build with Confidence.`,
+    default: `${SITE_NAME} — Material & cost calculators for home projects`,
     template: `%s | ${SITE_NAME}`,
   },
   description: SITE_DESCRIPTION,
@@ -37,13 +38,13 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     siteName: SITE_NAME,
-    title: `${SITE_NAME} — Calculate. Plan. Build with Confidence.`,
+    title: `${SITE_NAME} — Material & cost calculators for home projects`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
   },
   twitter: {
     card: "summary_large_image",
-    title: `${SITE_NAME} — Calculate. Plan. Build with Confidence.`,
+    title: `${SITE_NAME} — Material & cost calculators for home projects`,
     description: SITE_DESCRIPTION,
   },
   alternates: { canonical: SITE_URL },
@@ -57,6 +58,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       className={`${publicSans.variable} ${inter.variable} ${plexMono.variable} h-full antialiased`}
     >
       <head>
+        <ConsentDefaultsScript />
         <ThemeScript />
       </head>
       <body className="min-h-full flex flex-col bg-bg text-text">
