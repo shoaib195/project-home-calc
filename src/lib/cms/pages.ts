@@ -12,9 +12,9 @@ const STATIC: PageRow[] = [
     path: "/",
     title: "Home",
     body: "",
-    meta_title: "Material & cost calculators for home projects",
+    meta_title: "Free Construction & Material Calculators",
     meta_description: SITE_DESCRIPTION,
-    meta_keywords: "home improvement calculator, material estimator, concrete calculator, paint calculator",
+    meta_keywords: "home improvement calculator, concrete calculator, gravel calculator, paint calculator, material estimator, sand calculator, tile calculator",
     robots_index: true,
     status: "published",
   }),
@@ -92,6 +92,235 @@ For privacy or data requests, say so in the subject line so we can prioritise th
     meta_title: "Contact",
     meta_description: `Get in touch with ${SITE_NAME} about calculator errors, missing tools, or privacy requests.`,
     meta_keywords: "contact, support",
+    robots_index: true,
+    status: "published",
+  }),
+  page({
+    slug: "methodology",
+    path: "/methodology",
+    title: "How We Calculate",
+    body: `Every calculator on ${SITE_NAME} uses the same pattern: standard geometry, stated assumptions, and a waste line you can change. This page is the site-wide summary — each tool page still shows its own formula and worked example.
+
+## Volume tools (concrete, gravel, sand, mulch)
+
+Length × width × depth, with depth entered in inches or centimetres because that is how slabs and beds are specified on plans. US results convert cubic feet to cubic yards (÷ 27). UK results stay in cubic metres.
+
+## Weight from volume (gravel, sand)
+
+Suppliers price aggregate by the ton or tonne. We multiply volume by a typical compacted density — about 1.4 tons per cubic yard for gravel, lower for sand. Your quarry can give an exact figure for the stone you are ordering.
+
+## Count tools (drywall, tile, decking, fence)
+
+Area or run length is divided by the size of one unit (sheet, tile, board, panel), rounded up, then waste is added. Partial units still count as a full purchase.
+
+## Paint and coverage
+
+Wall area = room perimeter × ceiling height, minus fixed deductions per door and window. Paint volume = net area × coats ÷ coverage per gallon or litre (about 350 ft² per US gallon on a smooth wall).
+
+## Cost lines
+
+Default material prices are planning placeholders you can override. They are not live quotes. Labour and delivery are never guessed — you enter them or leave them at zero.
+
+## When we update a tool
+
+We change a calculator when a formula error is reported with reproducible inputs, or when a default assumption (coverage rate, bag yield, density) is clearly out of date. Each tool page shows a last-updated date.
+
+## Report a problem
+
+Wrong number? Email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with the tool URL, your inputs, and what you expected. We fix real errors; we do not change results to match a single supplier's quote.`,
+    meta_title: "How We Calculate",
+    meta_description: "How Project Home Calc tools work — volume, weight, count, and paint formulas with stated assumptions and waste factors.",
+    meta_keywords: "calculation methodology, material formulas, waste factors, home project estimates",
+    robots_index: true,
+    status: "published",
+  }),
+  page({
+    slug: "data-sources",
+    path: "/data-sources",
+    title: "Data Sources & Assumptions",
+    body: `Planning calculators need default numbers. Ours come from common trade references and supplier labels — not scraped price sites.
+
+## Material densities
+
+| Material | US planning factor | Notes |
+|----------|-------------------|-------|
+| Compacted gravel | ~1.4 tons/yd³ | Crushed stone sub-base |
+| Dry sand | ~1.35 tons/yd³ | Bedding sand |
+| Mulch (bulk) | By volume | Sold loose or in 2 ft³ bags |
+
+UK metric tools use tonnes per cubic metre with similar ratios.
+
+## Bag yields (concrete)
+
+| Bag | Approximate yield |
+|-----|-------------------|
+| 60 lb (US) | 0.45 ft³ |
+| 80 lb (US) | 0.60 ft³ |
+| 25 kg (UK) | 0.0125 m³ |
+
+Check the bag label — brands differ slightly.
+
+## Paint coverage
+
+- **US:** ~350 ft² per gallon per coat on a smooth, primed wall
+- **UK:** ~12 m² per litre per coat under the same conditions
+
+Textured or porous surfaces need more. The Paint Calculator does not auto-add a texture factor.
+
+## Default prices
+
+Cost fields use round national planning figures (ready-mix per yd³, gravel per ton, paint per gallon, and so on). Override them with your supplier quote — that is the intended workflow.
+
+## What we do not use
+
+- Live API price feeds (would imply false precision)
+- Copied tables from other websites
+- AI-generated market averages without a stated basis
+
+## Corrections
+
+If a default is wrong for your region, override it in the tool. If you think our built-in default should change site-wide, contact us with a source (supplier price sheet, product label, or code reference).`,
+    meta_title: "Data Sources & Assumptions",
+    meta_description: "Reference densities, bag yields, paint coverage rates, and default prices used in Project Home Calc planning tools.",
+    meta_keywords: "material densities, coverage rates, gravel tons per yard, concrete bag yield",
+    robots_index: true,
+    status: "published",
+  }),
+  page({
+    slug: "calculation-assumptions",
+    path: "/calculation-assumptions",
+    title: "Default Calculation Assumptions",
+    body: `These are the baseline values baked into each calculator before you change them. They are starting points, not quotes.
+
+## Waste allowances
+
+| Job type | Default | When to increase |
+|----------|---------|------------------|
+| Concrete pour | 10% | Irregular forms, steep access |
+| Flooring / tile | 10% | Diagonal lay, many alcoves |
+| Decking boards | 10% | Lots of posts, stairs |
+| Mulch | None (depth is net) | Add extra if topping deep beds |
+| Roofing | 10% | Hips, valleys, dormers |
+
+## Openings (paint)
+
+- **Door:** 21 ft² (US) / 1.95 m² (UK) deducted per door
+- **Window:** 15 ft² (US) / 1.4 m² (UK) per window
+
+Large picture windows or double doors — reduce the count or lower the deduction manually.
+
+## Sheet and roll sizes
+
+- **Drywall:** 4×8 ft (32 ft²) or 1200×2400 mm
+- **Insulation batt roll:** ~40 ft² or ~5.8 m² per roll (change to match your pack)
+
+## Fence defaults
+
+Panel width and post spacing default to 8 ft (2.4 m). Panel systems vary — enter what your kit specifies.
+
+## Cost estimator
+
+- Materials waste: 10% unless you change it
+- Markup: 0% for homeowners; trades may add 10–20% on quotes
+- Output range: ±10% on the total
+
+## Your job may differ
+
+Local code, product labels, and site conditions always win over a website default. Use these tables to see what we assumed — then adjust the inputs.`,
+    meta_title: "Default Calculation Assumptions",
+    meta_description: "Waste factors, door/window deductions, sheet sizes, and other defaults used across Project Home Calc calculators.",
+    meta_keywords: "waste factor, calculation defaults, planning assumptions",
+    robots_index: true,
+    status: "published",
+  }),
+  page({
+    slug: "reference-charts",
+    path: "/reference-charts",
+    title: "Reference Charts",
+    body: `Quick lookup tables for common planning questions. For interactive numbers, use the linked calculator.
+
+## Concrete slab thickness
+
+| Use | Typical thickness |
+|-----|-------------------|
+| Walkway / patio (foot traffic) | 4 in / 100 mm |
+| Driveway (cars) | 4–6 in / 100–150 mm |
+| Garage slab | 4–6 in |
+| Post footing (frost depth varies) | Below local frost line |
+
+## Gravel layer depth
+
+| Use | Depth |
+|-----|-------|
+| Paver bedding sand | 1–2 in / 25–50 mm |
+| Gravel sub-base under patio | 4–6 in / 100–150 mm |
+| Driveway sub-base | 6–8 in / 150–200 mm |
+
+## Mulch depth
+
+| Use | Depth |
+|-----|-------|
+| Flower beds | 2–3 in / 5–7.5 cm |
+| Trees (donut, not volcano) | 2–4 in away from trunk |
+
+## Paint coats
+
+| Situation | Coats |
+|-----------|-------|
+| Same colour refresh | 1 |
+| Colour change | 2 |
+| Dark → light | 2–3 |
+
+## Unit conversions
+
+| US | Metric |
+|----|--------|
+| 1 ft³ | 0.0283 m³ |
+| 1 yd³ | 0.765 m³ |
+| 1 ft² | 0.0929 m² |
+| 1 ton (US) | 0.907 tonnes |
+
+## Roofing pitch factor (US)
+
+Pitch factor = √(1 + (rise ÷ 12)²). Example: 6/12 → factor ≈ 1.118.
+
+See the [Roofing Calculator](/calculators/roofing/roofing-calculator) for your footprint.`,
+    meta_title: "Reference Charts",
+    meta_description: "Slab thickness, gravel depth, mulch depth, paint coats, and unit conversion charts for home project planning.",
+    meta_keywords: "concrete thickness chart, gravel depth, unit conversion, roofing pitch factor",
+    robots_index: true,
+    status: "published",
+  }),
+  page({
+    slug: "suggest-calculator",
+    path: "/suggest-calculator",
+    title: "Suggest a Calculator",
+    body: `Missing a tool? Tell us what you were trying to estimate.
+
+## What to send
+
+- The material or job (e.g. "asphalt driveway tonnage", "fence post concrete")
+- The inputs you would want to enter (length, depth, price, and so on)
+- A link to a similar calculator on another site, if one exists — optional
+
+Use the [contact form](/contact) or email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with **Calculator request** in the subject.
+
+## What we build first
+
+We prioritise tools that:
+
+1. Fit the home-improvement / small-project scope
+2. Use a clear formula we can show on the page
+3. Do not duplicate an existing tool without a good reason
+
+We do not add tools that require live regional pricing APIs, structural engineering sign-off, or licensed trade calculations.
+
+## Recently added
+
+Sand, concrete bags, tile, brick, paint cost, gravel cost, concrete cost, insulation, fence, and paver calculators joined the library in 2026. More are queued from user requests.`,
+    meta_title: "Suggest a Calculator",
+    meta_description: "Request a new home project calculator or improvement to an existing tool on Project Home Calc.",
+    meta_keywords: "suggest calculator, request tool, new calculator",
     robots_index: true,
     status: "published",
   }),

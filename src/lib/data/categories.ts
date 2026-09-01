@@ -5,17 +5,17 @@ export const categories: Category[] = [
   {
     slug: "construction",
     name: "Construction",
-    description: "Concrete volume and gravel for slabs, pads, and footings — formula on each tool page.",
+    description: "Concrete, gravel, sand, brick, and cost tools for slabs, pads, footings, and masonry.",
   },
   {
     slug: "landscaping",
     name: "Landscaping",
-    description: "Mulch and yard material volumes from bed area and depth.",
+    description: "Mulch, pavers, and yard material volumes from bed area and depth.",
   },
   {
     slug: "flooring",
     name: "Flooring",
-    description: "Room area to pack count, with a waste allowance for cuts.",
+    description: "Flooring boxes and floor tile counts with a waste allowance for cuts.",
   },
   {
     slug: "painting",
@@ -30,12 +30,12 @@ export const categories: Category[] = [
   {
     slug: "deck-fence",
     name: "Deck & Fence",
-    description: "Decking board count with width and gap — framing is a separate takeoff.",
+    description: "Decking board count and fence panel, post, and rail planning.",
   },
   {
     slug: "home-improvement",
     name: "Home Improvement",
-    description: "Room jobs such as drywall sheet counts for simple rectangles.",
+    description: "Drywall sheet counts, insulation rolls, and room boarding jobs.",
   },
   {
     slug: "cost-estimation",

@@ -61,7 +61,11 @@ export function SiteFooter({ tools, categories }: { tools?: Tool[]; categories?:
             <p className="text-[12px] font-bold uppercase tracking-[0.04em] text-text-3">Resources</p>
             <ul className="mt-3 flex flex-col gap-2">
               <li><Link href="/guides" className="text-[13.5px] text-text-2 hover:text-accent-strong">Guides</Link></li>
-              <li><Link href="/about" className="text-[13.5px] text-text-2 hover:text-accent-strong">How estimates work</Link></li>
+              <li><Link href="/methodology" className="text-[13.5px] text-text-2 hover:text-accent-strong">How we calculate</Link></li>
+              <li><Link href="/reference-charts" className="text-[13.5px] text-text-2 hover:text-accent-strong">Reference charts</Link></li>
+              <li><Link href="/data-sources" className="text-[13.5px] text-text-2 hover:text-accent-strong">Data sources</Link></li>
+              <li><Link href="/suggest-calculator" className="text-[13.5px] text-text-2 hover:text-accent-strong">Suggest a calculator</Link></li>
+              <li><Link href="/about" className="text-[13.5px] text-text-2 hover:text-accent-strong">About</Link></li>
               <li><Link href="/sitemap" className="text-[13.5px] text-text-2 hover:text-accent-strong">Sitemap</Link></li>
             </ul>
           </div>

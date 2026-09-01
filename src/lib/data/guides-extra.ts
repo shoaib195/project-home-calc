@@ -644,4 +644,143 @@ export const extraGuides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "how-many-bags-of-concrete-for-a-slab",
+    title: "How Many Bags of Concrete for a Slab?",
+    description: "Bag counts for common slab sizes — when bag mix makes sense and when to call the truck instead.",
+    updated: "2026-09-01",
+    relatedTools: ["concrete-bag-calculator", "concrete-calculator", "concrete-cost-calculator"],
+    intro:
+      "Bagged concrete is fine for post holes and small pads. It gets expensive and slow once the volume climbs past about a cubic yard. Here is how to sanity-check bag counts before you load the cart.",
+    sections: [
+      {
+        heading: "Quick reference sizes",
+        body: [
+          "An 8×8 ft slab at 4 in thick is about 0.8 yd³ — roughly 45 eighty-pound bags with 10% waste. A 10×10 ft pad at the same depth is about 1.23 yd³ before waste — that is where ready-mix starts to win on labour.",
+          "Post holes are a different shape but the same idea: diameter × depth gives volume, then divide by bag yield. Three 12-inch diameter holes 3 ft deep are still bag territory.",
+        ],
+      },
+      {
+        heading: "60 lb vs 80 lb bags",
+        body: [
+          "Eighty-pound bags cover more ground per trip from the truck. Sixty-pound bags are easier to lift if you are working alone. The label on the bag is the yield that matters — brands differ by a few percent.",
+          "Round up. Running out mid-pour with concrete setting in the mixer is worse than returning one unused bag.",
+        ],
+      },
+      {
+        heading: "When to stop buying bags",
+        body: [
+          "Past ~1 yd³, compare bag cost plus your time against a ready-mix quote with a short-load fee. Many homeowners underestimate how long hand-mixing 50+ bags takes.",
+          "Use the Concrete Bag Calculator for your exact footprint, then the Concrete Cost Calculator if you want to line it up against a truck price.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "How many bags for a 12×12 slab?", answer: "At 4 in thick with 10% waste, about 74 sixty-pound bags or 56 eighty-pound bags. Thicker driveways need proportionally more." },
+      { question: "Can I mix different bag brands?", answer: "Same strength and type on one pour — do not blend fast-set with standard mix in the same slab." },
+      { question: "Does this include the gravel base?", answer: "No. Order sub-base gravel separately." },
+    ],
+  },
+  {
+    slug: "planning-a-paver-patio-base",
+    title: "Planning a Paver Patio Base",
+    description: "Gravel sub-base, sand bedding, and paver counts — the three layers in order.",
+    updated: "2026-09-01",
+    relatedTools: ["paver-calculator", "sand-calculator", "gravel-calculator"],
+    intro:
+      "Pavers fail when the base fails. The visible pavers are only the top layer — compacted gravel and screed sand underneath do most of the work.",
+    sections: [
+      {
+        heading: "Layer 1 — compacted gravel",
+        body: [
+          "Most patios need 4–6 in of compacted crushed stone over firm soil. Use the Gravel Calculator for that volume and tonnage. Compaction matters — loose depth is not finished depth.",
+          "Geotextile between soil and stone helps on clay. It does not replace proper depth.",
+        ],
+      },
+      {
+        heading: "Layer 2 — bedding sand",
+        body: [
+          "1–2 in of coarse sand or screed sand sits on top of the gravel. The Sand Calculator handles that thin layer. Do not use play sand — it does not screed flat.",
+        ],
+      },
+      {
+        heading: "Layer 3 — pavers",
+        body: [
+          "Count pavers from patio area, paver size, joint width, and waste. Diagonal patterns need more waste than a running bond. The Paver Calculator covers the top layer only.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Can I lay pavers on dirt?", answer: "Not for a long-lasting patio. Without gravel and compaction, pavers settle unevenly after the first winter." },
+      { question: "Polymeric sand vs bedding sand?", answer: "Bedding sand goes under pavers. Polymeric sand locks joints after pavers are set — different product, different step." },
+    ],
+  },
+  {
+    slug: "how-many-tiles-for-a-bathroom-floor",
+    title: "How Many Tiles for a Bathroom Floor?",
+    description: "Measure a bathroom floor, pick a waste factor, and order boxes without a surplus pallet sitting in the garage.",
+    updated: "2026-09-01",
+    relatedTools: ["tile-calculator", "flooring-calculator", "cost-estimator"],
+    intro:
+      "Bathroom floors are small but cut-heavy. Toilets, niches, and door thresholds eat whole tiles fast. Measure the rectangle, then add waste that matches how you will lay the pattern.",
+    sections: [
+      {
+        heading: "Measure net floor area",
+        body: [
+          "Length × width of the open floor. The toilet footprint is usually tiled under the pan — do not subtract it unless you are leaving a cut-out.",
+          "Alcoves and step-down showers: split into rectangles and add areas.",
+        ],
+      },
+      {
+        heading: "Waste by layout",
+        body: [
+          "Straight lay in a box room: 10% waste is common. Diagonal or herringbone: 12–15%. Large format tiles on a small floor: fewer grout lines but higher breakage risk — keep an extra box.",
+        ],
+      },
+      {
+        heading: "Boxes, not loose tiles",
+        body: [
+          "Suppliers sell by the box. Divide your tile count by tiles per box and round up. Keep one unopened box after the job for future repairs — dye lots change.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Wall tile too?", answer: "This guide is floor-focused. Wall area is perimeter × height minus openings — a different measurement pass." },
+      { question: "Underfloor heating?", answer: "Does not change tile count. Follow the heating mat manufacturer's guidance on substrate and tile type." },
+    ],
+  },
+  {
+    slug: "fence-materials-for-a-straight-run",
+    title: "Fence Materials for a Straight Run",
+    description: "Panels, posts, and rails from a single fence length — before you buy the wrong kit.",
+    updated: "2026-09-01",
+    relatedTools: ["fence-calculator", "concrete-bag-calculator", "decking-calculator"],
+    intro:
+      "Fence kits are sized in panel widths. Measure the run along the ground, not along a slope diagonal, then count panels and posts from spacing that matches your product.",
+    sections: [
+      {
+        heading: "Measure the run",
+        body: [
+          "String line along where the fence will sit. Measure corner to corner. Gates need their own width subtracted from panel count and two posts minimum per opening.",
+        ],
+      },
+      {
+        heading: "Posts and concrete",
+        body: [
+          "Posts every 6–8 ft are typical for wood panel fencing. Each post needs a hole below frost depth with concrete — use the Concrete Bag Calculator per hole or ask your supplier for a mixed load.",
+        ],
+      },
+      {
+        heading: "Slopes and corners",
+        body: [
+          "This planning model is for a straight, level run. Stepped slopes need racked panels or custom cuts — add an extra panel on long graded runs.",
+          "Corners need their own post. Count them separately from line posts.",
+        ],
+      },
+    ],
+    faq: [
+      { question: "Panel fence vs picket?", answer: "Panel systems use the panel width field. Picket fences need picket spacing math — a different calculator pattern." },
+      { question: "How deep for posts?", answer: "Often one-third of post length in the ground, below local frost depth. Check your code." },
+    ],
+  },
 ];

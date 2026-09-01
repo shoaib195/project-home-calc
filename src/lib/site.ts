@@ -48,7 +48,7 @@ export const CONTACT_EMAIL =
   process.env.CONTACT_EMAIL?.trim() || process.env.SMTP_TO?.trim() || "shoaib.octachat@gmail.com";
 export const SITE_TAGLINE = "Free calculators for material quantities and planning costs.";
 export const SITE_DESCRIPTION =
-  "Free US and UK calculators for concrete, paint, flooring, roofing, gravel, and project cost — with the formula shown on every tool page.";
+  "Free construction and material calculators for concrete, gravel, sand, paint, tile, roofing, and 19+ home projects — US and UK units, formulas on every page.";
 
 /** Display dates on legal pages (en-GB), e.g. 2026-08-29 → 29 August 2026 */
 export function formatDisplayDate(isoOrText: string): string {

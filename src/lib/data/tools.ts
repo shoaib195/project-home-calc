@@ -1,10 +1,15 @@
 import type { Tool } from "@/lib/types";
+import { extraTools } from "@/lib/data/tools-extra";
 
-export const tools: Tool[] = [
+const coreTools: Tool[] = [
   {
     slug: "concrete-calculator",
     category: "construction",
     name: "Concrete Calculator",
+    metaTitle: "Concrete Calculator – Cubic Yards, Bags & Slab Volume",
+    metaDescription:
+      "Calculate concrete volume for a slab, patio, or footing in cubic yards or cubic metres. Includes waste allowance, bag counts, and a planning cost range.",
+    keywords: "concrete calculator, cubic yards concrete, concrete slab calculator, how much concrete do I need",
     shortDescription: "Work out how much ready-mix concrete a slab, footing, or column needs.",
     intro:
       "Enter the length, width, and depth of the area you're pouring to get the concrete volume, a recommended order quantity with waste allowance, and an estimated material cost.",
@@ -45,8 +50,18 @@ export const tools: Tool[] = [
         answer:
           "No — this calculator estimates concrete volume only. Sub-base gravel is estimated separately with the Gravel Calculator, and rebar/mesh requirements depend on your local code and the slab's use.",
       },
+      {
+        question: "How much concrete for a 10×10 patio at 4 inches?",
+        answer:
+          "About 1.23 cubic yards before waste. With 10% waste, order 1.36 yd³. Enter your exact dimensions above — a 6-inch driveway pad on the same footprint needs 50% more volume.",
+      },
+      {
+        question: "Can I switch between US and UK units?",
+        answer:
+          "Yes. Toggle feet/inches or metres/centimetres at the top. Depth stays in inches or centimetres because that is how plans specify slab thickness.",
+      },
     ],
-    relatedTools: ["gravel-calculator"],
+    relatedTools: ["gravel-calculator", "concrete-bag-calculator", "concrete-cost-calculator", "sand-calculator"],
     relatedGuides: ["how-much-does-a-concrete-patio-cost", "concrete-slab-thickness-what-matters"],
     updated: "2026-07-01",
   },
@@ -54,6 +69,10 @@ export const tools: Tool[] = [
     slug: "gravel-calculator",
     category: "construction",
     name: "Gravel Calculator",
+    metaTitle: "Gravel Calculator – Cubic Yards, Tons & Driveway Base",
+    metaDescription:
+      "Estimate gravel volume and weight for a driveway, path, or sub-base. Enter length, width, and depth for cubic yards, tons, and material cost.",
+    keywords: "gravel calculator, tons of gravel, driveway gravel, crushed stone calculator, gravel coverage",
     shortDescription: "Estimate gravel volume and weight for a driveway, path, or sub-base.",
     intro:
       "Enter the area's length, width, and desired depth to get the gravel volume and an estimated weight, since gravel is typically sold and delivered by the ton.",
@@ -94,8 +113,13 @@ export const tools: Tool[] = [
         answer:
           "Crushed, angular stone locks together and compacts more stably than rounded gravel, which is why it's the more common choice under driveways and patios. Rounded pea gravel is more often used as a decorative top layer.",
       },
+      {
+        question: "How much gravel for a 20-foot driveway?",
+        answer:
+          "Depends on width and depth. A 20 ft × 12 ft strip at 4 in deep is about 3 yd³ or roughly 4.2 tons. Enter your width — a single-car drive is often 10–12 ft wide.",
+      },
     ],
-    relatedTools: ["concrete-calculator", "cost-estimator"],
+    relatedTools: ["concrete-calculator", "sand-calculator", "gravel-cost-calculator"],
     relatedGuides: ["how-much-gravel-for-a-driveway", "patio-base-gravel-before-concrete"],
     updated: "2026-07-01",
   },
@@ -103,6 +127,10 @@ export const tools: Tool[] = [
     slug: "mulch-calculator",
     category: "landscaping",
     name: "Mulch Calculator",
+    metaTitle: "Mulch Calculator – Cubic Yards, Bags & Garden Bed Coverage",
+    metaDescription:
+      "Find how much mulch a garden bed needs in cubic yards or bags. Enter bed length, width, and depth for volume and bag count.",
+    keywords: "mulch calculator, how much mulch do I need, mulch bags, garden bed mulch, cubic yards mulch",
     shortDescription: "Find out how many bags or cubic yards of mulch a garden bed needs.",
     intro:
       "Enter the length and width of your garden bed and a target depth to get the mulch volume, plus how many standard bags that works out to.",
@@ -145,7 +173,7 @@ export const tools: Tool[] = [
           "No — it calculates the volume needed to reach your target depth at the time of spreading. Organic mulch typically compresses 10–20% over its first season, which is worth keeping in mind if you're topping up rather than starting fresh.",
       },
     ],
-    relatedTools: ["gravel-calculator"],
+    relatedTools: ["gravel-calculator", "paver-calculator"],
     relatedGuides: ["how-much-mulch-do-you-need"],
     updated: "2026-06-15",
   },
@@ -153,6 +181,10 @@ export const tools: Tool[] = [
     slug: "paint-calculator",
     category: "painting",
     name: "Paint Calculator",
+    metaTitle: "Paint Calculator – Gallons & Litres for a Room",
+    metaDescription:
+      "Calculate how much paint a room needs from wall area and coat count. Door and window deductions included for gallons or litres.",
+    keywords: "paint calculator, how much paint for a room, gallons of paint, wall paint coverage, litres of paint",
     shortDescription: "Estimate how much paint a room needs, based on wall area and coats.",
     intro:
       "Enter your room's dimensions, how many coats you're applying, and any doors or windows to deduct, to get the paint quantity needed.",
@@ -195,7 +227,7 @@ export const tools: Tool[] = [
           "Can labels quote coverage for a smooth, primed surface. Textured walls, unprimed drywall, and porous surfaces like new plaster all absorb more paint — budgeting an extra 10% is reasonable in those cases.",
       },
     ],
-    relatedTools: ["flooring-calculator", "drywall-calculator"],
+    relatedTools: ["paint-cost-calculator", "flooring-calculator", "drywall-calculator"],
     relatedGuides: ["how-much-paint-for-a-room", "interior-painting-cost-breakdown"],
     updated: "2026-06-20",
   },
@@ -203,6 +235,10 @@ export const tools: Tool[] = [
     slug: "flooring-calculator",
     category: "flooring",
     name: "Flooring Calculator",
+    metaTitle: "Flooring Calculator – Boxes Needed With Waste Allowance",
+    metaDescription:
+      "Work out how many flooring boxes to buy for a room. Enter dimensions, box coverage, and waste percent for laminate, vinyl, or hardwood.",
+    keywords: "flooring calculator, laminate boxes, hardwood flooring estimate, flooring waste factor, vinyl plank boxes",
     shortDescription: "Work out how many boxes of flooring to buy for a room, with waste included.",
     intro:
       "Enter your room's dimensions, a waste allowance, and how much area one box covers, to get the number of boxes to order.",
@@ -243,7 +279,7 @@ export const tools: Tool[] = [
           "Split the room into rectangular sections, calculate each one separately, and add the results together — this keeps each calculation accurate rather than estimating an irregular shape in one step.",
       },
     ],
-    relatedTools: ["paint-calculator"],
+    relatedTools: ["tile-calculator", "paint-calculator"],
     relatedGuides: ["how-to-estimate-flooring-with-waste", "waste-factors-explained"],
     updated: "2026-06-10",
   },
@@ -251,6 +287,10 @@ export const tools: Tool[] = [
     slug: "decking-calculator",
     category: "deck-fence",
     name: "Decking Calculator",
+    metaTitle: "Decking Calculator – Board Count With Gap & Waste",
+    metaDescription:
+      "Estimate deck boards for a rectangular deck. Enter deck size, board width, gap, and waste allowance.",
+    keywords: "deck calculator, deck boards needed, composite decking calculator, deck board count",
     shortDescription: "Estimate how many deck boards you need for a given deck area.",
     intro:
       "Enter your deck's length and width plus your board width, to get the total board count assuming boards run the length of the deck.",
@@ -292,7 +332,7 @@ export const tools: Tool[] = [
           "Most decks run boards along the longer dimension for fewer seams and a cleaner look, which is the assumption this calculator uses. Boards perpendicular to the house are also common for drainage — swap length and width when entering your measurements if that's your layout.",
       },
     ],
-    relatedTools: ["gravel-calculator", "concrete-calculator"],
+    relatedTools: ["fence-calculator", "gravel-calculator", "concrete-calculator"],
     relatedGuides: ["how-to-estimate-decking-boards"],
     updated: "2026-05-28",
   },
@@ -300,6 +340,10 @@ export const tools: Tool[] = [
     slug: "roofing-calculator",
     category: "roofing",
     name: "Roofing Calculator",
+    metaTitle: "Roofing Calculator – Squares, Bundles & Pitch-Adjusted Area",
+    metaDescription:
+      "Estimate roof area, squares, and shingle bundles from building footprint and pitch. Includes waste allowance for hips and valleys.",
+    keywords: "roofing calculator, roof squares calculator, shingle bundles, roof pitch calculator, how many bundles of shingles",
     shortDescription: "Estimate roof area, squares, and shingle bundles from a plan footprint and pitch.",
     intro:
       "Enter the roof's plan length and width plus the pitch rise. The calculator converts that footprint into sloped area, adds waste, and reports squares (US) or square metres (UK) with a bundle count.",
@@ -349,6 +393,10 @@ export const tools: Tool[] = [
     slug: "drywall-calculator",
     category: "home-improvement",
     name: "Drywall Calculator",
+    metaTitle: "Drywall Calculator – Sheets for Walls & Ceiling",
+    metaDescription:
+      "Calculate drywall or plasterboard sheets for a room. Enter length, width, height, and waste for walls and optional ceiling.",
+    keywords: "drywall calculator, plasterboard sheets, sheetrock calculator, how many drywall sheets",
     shortDescription: "Work out how many plasterboard or drywall sheets a room needs, including the ceiling.",
     intro:
       "Enter the room's length, width, and ceiling height. The calculator totals wall area, optionally adds the ceiling, applies waste, and rounds up to full 4×8 ft (or 1200×2400 mm) sheets.",
@@ -390,7 +438,7 @@ export const tools: Tool[] = [
           "Ten percent is reasonable for a rectangular room. Use 15% if there are many corners, arched openings, or you are hanging for the first time.",
       },
     ],
-    relatedTools: ["paint-calculator", "cost-estimator"],
+    relatedTools: ["insulation-calculator", "paint-calculator", "cost-estimator"],
     relatedGuides: ["how-much-drywall-for-a-room"],
     updated: "2026-08-01",
   },
@@ -398,6 +446,10 @@ export const tools: Tool[] = [
     slug: "cost-estimator",
     category: "cost-estimation",
     name: "Project Cost Estimator",
+    metaTitle: "Project Cost Estimator – Materials, Labour & Markup",
+    metaDescription:
+      "Roll up materials, labour, delivery, waste, and markup into a home project planning total. Compare contractor quotes with your own numbers.",
+    keywords: "project cost estimator, home renovation budget, contractor quote comparison, renovation cost calculator",
     shortDescription: "Roll materials, labor, delivery, waste, and optional markup into a planning total.",
     intro:
       "Enter the cost lines you already know. The estimator adds waste to materials, then labour and delivery, applies optional markup, and shows a range so the figure is clearly an estimate — not a contractor quote.",
@@ -444,6 +496,8 @@ export const tools: Tool[] = [
     updated: "2026-08-01",
   },
 ];
+
+export const tools: Tool[] = [...coreTools, ...extraTools];
 
 export function getTool(slug: string): Tool | undefined {
   return tools.find((t) => t.slug === slug);
