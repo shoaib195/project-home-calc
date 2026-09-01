@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="600" viewBox="0 0 2400 600" fill="none">
+  <rect width="2400" height="600" fill="none"/>
+  <!-- Icon mark -->
+  <rect x="48" y="48" width="504" height="504" rx="110" fill="#23508D"/>
+  <path d="M156 456V276l144-104 144 104v180M156 456h288M228 456V336h144v120" stroke="#FFFFFF" stroke-width="33.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Wordmark -->
+  <text x="620" y="355" font-family="Segoe UI, system-ui, -apple-system, BlinkMacSystemFont, sans-serif" font-size="148" font-weight="800" letter-spacing="-3" fill="#172D4F">Project Home Calc</text>
+</svg>

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import type { FaqItem } from "@/lib/types";
 import { CONTACT_EMAIL, SITE_DESCRIPTION, SITE_NAME, SITE_URL, absoluteUrl } from "@/lib/site";
+import { socialProfileUrls } from "@/lib/social";
 
 export function pageMetadata({
   title,
@@ -50,6 +51,7 @@ export function organizationJsonLd() {
     url: SITE_URL,
     description: SITE_DESCRIPTION,
     email: CONTACT_EMAIL,
+    sameAs: socialProfileUrls(),
     contactPoint: {
       "@type": "ContactPoint",
       email: CONTACT_EMAIL,

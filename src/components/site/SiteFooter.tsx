@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { getLiveCategories } from "@/lib/data/categories";
 import { tools as seedTools } from "@/lib/data/tools";
+import { SocialLinks } from "@/components/site/SocialLinks";
 import type { Category, Tool } from "@/lib/types";
 
 export function SiteFooter({ tools, categories }: { tools?: Tool[]; categories?: Category[] }) {
@@ -24,6 +25,7 @@ export function SiteFooter({ tools, categories }: { tools?: Tool[]; categories?:
             <p className="mt-3 max-w-[28ch] text-[13.5px] leading-snug text-text-3">
               Free calculators for material quantities and planning costs.
             </p>
+            <SocialLinks className="mt-5" showLabel />
           </div>
 
           <div>
@@ -83,8 +85,10 @@ export function SiteFooter({ tools, categories }: { tools?: Tool[]; categories?:
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-2 border-t border-border pt-6 text-[12.5px] text-text-3 sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Project Home Calc. Estimates are planning figures, not quotes — confirm quantities and pricing with your supplier or contractor.</p>
+        <div className="mt-12 border-t border-border pt-6">
+          <p className="text-[12.5px] text-text-3">
+            © {new Date().getFullYear()} Project Home Calc. Estimates are planning figures, not quotes — confirm quantities and pricing with your supplier or contractor.
+          </p>
         </div>
       </div>
     </footer>
