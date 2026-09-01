@@ -1,4 +1,17 @@
-const DEFAULT_SITE_URL = "https://projecthomecalc.com";
+const DEFAULT_SITE_URL = "https://www.projecthomecalc.com";
+
+function isUsableSiteUrl(value: string): boolean {
+  try {
+    const { hostname, protocol } = new URL(value);
+    if (protocol !== "http:" && protocol !== "https:") return false;
+    if (!hostname || hostname === "localhost") return false;
+    // Preview deployments should not become canonical SEO URLs.
+    if (hostname.endsWith(".vercel.app")) return false;
+    return true;
+  } catch {
+    return false;
+  }
+}
 
 /**
  * Resolve a valid absolute site origin.
@@ -6,21 +19,23 @@ const DEFAULT_SITE_URL = "https://projecthomecalc.com";
  */
 function resolveSiteUrl(): string {
   const fromEnv = process.env.NEXT_PUBLIC_SITE_URL?.trim();
-  if (fromEnv) {
-    try {
-      return new URL(fromEnv).origin;
-    } catch {
-      /* invalid — fall through */
+  if (fromEnv && isUsableSiteUrl(fromEnv)) {
+    return new URL(fromEnv).origin;
+  }
+
+  const production = process.env.VERCEL_PROJECT_PRODUCTION_URL?.trim();
+  if (production) {
+    const withProtocol = production.startsWith("http") ? production : `https://${production}`;
+    if (isUsableSiteUrl(withProtocol)) {
+      return new URL(withProtocol).origin;
     }
   }
 
   const vercel = process.env.VERCEL_URL?.trim();
   if (vercel) {
     const withProtocol = vercel.startsWith("http") ? vercel : `https://${vercel}`;
-    try {
+    if (isUsableSiteUrl(withProtocol)) {
       return new URL(withProtocol).origin;
-    } catch {
-      /* fall through */
     }
   }
 
@@ -29,7 +44,8 @@ function resolveSiteUrl(): string {
 
 export const SITE_NAME = "Project Home Calc";
 export const SITE_URL = resolveSiteUrl();
-export const CONTACT_EMAIL = "hello@projecthomecalc.com";
+export const CONTACT_EMAIL =
+  process.env.CONTACT_EMAIL?.trim() || process.env.SMTP_TO?.trim() || "shoaib.octachat@gmail.com";
 export const SITE_TAGLINE = "Free calculators for material quantities and planning costs.";
 export const SITE_DESCRIPTION =
   "Free US and UK calculators for concrete, paint, flooring, roofing, gravel, and project cost — with the formula shown on every tool page.";

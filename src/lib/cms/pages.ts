@@ -80,7 +80,7 @@ Bugs, missing tools, or privacy requests: [contact](/contact) or [${CONTACT_EMAI
 
 ## Email
 
-Write to [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}). We aim to reply to clear, actionable messages. The form below opens your email app with the subject and body filled in — we do not store form contents on a server.
+Write to [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}). We aim to reply to clear, actionable messages. The form below sends your message by email — we do not keep a separate database of submissions.
 
 ## What to include
 
@@ -109,6 +109,7 @@ ${SITE_NAME} provides free home-improvement calculators and guides. Calculators 
 
 - **Calculator inputs** are processed in your browser. We do not send dimensions or cost figures to our servers when you use a calculator.
 - **Contact messages** you send by email include whatever you put in the message. Use that channel only for information you are comfortable sharing.
+- **Contact form** submissions are emailed to us via SMTP. We do not store them in a separate database.
 - **Technical logs** may be collected by our hosting provider (for example page requests, IP address, browser type) as part of running a website. We do not use those logs to identify you for marketing.
 - **Theme preference** is stored in your browser (localStorage) so light or dark mode persists. It is not sent to us.
 

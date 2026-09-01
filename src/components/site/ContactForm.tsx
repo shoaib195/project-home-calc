@@ -5,47 +5,98 @@ import { Button } from "@/components/ui/Button";
 import { Alert } from "@/components/ui/Alert";
 import { CONTACT_EMAIL } from "@/lib/site";
 
+type FieldErrors = { name?: string; email?: string; message?: string };
+
 export function ContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [errors, setErrors] = useState<{ name?: string; email?: string; message?: string }>({});
-  const [status, setStatus] = useState<"idle" | "sent">("idle");
+  const [website, setWebsite] = useState("");
+  const [errors, setErrors] = useState<FieldErrors>({});
+  const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const [errorMessage, setErrorMessage] = useState("");
 
-  function validate() {
-    const next: typeof errors = {};
+  function validate(): FieldErrors {
+    const next: FieldErrors = {};
     if (name.trim().length < 2) next.name = "Enter your name so we know who to reply to.";
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim())) next.email = "Enter a valid email address.";
     if (message.trim().length < 10) next.message = "Add a bit more detail — at least a sentence or two.";
     return next;
   }
 
-  function onSubmit(e: React.FormEvent) {
+  async function onSubmit(e: React.FormEvent) {
     e.preventDefault();
     const next = validate();
     setErrors(next);
     if (Object.keys(next).length > 0) return;
 
-    const subject = encodeURIComponent(`Project Home Calc — message from ${name.trim()}`);
-    const body = encodeURIComponent(`${message.trim()}\n\n— ${name.trim()}\n${email.trim()}`);
-    window.location.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`;
-    setStatus("sent");
+    setStatus("sending");
+    setErrorMessage("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: name.trim(),
+          email: email.trim(),
+          message: message.trim(),
+          website,
+        }),
+      });
+
+      const data = (await res.json().catch(() => ({}))) as { error?: string };
+
+      if (!res.ok) {
+        setStatus("error");
+        setErrorMessage(data.error || "Something went wrong. Try again or email us directly.");
+        return;
+      }
+
+      setStatus("sent");
+    } catch {
+      setStatus("error");
+      setErrorMessage("Network error. Check your connection or email us directly.");
+    }
   }
 
   if (status === "sent") {
     return (
-      <Alert tone="success" title="Your email app should be open">
-        If nothing opened, write to us directly at{" "}
+      <Alert tone="success" title="Message sent">
+        Thanks — your message was emailed to us. We usually reply within a few business days. You can also
+        reach us at{" "}
         <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-accent-strong underline">
           {CONTACT_EMAIL}
         </a>
-        . We read every message about calculator errors, missing tools, and privacy requests.
+        .
       </Alert>
     );
   }
 
   return (
     <form onSubmit={onSubmit} noValidate className="flex flex-col gap-5">
+      {status === "error" && errorMessage ? (
+        <Alert tone="danger" title="Could not send">
+          {errorMessage}{" "}
+          <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-accent-strong underline">
+            Email {CONTACT_EMAIL}
+          </a>
+        </Alert>
+      ) : null}
+
+      <div className="sr-only" aria-hidden="true">
+        <label htmlFor="website">Website</label>
+        <input
+          id="website"
+          name="website"
+          type="text"
+          tabIndex={-1}
+          autoComplete="off"
+          value={website}
+          onChange={(e) => setWebsite(e.target.value)}
+        />
+      </div>
+
       <div>
         <label htmlFor="name" className="mb-1.5 block text-[13px] font-semibold uppercase tracking-[0.04em] text-text-3">
           Name
@@ -56,10 +107,11 @@ export function ContactForm() {
           type="text"
           autoComplete="name"
           value={name}
+          disabled={status === "sending"}
           aria-invalid={Boolean(errors.name)}
           aria-describedby={errors.name ? "name-error" : undefined}
           onChange={(e) => setName(e.target.value)}
-          className={`w-full rounded-[var(--radius-sm)] border bg-surface px-3 py-2.5 text-[16px] text-text outline-none focus:border-accent ${
+          className={`w-full rounded-[var(--radius-sm)] border bg-surface px-3 py-2.5 text-[16px] text-text outline-none focus:border-accent disabled:opacity-60 ${
             errors.name ? "border-danger" : "border-border-strong"
           }`}
         />
@@ -79,10 +131,11 @@ export function ContactForm() {
           type="email"
           autoComplete="email"
           value={email}
+          disabled={status === "sending"}
           aria-invalid={Boolean(errors.email)}
           aria-describedby={errors.email ? "email-error" : undefined}
           onChange={(e) => setEmail(e.target.value)}
-          className={`w-full rounded-[var(--radius-sm)] border bg-surface px-3 py-2.5 text-[16px] text-text outline-none focus:border-accent ${
+          className={`w-full rounded-[var(--radius-sm)] border bg-surface px-3 py-2.5 text-[16px] text-text outline-none focus:border-accent disabled:opacity-60 ${
             errors.email ? "border-danger" : "border-border-strong"
           }`}
         />
@@ -101,10 +154,11 @@ export function ContactForm() {
           name="message"
           rows={5}
           value={message}
+          disabled={status === "sending"}
           aria-invalid={Boolean(errors.message)}
           aria-describedby={errors.message ? "message-error" : undefined}
           onChange={(e) => setMessage(e.target.value)}
-          className={`w-full rounded-[var(--radius-sm)] border bg-surface px-3 py-2.5 text-[16px] text-text outline-none focus:border-accent ${
+          className={`w-full rounded-[var(--radius-sm)] border bg-surface px-3 py-2.5 text-[16px] text-text outline-none focus:border-accent disabled:opacity-60 ${
             errors.message ? "border-danger" : "border-border-strong"
           }`}
         />
@@ -114,15 +168,15 @@ export function ContactForm() {
           </p>
         )}
       </div>
-      <Button type="submit" className="self-start">
-        Open email to send
+      <Button type="submit" className="self-start" disabled={status === "sending"}>
+        {status === "sending" ? "Sending…" : "Send message"}
       </Button>
       <p className="text-[13px] text-text-3">
-        Prefer email directly? Write to{" "}
+        Messages are emailed to{" "}
         <a href={`mailto:${CONTACT_EMAIL}`} className="font-semibold text-accent-strong underline">
           {CONTACT_EMAIL}
         </a>
-        . The button opens your email app with this message filled in. We do not collect form contents on our servers.
+        . We use your email only to reply.
       </p>
     </form>
   );
