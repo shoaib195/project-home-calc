@@ -6,6 +6,7 @@ import { ConsentDefaultsScript } from "@/components/site/ConsentDefaultsScript";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const publicSans = Public_Sans({
   variable: "--font-public-sans",
@@ -74,6 +75,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         </a>
         {children}
       </body>
+
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID!} />
     </html>
   );
 }
