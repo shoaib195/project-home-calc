@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { CookieConsent } from "@/components/site/CookieConsent";
-import { AdSenseLoader } from "@/components/site/AdSenseLoader";
 import { getCatalog, liveCategoriesFrom } from "@/lib/cms/catalog";
 
 export const revalidate = 60;
@@ -23,7 +22,6 @@ export default async function SiteLayout({ children }: { children: React.ReactNo
       </main>
       <SiteFooter tools={catalog.tools} categories={liveCategories} />
       <CookieConsent />
-      <AdSenseLoader />
     </>
   );
 }

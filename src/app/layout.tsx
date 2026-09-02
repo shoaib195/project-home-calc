@@ -3,6 +3,7 @@ import { Public_Sans, Inter, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeScript } from "@/components/site/ThemeScript";
 import { ConsentDefaultsScript } from "@/components/site/ConsentDefaultsScript";
+import { AdSenseHeadScript } from "@/components/site/AdSenseHeadScript";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationJsonLd, websiteJsonLd } from "@/lib/seo";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
@@ -64,6 +65,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <ConsentDefaultsScript />
         <ThemeScript />
+        <AdSenseHeadScript />
       </head>
       <body className="min-h-full flex flex-col bg-bg text-text">
         <JsonLd data={[organizationJsonLd(), websiteJsonLd()]} />
