@@ -1,28 +1,14 @@
-"use client";
-
 import Script from "next/script";
-import { useEffect, useState } from "react";
-import { adsenseClientId, readStoredConsent } from "@/lib/ads";
+import { adsenseClientId } from "@/lib/ads";
 
-/** Loads the AdSense library only when publisher ID is set and the visitor accepted optional cookies. */
+/**
+ * Google AdSense library — matches the official snippet in AdSense → Get code.
+ * Loads when NEXT_PUBLIC_ADSENSE_CLIENT is set so Google can verify the site.
+ * Consent Mode v2 (ConsentDefaultsScript) keeps ad_storage denied until the visitor accepts optional cookies.
+ */
 export function AdSenseLoader() {
   const client = adsenseClientId();
-  const [allowed, setAllowed] = useState(false);
-
-  useEffect(() => {
-    function refresh() {
-      setAllowed(readStoredConsent() === "accepted");
-    }
-    refresh();
-    function onConsent(e: Event) {
-      const detail = (e as CustomEvent).detail;
-      setAllowed(detail === "accepted");
-    }
-    window.addEventListener("phc-consent", onConsent);
-    return () => window.removeEventListener("phc-consent", onConsent);
-  }, []);
-
-  if (!client || !allowed) return null;
+  if (!client) return null;
 
   return (
     <Script

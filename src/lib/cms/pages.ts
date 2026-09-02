@@ -427,7 +427,7 @@ We may update these terms. Continued use after a change means you accept the upd
 
 On first visit we show a cookie banner so you can accept optional advertising cookies or continue with essential storage only. Your choice is stored in your browser under the localStorage key phc-cookie-consent. Clear site data to see the banner again.
 
-We implement Google Consent Mode defaults with advertising storage denied until you choose **Accept**. **Essential only** keeps ad_storage, ad_user_data, and ad_personalization denied. The AdSense script loads only after Accept when a publisher ID is configured.
+We implement Google Consent Mode defaults with advertising storage denied until you choose **Accept**. **Essential only** keeps ad_storage, ad_user_data, and ad_personalization denied. When a publisher ID is configured, the AdSense library loads on public pages; labelled ad units and personalized ads stay off until you accept optional cookies.
 
 ## Advertising cookies (when enabled)
 
