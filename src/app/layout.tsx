@@ -27,6 +27,13 @@ const plexMono = IBM_Plex_Mono({
   weight: ["500", "600", "700"],
 });
 
+const OG_IMAGE = {
+  url: "/og-image.png",
+  width: 1200,
+  height: 630,
+  alt: `${SITE_NAME} — free material and cost calculators`,
+};
+
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
@@ -36,6 +43,14 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
   authors: [{ name: SITE_NAME }],
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48" },
+      { url: "/favicon.png", sizes: "48x48", type: "image/png" },
+      { url: "/icon-32.png", sizes: "32x32", type: "image/png" },
+    ],
+    apple: [{ url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }],
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -43,11 +58,14 @@ export const metadata: Metadata = {
     title: `${SITE_NAME} — Material & cost calculators for home projects`,
     description: SITE_DESCRIPTION,
     url: SITE_URL,
+    images: [OG_IMAGE],
   },
   twitter: {
     card: "summary_large_image",
+    site: "@projecthomecalc",
     title: `${SITE_NAME} — Material & cost calculators for home projects`,
     description: SITE_DESCRIPTION,
+    images: [OG_IMAGE.url],
   },
   alternates: { canonical: SITE_URL },
   verification: {

@@ -21,6 +21,13 @@ export function pageMetadata({
     ?.split(",")
     .map((s) => s.trim())
     .filter(Boolean);
+  const ogImage = {
+    url: absoluteUrl("/og-image.png"),
+    width: 1200,
+    height: 630,
+    alt: `${SITE_NAME} — free material and cost calculators`,
+  };
+
   return {
     title,
     description,
@@ -34,11 +41,14 @@ export function pageMetadata({
       siteName: SITE_NAME,
       locale: "en_US",
       type: "website",
+      images: [ogImage],
     },
     twitter: {
       card: "summary_large_image",
+      site: "@projecthomecalc",
       title: `${title} | ${SITE_NAME}`,
       description,
+      images: [ogImage.url],
     },
   };
 }
@@ -49,6 +59,7 @@ export function organizationJsonLd() {
     "@type": "Organization",
     name: SITE_NAME,
     url: SITE_URL,
+    logo: absoluteUrl("/brand/logo-icon-512.png"),
     description: SITE_DESCRIPTION,
     email: CONTACT_EMAIL,
     sameAs: socialProfileUrls(),
