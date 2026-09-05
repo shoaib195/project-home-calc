@@ -36,8 +36,8 @@ const STATIC: PageRow[] = [
     body: "",
     meta_title: "Guides",
     meta_description:
-      "How to measure waste, slab thickness, paint quantity, and contractor quote lines — notes that go with the calculators.",
-    meta_keywords: "home improvement guides, material estimating",
+      "Practical home project guides: concrete, gravel, paint, flooring, roofing, fencing, and budgeting — with worked numbers next to the calculators.",
+    meta_keywords: "home improvement guides, material estimating, concrete patio cost, paint calculator guide",
     robots_index: true,
     status: "published",
   }),
@@ -45,15 +45,21 @@ const STATIC: PageRow[] = [
     slug: "about",
     path: "/about",
     title: "About",
-    body: `${SITE_NAME} is a free set of material and planning-cost calculators for homeowners and small projects in the US and UK. No account. Pick a tool, enter dimensions, read the quantity — and the formula sits on the same page.
+    body: `${SITE_NAME} is a free set of material and planning-cost calculators for homeowners and small projects in the US and UK. No account. Pick a tool, enter dimensions, read the quantity — and the formula sits on the same page. We also publish longer [guides](/guides) that walk through measuring, waste, thickness, and quote comparison so the numbers have context.
 
 ## Who runs it
 
 We write and maintain the calculators and guides ourselves. If a number looks wrong, email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with the tool URL and the inputs you used. We don’t invent fake reviews, fake credentials, or fake user counts.
 
+## What you will find here
+
+- Calculators for concrete, gravel, sand, paint, tile, flooring, roofing, decking, fencing, and related cost ranges
+- Guides with worked examples (patio cost, bag counts, waste factors, contractor quote lines)
+- Trust pages: [how we calculate](/methodology), [data sources](/data-sources), [assumptions](/calculation-assumptions), and [reference charts](/reference-charts)
+
 ## How a result is produced
 
-Each tool page shows the formula, a worked example, and the assumptions behind any cost range. Cost defaults are typical national prices you can override. Treat them as planning bands, not a supplier quote.
+Each tool page shows the formula, a worked example, and the assumptions behind any cost range. Cost defaults are typical national prices you can override. Treat them as planning bands, not a supplier quote. Unit toggles support US and UK measurements; switching converts what you typed.
 
 ## What we don’t claim
 
