@@ -4,7 +4,8 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import { CookieConsent } from "@/components/site/CookieConsent";
 import { getCatalog, liveCategoriesFrom } from "@/lib/cms/catalog";
 
-export const revalidate = 60;
+/** Longer ISR window cuts Vercel ISR writes; content still refreshes on deploy / admin revalidatePath. */
+export const revalidate = 86400;
 
 export const metadata: Metadata = {
   robots: { index: true, follow: true },

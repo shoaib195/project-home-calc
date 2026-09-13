@@ -174,7 +174,7 @@ const coreTools: Tool[] = [
       },
     ],
     relatedTools: ["gravel-calculator", "paver-calculator"],
-    relatedGuides: ["how-much-mulch-do-you-need"],
+    relatedGuides: ["how-much-mulch-do-you-need", "how-much-topsoil-do-you-need"],
     updated: "2026-06-15",
   },
   {
@@ -228,7 +228,7 @@ const coreTools: Tool[] = [
       },
     ],
     relatedTools: ["paint-cost-calculator", "flooring-calculator", "drywall-calculator"],
-    relatedGuides: ["how-much-paint-for-a-room", "interior-painting-cost-breakdown"],
+    relatedGuides: ["how-much-paint-for-a-room", "how-many-wallpaper-rolls-for-a-room", "interior-painting-cost-breakdown"],
     updated: "2026-06-20",
   },
   {

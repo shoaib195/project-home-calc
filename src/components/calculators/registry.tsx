@@ -18,6 +18,8 @@ import { ConcreteCostCalculator } from "@/components/calculators/ConcreteCostCal
 import { InsulationCalculator } from "@/components/calculators/InsulationCalculator";
 import { FenceCalculator } from "@/components/calculators/FenceCalculator";
 import { PaverCalculator } from "@/components/calculators/PaverCalculator";
+import { TopsoilCalculator } from "@/components/calculators/TopsoilCalculator";
+import { WallpaperCalculator } from "@/components/calculators/WallpaperCalculator";
 
 export const calculatorRegistry: Record<string, ComponentType> = {
   "concrete-calculator": ConcreteCalculator,
@@ -39,4 +41,6 @@ export const calculatorRegistry: Record<string, ComponentType> = {
   "insulation-calculator": InsulationCalculator,
   "fence-calculator": FenceCalculator,
   "paver-calculator": PaverCalculator,
+  "topsoil-calculator": TopsoilCalculator,
+  "wallpaper-calculator": WallpaperCalculator,
 };

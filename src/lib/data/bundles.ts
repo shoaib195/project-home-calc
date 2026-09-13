@@ -21,8 +21,8 @@ export const bundles: ProjectBundle[] = [
   {
     slug: "paint-a-room",
     title: "Paint a room",
-    description: "Paint quantity and a materials-plus-labour cost check.",
-    toolSlugs: ["paint-calculator", "paint-cost-calculator", "drywall-calculator"],
+    description: "Paint quantity, wallpaper rolls, or a materials-plus-labour cost check.",
+    toolSlugs: ["paint-calculator", "wallpaper-calculator", "paint-cost-calculator", "drywall-calculator"],
   },
   {
     slug: "install-new-flooring",
@@ -33,8 +33,8 @@ export const bundles: ProjectBundle[] = [
   {
     slug: "refresh-a-garden-bed",
     title: "Refresh a garden bed",
-    description: "Mulch depth and coverage for beds and borders.",
-    toolSlugs: ["mulch-calculator", "paver-calculator"],
+    description: "Topsoil depth and mulch coverage for beds and borders.",
+    toolSlugs: ["topsoil-calculator", "mulch-calculator", "paver-calculator"],
   },
   {
     slug: "re-roof-the-house",

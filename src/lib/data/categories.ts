@@ -10,7 +10,7 @@ export const categories: Category[] = [
   {
     slug: "landscaping",
     name: "Landscaping",
-    description: "Mulch, pavers, and yard material volumes from bed area and depth.",
+    description: "Mulch, topsoil, pavers, and yard material volumes from bed area and depth.",
   },
   {
     slug: "flooring",
@@ -20,7 +20,7 @@ export const categories: Category[] = [
   {
     slug: "painting",
     name: "Painting",
-    description: "Wall paint from perimeter, height, coats, and door/window deductions.",
+    description: "Wall paint and wallpaper roll counts from room size, openings, and coats or pattern waste.",
   },
   {
     slug: "roofing",

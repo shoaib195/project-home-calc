@@ -1625,4 +1625,215 @@ export const extraGuides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "how-much-topsoil-do-you-need",
+    title: "How Much Topsoil Do You Need?",
+    description:
+      "Turn bed or lawn measurements into cubic yards or metres — depths for new beds vs topdressing, bags vs bulk, and what topsoil calculators leave out.",
+    updated: "2026-09-12",
+    relatedTools: ["topsoil-calculator", "mulch-calculator", "gravel-calculator", "sand-calculator"],
+    metaTitle: "How Much Topsoil Do You Need? Beds, Lawns & Cubic Yards",
+    metaDescription:
+      "Measure garden beds or lawn topdressing, pick a depth, and convert to cubic yards or tonnes. Includes waste, bulk vs bags, and fill dirt vs topsoil.",
+    keywords:
+      "how much topsoil do I need, topsoil calculator guide, cubic yards of topsoil, topsoil for garden bed, lawn topdressing depth",
+    intro:
+      "People short-order topsoil for the same reason they short-order gravel: they measure the footprint and forget depth, settlement, or that the truck sells whole yards. Measure the area, pick a depth that matches the job (new bed vs light lawn dressing), then convert to volume before you phone the landscape yard.",
+    sections: [
+      {
+        heading: "Measure the planting area, not the whole yard",
+        body: [
+          "Sketch each bed as a rectangle or use length × average width on a curve. Skip patio slabs and paths you will not cover. If beds wrap a house, measure along the foundation and out to the bed edge in a few places, then average the depth of the bed strip.",
+          "Lawn topdressing is different: you are covering most of the grass area, so measure the lawn the way you would measure a room — length × width, or split L-shapes into rectangles and add them.",
+          "Odd shapes are fine. Split once, run the Topsoil Calculator twice, and add the volumes. Guessing “a couple of yards” is how you finish a corner with dusty subsoil showing through.",
+        ],
+      },
+      {
+        heading: "Depth depends on the job",
+        body: [
+          "New planting beds commonly get about 4–6 inches (10–15 cm) of decent topsoil over loosened subgrade. Going from 4 to 6 inches is a 50% jump in volume for the same footprint — that shows up on the ticket fast.",
+          "Lawn topdressing is thinner. A half-inch to one inch of screened mix is typical for evening low spots and feeding the root zone without burying the grass. Dumping four inches of topsoil on an existing lawn is a different project (and usually a bad one).",
+          "Raised beds are taller by design. If the box is 12 inches deep and you are filling it, calculate that full depth — or blend topsoil with compost per your planting plan. The calculator does not invent your mix ratio; it only does area × depth.",
+        ],
+      },
+      {
+        heading: "Volume first, weight second",
+        body: [
+          "Suppliers talk in cubic yards or cubic metres. Your tape measure gives feet or metres and inches or centimetres. Convert depth to the same unit as length and width, multiply, then convert: cubic feet ÷ 27 = cubic yards.",
+          "Weight is a booking hint for the truck, not a promise. Moist clay weighs more than dry sandy loam. The Topsoil Calculator shows an approximate tonnage using a mid-range density so you can ask for “about X yards / Y tons” without sounding lost — then order against the yard’s product chart.",
+          "Worked check: a 20 × 10 ft bed at 4 inches is about 2.5 yd³ before waste. Add 10% and you are in the high-2s / low-3s. That is already a small bulk load for many yards, not a wagon of bags.",
+        ],
+      },
+      {
+        heading: "Waste and settlement",
+        body: [
+          "Soil settles. Grades are never as flat as the sketch. A 5–10% buffer is normal for a simple rectangle. Soft spots you dig out and refill need more. Skip the buffer only if you enjoy a mid-project run to the yard.",
+          "If you are blending compost on site, decide whether the calculator depth is finished topsoil only or the whole blend. Mixing 30% compost by volume changes how many yards of each material you buy — do that math on paper, not in your head at the till.",
+        ],
+      },
+      {
+        heading: "Bags vs bulk",
+        body: [
+          "Bagged “garden soil” is fine for a single shrub hole or a tiny border refresh. Once you need more than roughly a cubic yard, bulk screened topsoil almost always wins on price if a truck can tip near the bed.",
+          "Check access. A tipper that cannot reach the back garden means wheelbarrow labour that can cost more than the soil. Ask about minimum load fees — a “half yard” on the phone sometimes still bills like a full small load.",
+        ],
+      },
+      {
+        heading: "Topsoil is not fill dirt",
+        body: [
+          "Fill dirt raises grade. It is cheaper and usually lifeless for planting. Topsoil has organic matter plants actually use. If someone quotes a rock-bottom “soil” price, ask which one they mean.",
+          "Screened topsoil costs more and spreads cleaner. Unscreened loads may include rocks and clods you will pick out by hand. For lawn topdressing, screened material saves grief.",
+        ],
+      },
+      {
+        heading: "What to do after the number",
+        body: [
+          "Run the Topsoil Calculator with your real length, width, and depth, then call two local yards with the volume in hand. Ask product name, screened or not, and whether the price is per yard or per tonne.",
+          "Plan mulch separately. Bark on top of a new bed is a different calculator and a different delivery. Use the Mulch Calculator once the soil is in and graded.",
+          "If you are building a patio base under the soil work, gravel and sand layers are not topsoil — keep those takeoffs on the Gravel and Sand calculators so the tickets stay honest.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How much topsoil for a 10×10 area?",
+        answer:
+          "At 4 inches deep, about 1.2 yd³ before waste (10 × 10 × 0.33 ft ÷ 27). With 10% waste, plan on roughly 1.4 yd³. Change the depth and the number moves with it.",
+      },
+      {
+        question: "Can I put topsoil over weeds and call it done?",
+        answer:
+          "You can, but weeds come back through thin layers. Clear or smother first, or you will be fighting the same plants through your expensive soil.",
+      },
+      {
+        question: "Is bagged garden soil the same as bulk topsoil?",
+        answer:
+          "Sometimes it is a blend with compost and fertilizer. Read the bag. Coverage charts on bags assume a stated depth — divide your cubic volume by bag volume and round up.",
+      },
+      {
+        question: "How often do I need to add topsoil?",
+        answer:
+          "Beds get topped up when grade sinks or organic matter burns off — not on a fixed calendar. Lawns get light topdressing as part of overseeding or leveling, not a full new bed depth every year.",
+      },
+      {
+        question: "Does the calculator work in the UK?",
+        answer:
+          "Yes. Switch to metres and centimetres. Order in cubic metres or tonnes as your merchant sells it.",
+      },
+      {
+        question: "Should I test the soil?",
+        answer:
+          "For vegetable gardens and problem lawns, a simple pH/nutrient test beats guessing amendments. Quantity calculators do not replace soil chemistry.",
+      },
+    ],
+  },
+  {
+    slug: "how-many-wallpaper-rolls-for-a-room",
+    title: "How Many Wallpaper Rolls for a Room?",
+    description:
+      "Measure walls the way a paperhanger does — openings, pattern match, roll coverage — and stop guessing from floor area alone.",
+    updated: "2026-09-12",
+    relatedTools: ["wallpaper-calculator", "paint-calculator", "paint-cost-calculator", "drywall-calculator"],
+    metaTitle: "How Many Wallpaper Rolls for a Room? Pattern Waste Guide",
+    metaDescription:
+      "Calculate wallpaper rolls from wall area, doors, windows, and pattern repeat. Covers usable roll coverage, feature walls, and US vs UK rolls.",
+    keywords:
+      "how many wallpaper rolls do I need, wallpaper calculator guide, wallpaper pattern waste, wallpaper roll coverage, estimate wallpaper for a room",
+    intro:
+      "Wallpaper shortfalls happen mid-wall, when the shop is closed and your batch number is already discontinued. Floor area will not save you. Measure the walls, subtract openings, add pattern waste, then divide by the usable coverage on the roll you are actually buying.",
+    sections: [
+      {
+        heading: "Walls, not floor square footage",
+        body: [
+          "Wallpaper covers vertical surface. Perimeter × ceiling height is the starting gross area for a full room. A 14 × 12 ft room with 8 ft ceilings is 52 ft of perimeter × 8 = 416 ft² before you remove doors and windows — not 14 × 12 floor area.",
+          "Feature walls are simpler: one length × height. Do not run the full-room perimeter math and then “sort of” use a third of it. Measure the wall you will paper.",
+          "Vaulted or stair walls need a sketch. Split into rectangles. The Wallpaper Calculator is built for a rectangular room with a level ceiling line; weird geometry wants a trade takeoff or careful hand math.",
+        ],
+      },
+      {
+        heading: "Doors and windows still count — mostly",
+        body: [
+          "Subtract opening areas so you do not buy paper for glass. Standard planning deductions (about 21 ft² per door and 15 ft² per window in US rules of thumb) are close enough for shopping lists. Huge patio doors deserve a real tape measure.",
+          "Some hangers barely deduct small windows because offcuts fill around them. That is a judgement call. If you are ordering an expensive paper with a big repeat, deduct properly and still keep an extra roll — leftovers beat a mismatch.",
+        ],
+      },
+      {
+        heading: "Pattern match is where DIY math dies",
+        body: [
+          "Random-match or plain textures waste less. Straight-across and drop matches force you to throw away paper so the motif lines up. A large floral repeat can eat 15–20% before you have finished the first wall.",
+          "Read the repeat on the label in inches or centimetres. Bigger repeat → higher waste percent in the calculator. If the sample book is vague, assume 15% and round up a roll rather than praying.",
+          "Never mix dye lots on one wall if you can help it. Order enough in one go. A “I’ll buy two more next week” plan is how rooms end up with a visible stripe under afternoon light.",
+        ],
+      },
+      {
+        heading: "Usable coverage is not the roll face",
+        body: [
+          "A US single roll is often marketed around 27 usable square feet after trim; double rolls are two singles glued in marketing. UK metric rolls are commonly about 10 m long by 52 cm wide — raw area near 5.2 m², with less usable once you match and trim.",
+          "Enter the coverage from your product, not a blog average. The Wallpaper Calculator defaults are planning figures. Labels win.",
+          "Worked check: 365 ft² net walls, 15% waste → about 420 ft². At 27 ft² per roll that is 16 rolls after rounding up. Drop the waste to 10% and you might land on 15 — that one roll difference is why pattern assumptions matter.",
+        ],
+      },
+      {
+        heading: "Paper vs paint for the same room",
+        body: [
+          "If you are comparing finishes, run the Paint Calculator on the same room dimensions. Paint is usually cheaper in materials and more forgiving on DIY mistakes. Wallpaper wins on pattern and wipeable vinyl in hallways — not on “I measured wrong.”",
+          "New drywall should be finished and primed (or sized) per the wallpaper instructions. Hanging over glossy paint or crumbling texture is a prep problem, not a roll-count problem.",
+        ],
+      },
+      {
+        heading: "Order extras on purpose",
+        body: [
+          "Keep one unopened roll after the job when the design might need a patch in five years. Stores rotate prints. Your future self will not find that exact batch.",
+          "Ceilings, closets, and the back of a door are separate decisions. Add them only if you are actually covering them — do not inflate the main room order “just in case” without measuring.",
+        ],
+      },
+      {
+        heading: "Hire vs DIY (honest split)",
+        body: [
+          "Straight walls, random-match paper, and a patient weekend — DIY is realistic. Drop matches on stairwells, external corners that wander out of plumb, or silk papers that show every paste mark — that is where a paperhanger earns the fee.",
+          "If you DIY, buy one extra roll beyond the calculator when the paper is special-order. Returning an unopened roll beats owning a half-finished accent wall with a two-tone seam.",
+        ],
+      },
+      {
+        heading: "Before you checkout",
+        body: [
+          "Run the Wallpaper Calculator with your length, width, height, door and window counts, and a waste percent that matches the pattern. Then confirm roll coverage on the label.",
+          "If two walls meet a busy mural-style panel set, stop using simple roll math and follow the mural’s panel chart. Panels are sold as a set, not as generic coverage.",
+          "Paste, liner, and tools are separate lines. Put roll cost into a planning total with the Cost Estimator if you are building a full room budget next to paint or flooring.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How many rolls for a 10×10 room?",
+        answer:
+          "With 8 ft ceilings, gross walls are about 320 ft² before openings. One door and one window might leave ~280 ft² net; with 15% waste and 27 ft²/roll you are often around 12 rolls. Always recalculate with your height and openings.",
+      },
+      {
+        question: "Do I need the same waste for peel-and-stick?",
+        answer:
+          "Pattern match still matters. Peel-and-stick can be less forgiving on rehangs, so do not cut the waste to zero just because there is no paste.",
+      },
+      {
+        question: "Should I paper over old wallpaper?",
+        answer:
+          "Only if the old layer is sound and the manufacturer allows it. Loose seams telegraph through. Many pros strip to a clean, sealed surface first.",
+      },
+      {
+        question: "What if my rolls are double rolls?",
+        answer:
+          "Count in the unit the store sells, or convert everything to single-roll coverage. Do not mix “16 singles” with a shelf price quoted per double without converting.",
+      },
+      {
+        question: "Can I use this for commercial vinyl mural rolls?",
+        answer:
+          "Only if you know usable coverage per roll. Commercial widths and repeats differ — use the spec sheet.",
+      },
+      {
+        question: "US vs UK?",
+        answer:
+          "Switch units in the calculator and set coverage from the local roll label. Do not apply US 27 ft² assumptions to a European metric roll without checking.",
+      },
+    ],
+  },
 ];

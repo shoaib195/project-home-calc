@@ -14,7 +14,7 @@ const STATIC: PageRow[] = [
     body: "",
     meta_title: "Free Construction & Material Calculators",
     meta_description: SITE_DESCRIPTION,
-    meta_keywords: "home improvement calculator, concrete calculator, gravel calculator, paint calculator, material estimator, sand calculator, tile calculator",
+    meta_keywords: "home improvement calculator, concrete calculator, gravel calculator, paint calculator, wallpaper calculator, topsoil calculator, material estimator, sand calculator, tile calculator",
     robots_index: true,
     status: "published",
   }),

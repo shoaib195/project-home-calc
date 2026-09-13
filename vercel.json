@@ -3,13 +3,5 @@
   "framework": "nextjs",
   "buildCommand": "npm run build",
   "installCommand": "npm install",
-  "regions": ["iad1"],
-  "redirects": [
-    {
-      "source": "/:path((?!ads\\.txt$).*)",
-      "has": [{ "type": "host", "value": "projecthomecalc.com" }],
-      "destination": "https://www.projecthomecalc.com/:path*",
-      "permanent": true
-    }
-  ]
+  "regions": ["iad1"]
 }

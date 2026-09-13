@@ -380,4 +380,132 @@ export const extraTools: Tool[] = [
     relatedGuides: ["patio-base-gravel-before-concrete", "how-much-does-a-concrete-patio-cost"],
     updated: "2026-09-01",
   },
+  {
+    slug: "topsoil-calculator",
+    category: "landscaping",
+    name: "Topsoil Calculator",
+    metaTitle: "Topsoil Calculator – Cubic Yards, Tons & Garden Beds",
+    metaDescription:
+      "Work out how much topsoil you need for a garden bed or lawn. Enter length, width, and depth for cubic yards or metres plus an approximate weight.",
+    keywords:
+      "topsoil calculator, how much topsoil do I need, cubic yards of topsoil, topsoil for garden bed, lawn topdressing calculator",
+    shortDescription: "Cubic yards or metres of topsoil from bed area and depth.",
+    intro:
+      "Topsoil is sold by the cubic yard or tonne, but you measure the job as a rectangle and a depth. Enter the bed or lawn footprint and how thick you want the layer — new beds need more than a light lawn topdress — then read volume, a planning weight, and a rough cost band.",
+    synonyms: ["garden soil", "fill dirt vs topsoil", "lawn topdressing", "raised bed soil", "screened topsoil"],
+    formulaExplanation: [
+      "Volume is length × width × depth in consistent units. Imperial jobs convert cubic feet to cubic yards (÷ 27). Metric jobs stay in cubic metres when depth is in centimetres.",
+      "Weight is only a planning figure. Wet clay topsoil and dry sandy loam do not weigh the same. Use your supplier’s coverage chart when you have a product name.",
+    ],
+    methodology:
+      "Volume = L × W × D. yd³ = ft³ ÷ 27. Planning weight ≈ yd³ × 1.1 tons (US) or m³ × 1.3 tonnes (UK). Apply waste % for settlement.",
+    workedExample: {
+      title: "A 20 ft × 10 ft bed, 4 in deep, 10% waste",
+      steps: [
+        "Depth in feet: 4 ÷ 12 = 0.333 ft",
+        "Volume = 20 × 10 × 0.333 = 66.7 ft³",
+        "Cubic yards = 66.7 ÷ 27 = 2.47 yd³",
+        "With 10% waste ≈ 2.72 yd³ (~3.0 tons at 1.1 tons/yd³)",
+      ],
+    },
+    faq: [
+      {
+        question: "How deep should topsoil be for a new bed?",
+        answer:
+          "Many planting beds are planned around 4–6 inches (10–15 cm) of quality topsoil over improved subgrade. Vegetables and deep-rooted shrubs may want more. Lawn topdressing is usually only ½–1 inch.",
+      },
+      {
+        question: "Is fill dirt the same as topsoil?",
+        answer:
+          "No. Fill dirt is cheaper subsoil for raising grade. Topsoil has organic matter for planting. Do not plant into raw fill and expect the same result.",
+      },
+      {
+        question: "Why add a waste percentage?",
+        answer:
+          "Soil settles, grades are uneven, and truck loads are sold in whole yards. 5–10% keeps you from finishing a bed half an inch short.",
+      },
+      {
+        question: "Bags or bulk delivery?",
+        answer:
+          "Bagged topsoil works for small patches. Once you pass roughly a cubic yard, bulk delivery is usually cheaper if you have a place to tip.",
+      },
+      {
+        question: "Does this include compost or mulch?",
+        answer:
+          "No. Compost mixes and mulch cover are separate orders. Use the Mulch Calculator for bark depth on top of the bed.",
+      },
+      {
+        question: "US and UK units?",
+        answer:
+          "Toggle feet/inches or metres/centimetres. Cost currency follows the unit system.",
+      },
+    ],
+    relatedTools: ["mulch-calculator", "gravel-calculator", "sand-calculator"],
+    relatedGuides: ["how-much-topsoil-do-you-need", "how-much-mulch-do-you-need"],
+    updated: "2026-09-12",
+  },
+  {
+    slug: "wallpaper-calculator",
+    category: "painting",
+    name: "Wallpaper Calculator",
+    metaTitle: "Wallpaper Calculator – How Many Rolls Do I Need?",
+    metaDescription:
+      "Calculate wallpaper rolls for a room from wall area, doors, windows, and pattern waste. US and UK roll coverage with a planning cost range.",
+    keywords:
+      "wallpaper calculator, how many rolls of wallpaper, wallpaper roll calculator, wallpaper estimator, wallpaper coverage",
+    shortDescription: "Wallpaper roll count from room size, openings, and pattern match waste.",
+    intro:
+      "Wallpaper is sold by the roll, but you measure walls in feet or metres. Enter the room size, subtract doors and windows, add pattern-match waste, and read how many rolls to order — then check the coverage on your actual product label.",
+    synonyms: ["wallpaper rolls", "wall covering", "paperhanging", "vinyl wallpaper", "pattern repeat"],
+    formulaExplanation: [
+      "Net wall area is perimeter × height minus door and window openings. Pattern repeats and trimming waste mean you never order the exact area divided by roll coverage.",
+      "Default usable coverage assumes a typical single roll after trim. Large repeats and drop matches need a higher waste percent — or the coverage number printed on your roll.",
+    ],
+    methodology:
+      "Net area = (2 × (L + W) × H) − openings. Adjusted = net × (1 + waste %). Rolls = ceil(adjusted ÷ coverage per roll).",
+    workedExample: {
+      title: "A 14 × 12 ft room, 8 ft ceilings, 1 door, 2 windows, 15% waste",
+      steps: [
+        "Perimeter = 2 × (14 + 12) = 52 ft",
+        "Gross walls = 52 × 8 = 416 ft²",
+        "Openings ≈ 21 + 15 + 15 = 51 ft² → net ≈ 365 ft²",
+        "With 15% waste ≈ 420 ft² ÷ 27 ft²/roll ≈ 16 rolls",
+      ],
+    },
+    faq: [
+      {
+        question: "How much pattern waste should I use?",
+        answer:
+          "Plain or random-match papers often work with about 10%. Straight-across or drop matches with a large repeat commonly need 15–20%. When in doubt, round up a roll.",
+      },
+      {
+        question: "Single roll vs double roll?",
+        answer:
+          "US stores often sell double rolls but quote coverage per single roll on the label. Enter the usable coverage for the unit you are buying, or convert doubles to singles consistently.",
+      },
+      {
+        question: "Should I wallpaper the ceiling?",
+        answer:
+          "This tool is for vertical walls. Ceiling area is length × width — run a separate takeoff if you are papering overhead.",
+      },
+      {
+        question: "Textured or feature wall only?",
+        answer:
+          "Measure only the walls you will cover. A single feature wall is one length × height, not the full room perimeter.",
+      },
+      {
+        question: "Paste and liner included?",
+        answer:
+          "No. Paste, liner paper, and sizing are separate. Budget them from the product instructions once you know roll count.",
+      },
+      {
+        question: "UK metric rolls?",
+        answer:
+          "Switch to metric and set coverage from the roll label (often around 5 m² usable before a heavy pattern match). Do not assume US single-roll coverage.",
+      },
+    ],
+    relatedTools: ["paint-calculator", "paint-cost-calculator", "drywall-calculator"],
+    relatedGuides: ["how-many-wallpaper-rolls-for-a-room", "how-much-paint-for-a-room"],
+    updated: "2026-09-12",
+  },
 ];
