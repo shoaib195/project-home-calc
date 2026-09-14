@@ -62,7 +62,7 @@ const coreTools: Tool[] = [
       },
     ],
     relatedTools: ["gravel-calculator", "concrete-bag-calculator", "concrete-cost-calculator", "sand-calculator"],
-    relatedGuides: ["how-much-does-a-concrete-patio-cost", "concrete-slab-thickness-what-matters"],
+    relatedGuides: ["how-much-does-a-concrete-patio-cost", "concrete-slab-thickness-what-matters", "ready-mix-vs-bagged-concrete"],
     updated: "2026-07-01",
   },
   {
@@ -228,7 +228,7 @@ const coreTools: Tool[] = [
       },
     ],
     relatedTools: ["paint-cost-calculator", "flooring-calculator", "drywall-calculator"],
-    relatedGuides: ["how-much-paint-for-a-room", "how-many-wallpaper-rolls-for-a-room", "interior-painting-cost-breakdown"],
+    relatedGuides: ["how-much-paint-for-a-room", "how-many-wallpaper-rolls-for-a-room", "how-to-measure-a-room-for-materials", "interior-painting-cost-breakdown"],
     updated: "2026-06-20",
   },
   {
@@ -280,7 +280,7 @@ const coreTools: Tool[] = [
       },
     ],
     relatedTools: ["tile-calculator", "paint-calculator"],
-    relatedGuides: ["how-to-estimate-flooring-with-waste", "waste-factors-explained"],
+    relatedGuides: ["how-to-estimate-flooring-with-waste", "waste-factors-explained", "how-to-measure-a-room-for-materials"],
     updated: "2026-06-10",
   },
   {

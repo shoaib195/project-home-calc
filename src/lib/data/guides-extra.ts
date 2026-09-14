@@ -1836,4 +1836,238 @@ export const extraGuides: Guide[] = [
       },
     ],
   },
+  {
+    slug: "ready-mix-vs-bagged-concrete",
+    title: "Ready-Mix vs Bagged Concrete: Which Should You Order?",
+    description:
+      "An honest break-even around one cubic yard — labour time, short-load fees, colour consistency, and when bags beat a truck for posts and small pads.",
+    updated: "2026-09-14",
+    relatedTools: [
+      "concrete-calculator",
+      "concrete-bag-calculator",
+      "concrete-cost-calculator",
+      "gravel-calculator",
+    ],
+    metaTitle: "Ready-Mix vs Bagged Concrete | When to Order a Truck",
+    metaDescription:
+      "Compare ready-mix truck vs bagged concrete for DIY and small jobs. Break-even near 1 yd³, short-load fees, mixing time, colour match, posts vs slabs.",
+    keywords:
+      "ready mix vs bags, bagged concrete vs truck, when to order ready mix, how many bags before ready mix",
+    intro:
+      "Most people ask the wrong first question. It is not “which is cheaper per bag or per yard?” It is “how much concrete do I need, and can I place it before it sets?” Once you know volume, ready-mix vs bags is a labour and logistics call. Use the Concrete Calculator for the pour size, then decide how that volume gets to the forms.",
+    sections: [
+      {
+        heading: "Get the volume first — then argue about trucks",
+        body: [
+          "Length × width × thickness in consistent units gives cubic feet or cubic metres. Divide cubic feet by 27 for cubic yards. A 10 × 10 ft slab at 4 inches is about 3.1 yd³ before waste. A single fence-post hole is often 0.05–0.1 yd³. Those two jobs do not belong on the same order ticket.",
+          "Run the numbers in the Concrete Calculator before you phone a plant or fill a trolley. Add a small waste allowance for uneven subgrade and spillage — often 5–10% on a simple pad, more if the dig is rough. Guessing “a couple of bags” on a patio is how weekends turn into emergency second trips.",
+          "If you also need a gravel sub-base, keep that takeoff on the Gravel Calculator. Sub-base volume is not concrete volume.",
+        ],
+      },
+      {
+        heading: "The honest break-even sits near one cubic yard",
+        body: [
+          "As a planning rule of thumb, bagged concrete starts to lose the argument somewhere around one cubic yard — roughly 40–45 of the common 80 lb bags, depending on mix and yield. Below that, bags often win on flexibility. Above that, a truck usually wins on labour even if the plant’s per-yard price looks steep.",
+          "Check yield on the bag, not a memory of “two square feet per bag.” Enter bag size and project volume in the Concrete Bag Calculator so the bag count matches the slab or footing you measured. Rounding up to whole bags is normal; rounding down is how you run dry with wet forms waiting.",
+          "One yard is not a hard law. With helpers, a mixer, and a short carry, you might push past a yard in bags. Alone on a hot day with a long barrow run, half a yard of bags can already feel like a bad decision.",
+        ],
+      },
+      {
+        heading: "Labour time beats sticker price more often than people admit",
+        body: [
+          "Each bag means cut, dump, mix, place, and rinse tools. Even with a powered mixer, a yard of bags is a long morning. Ready-mix arrives as a continuous stream if access is good — chute or pump — and the clock starts when the drum is spinning, not when you open the first bag.",
+          "Price the hour, not only the material. If four people spend half a day mixing bags for a slab you could have placed in an hour from a truck, you did not save money — you spent a Saturday. The Concrete Cost Calculator helps you compare material lines; add labour and hire (mixer, wheelbarrow, pump) so the bag aisle does not look artificially cheap.",
+          "Bags let you pace the day in small batches. A truck wants a crew ready when it arrives. Match the method to the crew you actually have.",
+        ],
+      },
+      {
+        heading: "Short-load fees change the truck math",
+        body: [
+          "Ready-mix plants often charge a short-load or minimum fee when the order is small. A “cheap” half-yard on the phone can bill closer to a full small load once fees, environmental charges, and waiting time land on the ticket. Ask for the all-in delivered price before you commit.",
+          "Access matters as much as volume. Tight side yards, soft lawns, low trees, and weight limits push you toward bags even when volume says truck. No chute access means a pump quote — another line that can flip the comparison.",
+          "If forms are not ready when the truck arrives, demurrage clocks tick. Bags forgive a slow morning. Trucks do not. Make pour day placement day, not carpentry day.",
+        ],
+      },
+      {
+        heading: "Colour and finish consistency",
+        body: [
+          "Bagged mixes from one brand and batch are usually close enough for a grey pad. Stretch a large slab across many bags mixed over hours and you can get shade bands where water content drifted. Ready-mix from one load is more even for visible slabs and garage floors.",
+          "If you must use bags on a visible pour, buy one lot, keep water measured, and mix to the same slump every batch. Do not “eyeball a splash” from bag to bag. That is how a patio looks pieced together under afternoon light.",
+        ],
+      },
+      {
+        heading: "Posts, footings, and other small discrete pours",
+        body: [
+          "Fence posts, mailbox footings, and deck pier holes are bag territory for most homeowners. You dig a few holes, mix as you go, and you are not fighting a short-load fee for a wheelbarrow of mud. Fast-setting bag mixes exist for posts — read the bag; some are not meant for structural slabs.",
+          "Sonotube piers can go either way. A handful of tubes: bags. A whole deck of piers the same afternoon with a crew: maybe a small ready-mix order if access is easy and the plant’s minimum does not punish you. Run total volume first, then count how many separate places the concrete has to land.",
+          "Do not order a truck for six post holes because a neighbour said ready-mix is “always better.” Continuous slabs, yes. Scattered weekend holes, bags.",
+        ],
+      },
+      {
+        heading: "Slabs, driveways, and pours that want continuity",
+        body: [
+          "Patios, garage slabs, sidewalks, and driveway sections want a continuous pour when possible. Cold joints and mismatched batches show forever. That is where ready-mix earns its keep — one load, one placement, one finish pass while the surface is still workable.",
+          "Thickness drives volume hard. Moving from 3.5 to 4 inches on a big slab is not a rounding error. Confirm thickness, then lock it in the Concrete Calculator before you compare bag counts to truck yards.",
+          "Reinforcement, vapour barriers, and control joints are part of the slab. Bags vs truck only answers how the concrete arrives — not whether the detail is right.",
+        ],
+      },
+      {
+        heading: "A simple decision checklist before you order",
+        body: [
+          "Under roughly 0.5 yd³ with easy mixing: bags, almost always. Around 0.5–1 yd³: compare bag count (Concrete Bag Calculator), all-in truck price with short-load fees, crew size, and carry distance. Over about 1–1.5 yd³ with decent access: call ready-mix unless the site cannot take a truck.",
+          "Price materials with the Concrete Cost Calculator using local bag and per-yard rates, then add mixer hire, delivery fees, and your time. Put a ready-mix quote with fees beside the bag tally on one scrap of paper — the answer is usually obvious.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "How many bags equal one cubic yard?",
+        answer:
+          "Common 80 lb bags often yield about 0.6 ft³ each, so roughly 45 bags per cubic yard — confirm the yield on your bag. Use the Concrete Bag Calculator with your exact bag size.",
+      },
+      {
+        question: "Is ready-mix always stronger than bagged mix?",
+        answer:
+          "Not automatically. Strength follows the mix design and how you place and cure it. Bags can meet the same nominal strength if mixed and cured properly. Trucks help on big pours because consistency is easier to control.",
+      },
+      {
+        question: "Can I mix ready-mix and bags on the same slab?",
+        answer:
+          "Avoid it on a visible continuous slab. Different water contents and timing create colour and joint issues. Expect a cold joint if you patch or extend later.",
+      },
+      {
+        question: "What about trailer-mix or volumetric trucks?",
+        answer:
+          "They sit between bags and plant mix: concrete mixed on site to the volume you need. Useful when you want truck convenience without a huge short-load penalty — ask local minimums.",
+      },
+      {
+        question: "Do I still need gravel under a bagged pad?",
+        answer:
+          "Often yes — same as ready-mix. Size sub-base with the Gravel Calculator; bags do not replace compacted base.",
+      },
+      {
+        question: "When should I just hire a contractor?",
+        answer:
+          "Large driveways, structural foundations, stamped finishes, and pours that need a pump are where pro crews pay for themselves. DIY bags and small truck pours fit pads, paths, and posts when you can form and finish honestly.",
+      },
+    ],
+  },
+  {
+    slug: "how-to-measure-a-room-for-materials",
+    title: "How to Measure a Room for Paint, Flooring, and Wallpaper",
+    description:
+      "Practical tape-measure steps for walls vs floors, openings, L-shapes, ceiling height mistakes, and when a quick sketch saves a wrong order.",
+    updated: "2026-09-14",
+    relatedTools: [
+      "paint-calculator",
+      "flooring-calculator",
+      "wallpaper-calculator",
+      "tile-calculator",
+    ],
+    metaTitle: "How to Measure a Room for Paint, Flooring & Wallpaper",
+    metaDescription:
+      "Measure walls and floors the right way for paint, flooring, wallpaper, and tile. Covers openings, L-shapes, ceiling height errors, and when to sketch.",
+    keywords:
+      "how to measure a room, room measurement for paint, measure walls for wallpaper, flooring room measure",
+    intro:
+      "Wrong material orders usually start with wrong measurements — not with a bad brand. Paint cares about wall area. Flooring cares about floor area. Wallpaper cares about wall area plus pattern waste. Reuse one number for all three and you will buy the wrong amount of something. This is a tape-and-notebook method for one quiet pass around the room.",
+    sections: [
+      {
+        heading: "Decide what surface you are buying for",
+        body: [
+          "Paint and wallpaper cover walls (and sometimes ceilings). Flooring and most tile cover the floor plan. Write the job at the top of the page before you measure: “paint walls,” “paint walls + ceiling,” “floor,” or “wallpaper feature wall.” That label stops you from feeding floor square footage into a paint estimate.",
+          "Use the matching tool after you measure: Paint Calculator for coats on walls or ceilings, Flooring Calculator for planks or carpet area, Wallpaper Calculator for rolls, Tile Calculator when the finish is tile on floor or wall. Same room, different inputs.",
+          "Closets, halls, and adjoining rooms are separate takeoffs unless you want one continuous order. Measuring “the downstairs” as one blob is how leftover boxes appear for a room you never meant to cover.",
+        ],
+      },
+      {
+        heading: "Floor measurements: length, width, then odd shapes",
+        body: [
+          "For a simple rectangle, measure length and width along the floor at the widest clear run. Measure in inches or millimetres if you want tighter waste math; convert to feet or metres for the calculator. A 12 ft 6 in × 10 ft 3 in room is not “12 × 10” if you are ordering expensive flooring.",
+          "L-shapes and bay windows: split the floor into two rectangles on a sketch, measure each, and add. Do not average a weird room into one fake rectangle unless you enjoy leftover cartons — or a shortfall.",
+          "Include alcoves and closets only if they get the same flooring. Run the total through the Flooring Calculator with the waste percent your product needs — plank direction and pattern affect waste more than people expect.",
+        ],
+      },
+      {
+        heading: "Wall measurements: perimeter × height, then openings",
+        body: [
+          "For full-room paint or wallpaper, walk the perimeter at floor level and record each wall length, or measure overall length and width and compute perimeter as 2 × (L + W) for a rectangle. Multiply by ceiling height for gross wall area.",
+          "Example: 14 × 11 ft room, 8 ft ceilings → perimeter 50 ft × 8 = 400 ft² gross walls. That is the starting number for the Paint Calculator or Wallpaper Calculator — not 14 × 11 floor area.",
+          "Feature walls are one length × height. Measure that wall alone. Do not take a third of the room perimeter “by eye.”",
+        ],
+      },
+      {
+        heading: "Openings: doors, windows, and what to subtract",
+        body: [
+          "Measure each door and window opening width × height. Subtract those areas from gross wall area for paint and wallpaper. A standard interior door is often about 21 ft²; a big picture window can be 40+ ft². Skipping openings over-orders; inventing huge openings under-orders.",
+          "For flooring, openings usually do not subtract — the floor runs to the threshold. Do not reuse your paint “net wall” number as floor area. Keep two columns on the sketch: floor area and net wall area.",
+          "If you are only painting dado height, measure the painted band height, not full ceiling height. Partial-height paint jobs are their own takeoff.",
+        ],
+      },
+      {
+        heading: "Ceiling height mistakes that wreck orders",
+        body: [
+          "Measure height in more than one place. Older houses settle; one corner can be an inch off. For wallpaper, that inch changes drop counts. For paint it matters more on tall rooms.",
+          "Vaulted or sloping ceilings need the actual wall height at each section, not the height from a flat bedroom down the hall. Average high and low points only when the slope is gentle and you are painting — not papering a matched pattern.",
+          "Tray ceilings and bulkheads add faces. Measure the strips you will paint; leave out the ones you will not. Guessing “a bit extra” without measuring is how five-gallon plans become eight.",
+        ],
+      },
+      {
+        heading: "When to sketch (and what to put on it)",
+        body: [
+          "Sketch any room that is not a clean rectangle — L-shapes, corridors with jogs, kitchens with peninsulas. A one-minute plan view with dimensions beats three conflicting memories at the store.",
+          "Label each dimension with units. Mark doors and windows with width × height. Circle the surfaces in scope. That sketch is what you feed into the calculators at the desk.",
+          "Take a phone photo of each wall and the floor with the sketch in frame if numbers are crowded. Future you will not remember which “92 inches” was the window wall.",
+        ],
+      },
+      {
+        heading: "Tape-measure steps that keep numbers honest",
+        body: [
+          "Clear the baseboard line enough to hook the tape. Measure along the wall, not along furniture. For floors, measure wall-to-wall where the new flooring will sit; note whether you undercut jambs or stop at existing transitions.",
+          "Hook or pinch the tape the same way each time. Do not mix “inside plaster” with “across skirting” mid-room. Consistency matters more than millimetre perfection for most paint and mid-grade flooring orders.",
+          "Write every number down before you move the tape. Adding in your head while the blade retracts is how 3.6 m becomes 3.0 m on the notepad. Double-check the longest spans once — those drive most of the money.",
+        ],
+      },
+      {
+        heading: "From notebook to calculators without mixing jobs",
+        body: [
+          "Paint: length, width, height, and openings in the Paint Calculator, then coats. Wallpaper: same wall geometry plus pattern waste in the Wallpaper Calculator. Flooring: length and width in the Flooring Calculator with product waste. Tile: area plus piece size and waste in the Tile Calculator — wall tile uses wall area; floor tile uses floor area.",
+          "Order from the calculator output and the product coverage label, not from a round number you like. If two tools disagree, you probably fed wall data into a floor tool or forgot openings.",
+          "Keep a small contingency for cuts and dye lots — especially wallpaper and tile. Contingency is intentional; it is not a substitute for measuring properly the first time.",
+        ],
+      },
+    ],
+    faq: [
+      {
+        question: "Can I use floor square footage to buy paint?",
+        answer:
+          "No. Paint needs wall (and optional ceiling) area. A 12 × 12 room has 144 ft² of floor but roughly 384 ft² of walls at 8 ft height before openings. Use the Paint Calculator with wall dimensions.",
+      },
+      {
+        question: "Do I subtract closets from flooring area?",
+        answer:
+          "Only if you are not flooring them. If the same plank runs into the closet, include that floor area. Measure the closet as its own rectangle and add it.",
+      },
+      {
+        question: "How do I measure an L-shaped room?",
+        answer:
+          "Draw the L, split it into two rectangles, measure each, and add. Use that sum in the Flooring Calculator. For paint, measure each wall segment for perimeter.",
+      },
+      {
+        question: "Should wallpaper use the same openings as paint?",
+        answer:
+          "Usually yes for doors and windows you will not paper over. Pattern waste still sits on top of net wall area in the Wallpaper Calculator.",
+      },
+      {
+        question: "What if my walls are not square?",
+        answer:
+          "Measure each wall length at floor level for perimeter work. For flooring, use the maximum span the material must cover, or split into shapes. Out-of-square rooms need a sketch.",
+      },
+      {
+        question: "When do I need the Tile Calculator instead of flooring?",
+        answer:
+          "When the finish is tile (floor or wall) and you care about piece size, layout, and cut waste. Use the Tile Calculator for ceramic takeoffs — not a plank flooring tool.",
+      },
+    ],
+  },
 ];

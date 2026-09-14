@@ -36,8 +36,8 @@ const STATIC: PageRow[] = [
     body: "",
     meta_title: "Guides",
     meta_description:
-      "Practical home project guides: concrete, gravel, paint, flooring, roofing, fencing, and budgeting — with worked numbers next to the calculators.",
-    meta_keywords: "home improvement guides, material estimating, concrete patio cost, paint calculator guide",
+      "Practical home project guides: concrete ready-mix vs bags, measuring rooms, paint, flooring, gravel, topsoil, wallpaper, and budgeting — with worked numbers next to the calculators.",
+    meta_keywords: "home improvement guides, ready mix vs bagged concrete, measure a room, material estimating",
     robots_index: true,
     status: "published",
   }),
@@ -45,38 +45,58 @@ const STATIC: PageRow[] = [
     slug: "about",
     path: "/about",
     title: "About",
-    body: `${SITE_NAME} is a free set of material and planning-cost calculators for homeowners and small projects in the US and UK. No account. Pick a tool, enter dimensions, read the quantity — and the formula sits on the same page. We also publish longer [guides](/guides) that walk through measuring, waste, thickness, and quote comparison so the numbers have context.
+    body: `${SITE_NAME} is a free library of material-quantity and planning-cost calculators for homeowners, landlords, and small project planners in the US and UK. You do not need an account. Open a tool, enter dimensions, and read a quantity with the formula on the same page — then use a [guide](/guides) when you want the “why” behind waste, thickness, or a quote line.
+
+We built the site because material orders go wrong in predictable ways: wrong depth, forgotten waste, lump-sum quotes that hide assumptions, and bag counts that looked fine until the pour started. The calculators exist to make those numbers checkable before you spend money.
 
 ## Who runs it
 
-We write and maintain the calculators and guides ourselves. If a number looks wrong, email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with the tool URL and the inputs you used. We don’t invent fake reviews, fake credentials, or fake user counts.
+We write and maintain the calculators and guides ourselves. There is no anonymous content farm behind the pages. If a result looks wrong, email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with the tool URL and the inputs you used. We do not invent fake reviews, fake credentials, or fake user counts.
+
+When we change a default (for example a typical waste percentage or a bag yield), we update the tool’s “last updated” note and the related guide where it matters.
 
 ## What you will find here
 
-- Calculators for concrete, gravel, sand, paint, tile, flooring, roofing, decking, fencing, and related cost ranges
-- Guides with worked examples (patio cost, bag counts, waste factors, contractor quote lines)
-- Trust pages: [how we calculate](/methodology), [data sources](/data-sources), [assumptions](/calculation-assumptions), and [reference charts](/reference-charts)
+- **Calculators** for concrete, gravel, sand, topsoil, mulch, paint, wallpaper, tile, flooring, roofing, decking, fencing, insulation, drywall, and related cost ranges
+- **Guides** with worked numbers: patio cost, bag vs truck concrete, waste factors, quote comparison, measuring rooms, and more
+- **Trust pages**: [how we calculate](/methodology), [data sources](/data-sources), [assumptions](/calculation-assumptions), and [reference charts](/reference-charts)
+
+Every public calculator page follows the same pattern: short intro, interactive tool, plain-language method, formula, worked example, and FAQ.
 
 ## How a result is produced
 
-Each tool page shows the formula, a worked example, and the assumptions behind any cost range. Cost defaults are typical national prices you can override. Treat them as planning bands, not a supplier quote. Unit toggles support US and UK measurements; switching converts what you typed.
+Each tool uses geometry and stated defaults you can see and change. Cost lines are planning bands from typical national prices — not a supplier quote and not a promise of what you will pay locally. Unit toggles support feet/inches and metres/centimetres; switching converts what you already typed instead of wiping the form.
+
+We would rather show a range and a caveat than a single confident number that pretends regional pricing does not exist.
+
+## Editorial standards
+
+- Prefer clear steps and worked examples over filler
+- State what the calculator does **not** include (permits, structural design, soil reports, decorative labour)
+- Link related tools and guides so you can move from quantity to context without hunting
+- Keep ads (if enabled) labelled and away from Calculate controls — we never ask anyone to click ads
 
 ## What we don’t claim
 
-These tools don’t replace a site visit, a structural design, or a local contractor’s price. Confirm quantities before you order, and check code for anything structural. See the [disclaimer](/legal/disclaimer).
+These tools do not replace a site visit, a structural design, an engineer’s stamp, or a local contractor’s price. Confirm quantities before you order, and check code for anything structural. See the [disclaimer](/legal/disclaimer).
 
 ## Funding
 
 The site may show labelled ads (for example Google AdSense) and, later, labelled partner links. Ads stay off calculator controls and results. We don’t ask anyone to click ads. Partner blocks stay hidden until a real URL exists.
 
+## Privacy in one line
+
+Calculator inputs stay in your browser unless you choose to contact us. See [Privacy](/legal/privacy) and [Cookies](/legal/cookies).
+
 ## Contact
 
-Bugs, missing tools, or privacy requests: [contact](/contact) or [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}).`,
-    meta_title: "About",
-    meta_description: `What ${SITE_NAME} is: free calculators with formulas on the page, labelled estimates, no account.`,
-    meta_keywords: "about, methodology, home improvement calculators",
+Bugs, missing tools, guide corrections, or privacy requests: [contact](/contact) or [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}).`,
+    meta_title: "About Project Home Calc",
+    meta_description: `Who runs ${SITE_NAME}, how calculators are written, what we publish, and what the estimates are not — formulas on every tool page, no account required.`,
+    meta_keywords: "about project home calc, home improvement calculators, material estimating methodology",
     robots_index: true,
     status: "published",
+    updated_at: "2026-09-14",
   }),
   page({
     slug: "contact",
@@ -107,38 +127,47 @@ For privacy or data requests, say so in the subject line so we can prioritise th
     title: "How We Calculate",
     body: `Every calculator on ${SITE_NAME} uses the same pattern: standard geometry, stated assumptions, and a waste line you can change. This page is the site-wide summary — each tool page still shows its own formula and worked example.
 
-## Volume tools (concrete, gravel, sand, mulch)
+## Why we show the formula
 
-Length × width × depth, with depth entered in inches or centimetres because that is how slabs and beds are specified on plans. US results convert cubic feet to cubic yards (÷ 27). UK results stay in cubic metres.
+A single output number without a method is hard to trust. Reviewers, suppliers, and homeowners all ask the same question: what did you assume? We put the method on the page so you can catch a wrong thickness, a missing opening, or a waste factor that does not match a diagonal layout.
 
-## Weight from volume (gravel, sand)
+## Volume tools (concrete, gravel, sand, mulch, topsoil)
 
-Suppliers price aggregate by the ton or tonne. We multiply volume by a typical compacted density — about 1.4 tons per cubic yard for gravel, lower for sand. Your quarry can give an exact figure for the stone you are ordering.
+Length × width × depth, with depth entered in inches or centimetres because that is how slabs and beds are specified on plans. US results convert cubic feet to cubic yards (÷ 27). UK results stay in cubic metres. Waste covers settlement and uneven grade — you can lower it for a simple rectangle or raise it for soft ground.
 
-## Count tools (drywall, tile, decking, fence)
+## Weight from volume (gravel, sand, topsoil)
 
-Area or run length is divided by the size of one unit (sheet, tile, board, panel), rounded up, then waste is added. Partial units still count as a full purchase.
+Suppliers price aggregate and soil by the ton or tonne. We multiply volume by a typical bulk density. Moisture and rock type move the real weight; treat our tonnage as a planning figure and confirm with the yard’s product sheet.
+
+## Count tools (drywall, tile, decking, fence, wallpaper rolls)
+
+Area or run length is divided by the size of one unit (sheet, tile, board, panel, or usable roll coverage), rounded up, then waste is added. Partial units still count as a full purchase. Pattern-match wallpaper needs a higher waste percent than plain paint area math.
 
 ## Paint and coverage
 
-Wall area = room perimeter × ceiling height, minus fixed deductions per door and window. Paint volume = net area × coats ÷ coverage per gallon or litre (about 350 ft² per US gallon on a smooth wall).
+Wall area = room perimeter × ceiling height, minus fixed deductions per door and window. Paint volume = net area × coats ÷ coverage per gallon or litre (about 350 ft² per US gallon on a smooth wall). Rough or porous surfaces need more — override coverage when the tin says so.
 
 ## Cost lines
 
-Default material prices are planning placeholders you can override. They are not live quotes. Labour and delivery are never guessed — you enter them or leave them at zero.
+Default material prices are planning placeholders you can override. They are not live quotes. Labour and delivery are never guessed into a fake total — you enter them or leave them at zero. See also [data sources](/data-sources) and [calculation assumptions](/calculation-assumptions).
+
+## What this is not
+
+We do not provide structural design, soil reports, or code compliance. A driveway thickness on a soft clay site is an engineering question, not a volume question. The calculator still helps you compare two proposed thicknesses on materials alone.
 
 ## When we update a tool
 
-We change a calculator when a formula error is reported with reproducible inputs, or when a default assumption (coverage rate, bag yield, density) is clearly out of date. Each tool page shows a last-updated date.
+We change a calculator when a formula error is reported with reproducible inputs, or when a default assumption (coverage rate, bag yield, density) is clearly out of date. Each tool page shows a last-updated date. Related [guides](/guides) are updated when the same assumption appears in an article.
 
 ## Report a problem
 
 Wrong number? Email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with the tool URL, your inputs, and what you expected. We fix real errors; we do not change results to match a single supplier's quote.`,
     meta_title: "How We Calculate",
-    meta_description: "How Project Home Calc tools work — volume, weight, count, and paint formulas with stated assumptions and waste factors.",
+    meta_description: "How Project Home Calc tools work — volume, weight, count, paint, and waste formulas with stated assumptions you can change.",
     meta_keywords: "calculation methodology, material formulas, waste factors, home project estimates",
     robots_index: true,
     status: "published",
+    updated_at: "2026-09-14",
   }),
   page({
     slug: "data-sources",

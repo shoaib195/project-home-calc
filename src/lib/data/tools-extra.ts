@@ -75,7 +75,7 @@ export const extraTools: Tool[] = [
       { question: "UK bag sizes?", answer: "Switch to metric for 25 kg bag yields. Yields vary slightly by brand — check the label on the bag you buy." },
     ],
     relatedTools: ["concrete-calculator", "concrete-cost-calculator", "gravel-calculator"],
-    relatedGuides: ["concrete-slab-thickness-what-matters", "how-much-does-a-concrete-patio-cost"],
+    relatedGuides: ["concrete-slab-thickness-what-matters", "how-much-does-a-concrete-patio-cost", "ready-mix-vs-bagged-concrete"],
     updated: "2026-09-01",
   },
   {
@@ -505,7 +505,7 @@ export const extraTools: Tool[] = [
       },
     ],
     relatedTools: ["paint-calculator", "paint-cost-calculator", "drywall-calculator"],
-    relatedGuides: ["how-many-wallpaper-rolls-for-a-room", "how-much-paint-for-a-room"],
+    relatedGuides: ["how-many-wallpaper-rolls-for-a-room", "how-much-paint-for-a-room", "how-to-measure-a-room-for-materials"],
     updated: "2026-09-12",
   },
 ];
