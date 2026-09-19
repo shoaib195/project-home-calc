@@ -17,6 +17,8 @@ export const extraTools: Tool[] = [
     formulaExplanation: [
       "Sand volume uses the same length × width × depth formula as gravel. The difference is density — dry sand runs lighter than compacted crushed stone, so the tonnage line uses a lower factor.",
       "Bag counts are a rough equivalent for DIY runs to the hardware store. Bulk delivery by the ton is what most patio and driveway bases use once the area gets past a few square feet.",
+      "Keep bedding sand separate from the gravel sub-base in your takeoff. Mixing those two volumes into one 'base' number is how patio quotes hide a missing layer.",
+      "Wet sand weighs more and bulks differently in a truck. Treat the tonnage line as planning weight and confirm with your yard's product sheet when colour or moisture content matters.",
     ],
     methodology: "Volume = Length × Width × Depth. Cubic yards = ft³ ÷ 27. Tons ≈ yd³ × 1.35 (US) or tonnes ≈ m³ × 1.6 (UK).",
     workedExample: {
@@ -35,9 +37,11 @@ export const extraTools: Tool[] = [
       { question: "Does this include compaction?", answer: "No. Compacting sand reduces finished depth by roughly 10–15%. Order slightly more if you will screed and compact in layers." },
       { question: "Can I use this for mortar mix?", answer: "It gives you bulk sand volume. Mortar mix ratios are a different calculation — this tool is for bedding and fill quantity only." },
       { question: "US and UK units?", answer: "Toggle feet/inches or metres/centimetres at the top. Cost currency follows the unit system you pick." },
+      { question: "Is polymeric joint sand the same?", answer: "No. Joint sand for locking pavers is a separate bagged product. This calculator is for the bedding layer under the pavers." },
+      { question: "Sandbox depth?", answer: "Children's sandboxes often use 6–12 inches of play sand. Enter that depth here, but buy play sand — not sharp bedding sand." },
     ],
     relatedTools: ["gravel-calculator", "paver-calculator", "concrete-calculator"],
-    relatedGuides: ["patio-base-gravel-before-concrete", "how-much-gravel-for-a-driveway"],
+    relatedGuides: ["how-much-sand-for-a-paver-bed", "planning-a-paver-patio-base", "patio-base-gravel-before-concrete"],
     updated: "2026-09-01",
   },
   {
@@ -75,7 +79,7 @@ export const extraTools: Tool[] = [
       { question: "UK bag sizes?", answer: "Switch to metric for 25 kg bag yields. Yields vary slightly by brand — check the label on the bag you buy." },
     ],
     relatedTools: ["concrete-calculator", "concrete-cost-calculator", "gravel-calculator"],
-    relatedGuides: ["concrete-slab-thickness-what-matters", "how-much-does-a-concrete-patio-cost", "ready-mix-vs-bagged-concrete"],
+    relatedGuides: ["concrete-slab-thickness-what-matters", "how-much-does-a-concrete-patio-cost", "ready-mix-vs-bagged-concrete", "concrete-for-fence-posts"],
     updated: "2026-09-01",
   },
   {
@@ -131,6 +135,8 @@ export const extraTools: Tool[] = [
     formulaExplanation: [
       "Bricks per row is the wall length divided by brick length plus one mortar joint. Rows are wall height divided by brick height plus joint. Multiply and add waste for cuts at ends and openings.",
       "Mortar is highly variable — mix design, joint width, and porous brick all change it. The mortar line is a planning figure based on roughly one bag per 120 bricks for standard work.",
+      "Openings for doors and windows should be subtracted from the wall rectangle before you trust a shopping count. Leaving them in is how people over-order by a whole pallet corner.",
+      "Bond pattern matters at corners and ends more than in the middle of a long run. Soldier courses and decorative bands need a separate count if they use a different brick size.",
     ],
     methodology: "Bricks per row = floor(Length ÷ (brick + joint)). Rows = ceil(Height ÷ (brick + joint)). Total = rows × bricks per row × (1 + waste %).",
     workedExample: {
@@ -149,9 +155,11 @@ export const extraTools: Tool[] = [
       { question: "What about windows and doors?", answer: "This assumes a solid rectangle. Subtract openings manually or reduce the wall length/height to net dimensions before calculating." },
       { question: "Why add waste?", answer: "Cuts at corners, damaged bricks on delivery, and mismatched colour lots all eat into a tight count. 5% is a minimum; 10% is safer on small walls." },
       { question: "Single wythe vs double?", answer: "Run the calculator once per leaf if both sides are brick. A brick-on-block wall only needs a count for the outer brick layer." },
+      { question: "Garden wall vs house wall?", answer: "The count math is the same. Structural thickness, piers, and caps are design choices — confirm with a mason for anything retaining soil or carrying load." },
+      { question: "Does this include pointing only?", answer: "No. For re-pointing an existing wall, see the mortar quantities guide — you are filling joints, not buying whole bricks." },
     ],
     relatedTools: ["concrete-calculator", "sand-calculator", "cost-estimator"],
-    relatedGuides: ["waste-factors-explained", "how-to-compare-contractor-quotes"],
+    relatedGuides: ["how-many-bricks-for-a-garden-wall", "mortar-quantities-for-brickwork", "waste-factors-explained"],
     updated: "2026-09-01",
   },
   {
@@ -189,7 +197,7 @@ export const extraTools: Tool[] = [
       { question: "Exterior painting?", answer: "Exterior work has different prep, access, and coverage. Use this for interior box rooms only." },
     ],
     relatedTools: ["paint-calculator", "drywall-calculator", "cost-estimator"],
-    relatedGuides: ["interior-painting-cost-breakdown", "how-much-paint-for-a-room"],
+    relatedGuides: ["interior-painting-cost-breakdown", "how-much-paint-for-a-room", "exterior-house-painting-quantity"],
     updated: "2026-09-01",
   },
   {
@@ -207,6 +215,8 @@ export const extraTools: Tool[] = [
     formulaExplanation: [
       "Volume converts to weight using the same density factors as the Gravel Calculator. Suppliers price by the ton, so the cost line multiplies weight by your per-ton figure.",
       "Delivery is a flat add-on because small loads and distance dominate haulage more than the stone itself. Adjust it to match your supplier's minimum load charge.",
+      "Run the tool once per layer when you have a sub-base and a surface chip. Adding depths into one pass hides which layer is expensive when a quote changes.",
+      "Regional stone prices move with fuel and quarry distance. Replace the default price with a phone quote from a yard that can actually deliver to your postcode or zip.",
     ],
     methodology: "Tons = (L × W × D in ft) ÷ 27 × 1.4. Material cost = tons × price/ton. Total = materials + delivery.",
     workedExample: {
@@ -225,9 +235,11 @@ export const extraTools: Tool[] = [
       { question: "Compacted vs loose volume?", answer: "The density factor assumes compacted aggregate. Loose fill in a truck measures larger before compaction." },
       { question: "UK tonnes?", answer: "Switch to metric for tonnes and price per tonne. Delivery fees in GBP go in the delivery field." },
       { question: "Installation labour?", answer: "Not included. Spread and compact rates vary — add labour through the Project Cost Estimator if you have a quote." },
+      { question: "Does delivery include tipping?", answer: "Ask. Some quotes drop at the kerb; others need a barrow or machine to move stone down a side access — that labour is separate." },
+      { question: "Pea gravel vs crusher run?", answer: "Change the density and price to match the product. Pea gravel and dense graded base do not weigh or cost the same per cubic yard." },
     ],
     relatedTools: ["gravel-calculator", "sand-calculator", "cost-estimator"],
-    relatedGuides: ["how-much-gravel-for-a-driveway", "how-much-does-a-concrete-patio-cost"],
+    relatedGuides: ["how-much-gravel-for-a-driveway", "driveway-concrete-thickness-and-cost"],
     updated: "2026-09-01",
   },
   {
@@ -245,6 +257,8 @@ export const extraTools: Tool[] = [
     formulaExplanation: [
       "Volume and waste follow the same method as the Concrete Calculator. Materials multiply order quantity by your ready-mix price — the number on the quote sheet from the plant.",
       "Labour per unit volume is a simplified way to compare contractor bids. Finishing, forming, and reinforcement are not broken out; adjust the labour rate to reflect what your market includes.",
+      "Pump and short-load fees belong in the fee field, not buried inside the per-yard labour rate. When those fees are visible, small slabs stop looking mysteriously expensive.",
+      "Driveways and patios often share the same calculator but not the same thickness or base. Change depth first, then price — a thicker slab is not a rounding error.",
     ],
     methodology: "Order = Volume × (1 + waste %). Materials = Order × $/yd³. Total = Materials + (Order × labour rate) + fees.",
     workedExample: {
@@ -263,9 +277,11 @@ export const extraTools: Tool[] = [
       { question: "How do I get the ready-mix price?", answer: "Call two local plants with your zip or postcode and ask for price per cubic yard delivered. Prices move with fuel and demand." },
       { question: "Bag mix instead?", answer: "For small volumes use the Concrete Bag Calculator. This tool assumes ready-mix delivery." },
       { question: "UK ready-mix?", answer: "Toggle to metric for price per cubic metre and labour per m³." },
+      { question: "Does this include gravel sub-base?", answer: "No. Estimate base with the Gravel Calculator, then add that materials line beside the concrete total." },
+      { question: "Why is a small pad expensive per square foot?", answer: "Mobilisation, forms, and minimum truck charges do not shrink linearly. Short-load fees often dominate tiny pours." },
     ],
     relatedTools: ["concrete-calculator", "concrete-bag-calculator", "gravel-calculator"],
-    relatedGuides: ["how-much-does-a-concrete-patio-cost", "concrete-slab-thickness-what-matters"],
+    relatedGuides: ["how-much-does-a-concrete-patio-cost", "driveway-concrete-thickness-and-cost", "concrete-slab-thickness-what-matters"],
     updated: "2026-09-01",
   },
   {
@@ -283,6 +299,8 @@ export const extraTools: Tool[] = [
     formulaExplanation: [
       "Roll count is net area plus waste, divided by the coverage printed on the packaging. Standard US batts often cover about 40 ft² per roll; UK rolls vary more — change the assumption to match your product.",
       "This does not pick an R-value for you. Buy the thickness that meets your code or target; the calculator only handles how many rolls that thickness requires.",
+      "Measure each wall or ceiling plane separately, then add the areas. Door and window openings are often left in the gross area for batts because you still cut and fit around the opening — only subtract large openings if your installer works that way.",
+      "Attic and floor jobs may need two layers or a different product (blown cellulose, rigid board). If the label coverage assumes a single batt pass, do not force this roll math onto a blown-in quote.",
     ],
     methodology: "Rolls = ceil((Area × (1 + waste %)) ÷ coverage per roll).",
     workedExample: {
@@ -300,9 +318,11 @@ export const extraTools: Tool[] = [
       { question: "Vapour barrier?", answer: "Not included. Follow local code on whether you need a separate vapour retarder and on which side of the batt it goes." },
       { question: "Does R-value affect roll count?", answer: "Thicker batts cover less area per roll for the same width. Always use the coverage on the exact product SKU you plan to buy." },
       { question: "Metric rooms?", answer: "Switch to metres. Enter roll coverage in m² from the EU/UK label." },
+      { question: "Should I buy all rolls from one lot?", answer: "Where possible, yes — especially if you are matching faced batts. Running out mid-wall and switching SKUs is how gaps and thickness mismatches appear." },
+      { question: "Does this include labour or PPE?", answer: "No. It is a materials count only. Fibreglass work needs gloves, mask, and long sleeves regardless of how tidy the roll math looks." },
     ],
     relatedTools: ["drywall-calculator", "cost-estimator", "paint-calculator"],
-    relatedGuides: ["waste-factors-explained", "planning-a-home-improvement-budget"],
+    relatedGuides: ["how-much-insulation-for-a-room", "waste-factors-explained", "planning-a-home-improvement-budget"],
     updated: "2026-09-01",
   },
   {
@@ -320,6 +340,8 @@ export const extraTools: Tool[] = [
     formulaExplanation: [
       "Panels are the fence length divided by panel width, rounded up. Posts are the length divided by post spacing, plus one end post. Most panel systems use two horizontal rails per section.",
       "This assumes a straight run on level ground. Slopes, gates, and corner posts need extra parts the linear model does not add automatically.",
+      "Measure the run along the ground where the fence will sit, not the property line on a title plan if those differ. Inside corners and dog-legs should be split into straight segments and added.",
+      "Panel height changes wind load and post size more than panel count. A taller privacy fence on the same length still uses the same bay math only when panel widths match — the concrete and post section may not.",
     ],
     methodology: "Panels = ceil(Length ÷ panel width). Posts = ceil(Length ÷ spacing) + 1. Rails ≈ panels × 2.",
     workedExample: {
@@ -337,9 +359,11 @@ export const extraTools: Tool[] = [
       { question: "Sloped ground?", answer: "Stepped or racked panels change panel count slightly. Order one extra panel on long runs with grade change." },
       { question: "Labour cost?", answer: "Materials only here. Installation is often priced per linear foot — add it through the Project Cost Estimator." },
       { question: "Metric fences?", answer: "Enter length and panel size in metres. Post spacing in metres works the same way." },
+      { question: "Do I need gravel under post concrete?", answer: "Many installs put a little gravel in the hole for drainage before concrete. That volume is tiny compared with the fence panels — estimate it separately if your soil holds water." },
+      { question: "Pickets vs panels?", answer: "If you are building from individual pickets, convert the run into panel-width bays or count pickets from spacing. This tool is aimed at panelised systems." },
     ],
     relatedTools: ["decking-calculator", "concrete-bag-calculator", "gravel-calculator"],
-    relatedGuides: ["how-to-compare-contractor-quotes", "planning-a-home-improvement-budget"],
+    relatedGuides: ["fence-materials-for-a-straight-run", "concrete-for-fence-posts", "how-to-compare-contractor-quotes"],
     updated: "2026-09-01",
   },
   {
@@ -357,6 +381,8 @@ export const extraTools: Tool[] = [
     formulaExplanation: [
       "Each paver plus its joint gap occupies a rectangle on the ground. Patio area divided by that footprint gives the raw count; waste covers cuts along edges and breakage.",
       "The sand line assumes a thin bedding layer under the pavers — not the compacted gravel sub-base. Use the Gravel and Sand calculators for those layers.",
+      "Buy from one dye lot when colour matters. Running out mid-patio and grabbing a different batch is how blotchy fields appear even when the count was correct.",
+      "Edge restraint and cutting along curves change labour more than the raw paver count. If the layout is a circle or freeform, sketch a sample bay and scale up instead of trusting a single rectangle.",
     ],
     methodology: "Pavers = ceil((Patio area ÷ (paver + gap)²) × (1 + waste %)). Sand bed ≈ area × bedding depth.",
     workedExample: {
@@ -375,9 +401,11 @@ export const extraTools: Tool[] = [
       { question: "Different paver sizes?", answer: "Enter the actual dimensions from your supplier. Mixed-size patterns need a layout plan this simple grid math cannot replace." },
       { question: "Curved edges?", answer: "Rectangular math over-counts or under-counts on curves. Add 10–15% waste or sketch the layout and count a sample bay." },
       { question: "UK paving slabs?", answer: "Switch to metric and enter slab size in centimetres as sold at your merchant." },
+      { question: "How thick is the sand bed?", answer: "Many patio installs use about 1 inch (25 mm) of bedding sand over compacted gravel. Confirm with your paver manufacturer — some systems want a different bedding." },
+      { question: "Does this include base gravel?", answer: "No. Estimate gravel with the Gravel Calculator, bedding with the Sand Calculator, then use this tool for the paver count." },
     ],
     relatedTools: ["sand-calculator", "gravel-calculator", "concrete-calculator"],
-    relatedGuides: ["patio-base-gravel-before-concrete", "how-much-does-a-concrete-patio-cost"],
+    relatedGuides: ["planning-a-paver-patio-base", "how-much-sand-for-a-paver-bed", "patio-base-gravel-before-concrete"],
     updated: "2026-09-01",
   },
   {

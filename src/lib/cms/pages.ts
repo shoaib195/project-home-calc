@@ -272,7 +272,11 @@ Local code, product labels, and site conditions always win over a website defaul
     slug: "reference-charts",
     path: "/reference-charts",
     title: "Reference Charts",
-    body: `Quick lookup tables for common planning questions. For interactive numbers, use the linked calculator.
+    body: `Quick lookup tables for common planning questions on ${SITE_NAME}. These charts are starting points — local code, soil, and product labels still win. For interactive numbers with waste and cost bands, open the linked calculator.
+
+## How to use these charts
+
+Pick the row that matches the job, then re-run the matching calculator with your length, width, and depth. A chart cannot see your access path, frost line, or dye lot — it only keeps you from starting with an empty guess.
 
 ## Concrete slab thickness
 
@@ -281,22 +285,32 @@ Local code, product labels, and site conditions always win over a website defaul
 | Walkway / patio (foot traffic) | 4 in / 100 mm |
 | Driveway (cars) | 4–6 in / 100–150 mm |
 | Garage slab | 4–6 in |
+| Shed pad (light storage) | 4 in / 100 mm |
 | Post footing (frost depth varies) | Below local frost line |
 
-## Gravel layer depth
+Thicker slabs jump volume fast: going from 4 in to 6 in is a 50% increase for the same footprint. Confirm with the [Concrete Calculator](/calculators/construction/concrete-calculator) before you compare quotes.
+
+## Gravel and sand layer depth
 
 | Use | Depth |
 |-----|-------|
 | Paver bedding sand | 1–2 in / 25–50 mm |
 | Gravel sub-base under patio | 4–6 in / 100–150 mm |
 | Driveway sub-base | 6–8 in / 150–200 mm |
+| Path topping (decorative gravel) | 2–3 in / 50–75 mm |
 
-## Mulch depth
+Bedding sand and gravel base are separate orders. See the [Gravel Calculator](/calculators/construction/gravel-calculator) and [Sand Calculator](/calculators/construction/sand-calculator).
+
+## Mulch and topsoil depth
 
 | Use | Depth |
 |-----|-------|
-| Flower beds | 2–3 in / 5–7.5 cm |
+| Flower beds (mulch) | 2–3 in / 5–7.5 cm |
 | Trees (donut, not volcano) | 2–4 in away from trunk |
+| New planting bed (topsoil) | 4–6 in / 10–15 cm |
+| Lawn topdressing | ½–1 in / 1–2.5 cm |
+
+Bulk delivery usually wins past about one cubic yard. Use the [Mulch](/calculators/landscaping/mulch-calculator) and [Topsoil](/calculators/landscaping/topsoil-calculator) tools for tonnage.
 
 ## Paint coats
 
@@ -305,6 +319,21 @@ Local code, product labels, and site conditions always win over a website defaul
 | Same colour refresh | 1 |
 | Colour change | 2 |
 | Dark → light | 2–3 |
+| Bare plaster / patched walls | Primer + 2 |
+
+Coverage on the tin assumes ideal conditions. Rough surfaces and deep colour changes burn more paint — see the [Paint Calculator](/calculators/painting/paint-calculator).
+
+## Waste allowances (planning defaults)
+
+| Job | Common planning waste |
+|-----|------------------------|
+| Simple rectangular flooring | 5–8% |
+| Diagonal tile or herringbone pavers | 12–15% |
+| Straight fence panel run | 1 spare panel on long runs |
+| Asphalt roof field (simple gable) | ~10% |
+| Brick wall (solid rectangle) | 5–10% |
+
+Edit waste in each calculator — these rows are defaults, not rules.
 
 ## Unit conversions
 
@@ -314,14 +343,32 @@ Local code, product labels, and site conditions always win over a website defaul
 | 1 yd³ | 0.765 m³ |
 | 1 ft² | 0.0929 m² |
 | 1 ton (US) | 0.907 tonnes |
+| 1 gallon (US) | 3.785 litres |
 
 ## Roofing pitch factor (US)
 
 Pitch factor = √(1 + (rise ÷ 12)²). Example: 6/12 → factor ≈ 1.118.
 
-See the [Roofing Calculator](/calculators/roofing/roofing-calculator) for your footprint.`,
-    meta_title: "Reference Charts",
-    meta_description: "Slab thickness, gravel depth, mulch depth, paint coats, and unit conversion charts for home project planning.",
+One US roofing square = 100 ft² of roof area. Bundle counts depend on the product — see [How to read a roofing square](/guides/how-to-read-a-roofing-square) and the [Roofing Calculator](/calculators/roofing/roofing-calculator).
+
+## Brick and mortar (rule of thumb)
+
+| Item | Planning note |
+|------|----------------|
+| US modular brick | Often ~7 per ft² of wall face with mortar joints |
+| UK metric brick | Often ~60 per m² of single-leaf wall |
+| Premixed mortar bags | Roughly 1 bag per ~100–120 bricks for standard joints |
+
+Confirm brick size on the pallet label. Guides: [How many bricks for a garden wall](/guides/how-many-bricks-for-a-garden-wall) and [Mortar quantities](/guides/mortar-quantities-for-brickwork).
+
+## Related pages
+
+- [How we calculate](/methodology)
+- [Data sources](/data-sources)
+- [Calculation assumptions](/calculation-assumptions)
+- [Guides](/guides)`,
+    meta_title: "Reference Charts – Thickness, Depth, Waste & Units",
+    meta_description: "Slab thickness, gravel and sand depth, mulch, paint coats, waste defaults, roofing squares, and unit conversion charts for home project planning.",
     meta_keywords: "concrete thickness chart, gravel depth, unit conversion, roofing pitch factor",
     robots_index: true,
     status: "published",
@@ -330,13 +377,14 @@ See the [Roofing Calculator](/calculators/roofing/roofing-calculator) for your f
     slug: "suggest-calculator",
     path: "/suggest-calculator",
     title: "Suggest a Calculator",
-    body: `Missing a tool? Tell us what you were trying to estimate.
+    body: `Missing a tool on ${SITE_NAME}? Tell us what you were trying to estimate. We build calculators when the formula is clear, the inputs are measurable with a tape, and the result helps a homeowner or small planner order materials without guessing.
 
 ## What to send
 
-- The material or job (e.g. "asphalt driveway tonnage", "fence post concrete")
-- The inputs you would want to enter (length, depth, price, and so on)
-- A link to a similar calculator on another site, if one exists — optional
+- The material or job (e.g. "asphalt driveway tonnage", "fence post concrete", "render coverage")
+- The inputs you would want to enter (length, depth, price, bag size, and so on)
+- Whether you need US units, UK units, or both
+- A link to a similar calculator on another site, if one exists — optional, for scope only
 
 Use the [contact form](/contact) or email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with **Calculator request** in the subject.
 
@@ -347,12 +395,21 @@ We prioritise tools that:
 1. Fit the home-improvement / small-project scope
 2. Use a clear formula we can show on the page
 3. Do not duplicate an existing tool without a good reason
+4. Can ship with a worked example and FAQ so the page is useful without ads
 
-We do not add tools that require live regional pricing APIs, structural engineering sign-off, or licensed trade calculations.
+We do not add tools that require live regional pricing APIs, structural engineering sign-off, licensed trade calculations, or scraped third-party content.
+
+## What already exists
+
+Browse [all calculators](/calculators) before requesting a duplicate. Construction, landscaping, flooring, painting, roofing, deck and fence, insulation/drywall, and cost tools are live. Guides cover patio cost, waste factors, roofing squares, fence posts, brick counts, and more — check [Guides](/guides) if your question is “how” rather than “how many.”
 
 ## Recently added
 
-Sand, concrete bags, tile, brick, paint cost, gravel cost, concrete cost, insulation, fence, and paver calculators joined the library in 2026. More are queued from user requests.`,
+Sand, concrete bags, tile, brick, paint cost, gravel cost, concrete cost, insulation, fence, and paver calculators joined the library in 2026. Editorial guides continue to expand alongside the tools so each calculator page has context, not only a widget.
+
+## How we decide
+
+If several people ask for the same takeoff and we can state the method in plain language, it goes on the queue. Niche one-off engineering problems stay offline — those need a professional, not a browser form.`,
     meta_title: "Suggest a Calculator",
     meta_description: "Request a new home project calculator or improvement to an existing tool on Project Home Calc.",
     meta_keywords: "suggest calculator, request tool, new calculator",

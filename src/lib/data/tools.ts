@@ -228,7 +228,7 @@ const coreTools: Tool[] = [
       },
     ],
     relatedTools: ["paint-cost-calculator", "flooring-calculator", "drywall-calculator"],
-    relatedGuides: ["how-much-paint-for-a-room", "how-many-wallpaper-rolls-for-a-room", "how-to-measure-a-room-for-materials", "interior-painting-cost-breakdown"],
+    relatedGuides: ["how-much-paint-for-a-room", "how-many-wallpaper-rolls-for-a-room", "how-to-measure-a-room-for-materials", "interior-painting-cost-breakdown", "exterior-house-painting-quantity"],
     updated: "2026-06-20",
   },
   {
@@ -386,7 +386,7 @@ const coreTools: Tool[] = [
       },
     ],
     relatedTools: ["cost-estimator", "drywall-calculator"],
-    relatedGuides: ["how-to-estimate-roofing-materials"],
+    relatedGuides: ["how-to-estimate-roofing-materials", "how-to-read-a-roofing-square", "waste-factors-explained"],
     updated: "2026-08-01",
   },
   {

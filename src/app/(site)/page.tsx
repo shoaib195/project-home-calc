@@ -246,6 +246,39 @@ export default async function HomePage() {
       </section>
 
       <section className="mx-auto max-w-[720px] px-4 py-16 sm:px-6">
+        <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Why these calculators exist</h2>
+        <div className="mt-5 space-y-4 text-[15.5px] leading-relaxed text-text-2">
+          <p>
+            Most material orders go wrong in predictable ways: the wrong slab thickness, a forgotten waste percentage,
+            a lump-sum quote that hides whether gravel base is included, or a bag count that looked fine until the pour
+            started. Project Home Calc puts the quantity, the formula, and a worked example on the same page so you can
+            check the number before you spend money.
+          </p>
+          <p>
+            Every public tool follows the same pattern — short intro, interactive calculator, plain-language method,
+            formula, example, and FAQ. Guides sit beside the tools when you need the “why” behind patio cost, waste
+            factors, roofing squares, or comparing contractor quotes. Results are planning estimates for US and UK units,
+            not structural designs or local price guarantees.
+          </p>
+          <p>
+            Start with a{" "}
+            <Link href="/calculators" className="font-semibold text-accent-strong hover:underline">
+              calculator
+            </Link>
+            , read a{" "}
+            <Link href="/guides" className="font-semibold text-accent-strong hover:underline">
+              guide
+            </Link>{" "}
+            when two quotes disagree, or see{" "}
+            <Link href="/methodology" className="font-semibold text-accent-strong hover:underline">
+              how we calculate
+            </Link>{" "}
+            for the site-wide assumptions.
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[720px] px-4 py-16 sm:px-6">
         <h2 className="text-[26px] font-extrabold tracking-[-0.01em] text-text">Frequently asked questions</h2>
         <div className="mt-6">
           <Faq items={homeFaq} />

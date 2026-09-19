@@ -4,9 +4,11 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ToolCard } from "@/components/ui/ToolCard";
 import { GuideCard } from "@/components/ui/GuideCard";
 import { AdSlot } from "@/components/ui/AdSlot";
+import { MarkdownBody } from "@/components/site/MarkdownBody";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbJsonLd, pageMetadata } from "@/lib/seo";
 import { getLiveCategories } from "@/lib/data/categories";
+import { categoryHubBodies } from "@/lib/data/category-hubs";
 import { getCatalog, getResolvedPage, liveCategoriesFrom } from "@/lib/cms/catalog";
 
 export function generateStaticParams() {
@@ -47,6 +49,8 @@ export default async function CategoryPage({
 
   const relatedGuides = catalog.guides.filter((g) => catTools.some((t) => g.relatedTools.includes(t.slug)));
   const otherCategories = liveCategoriesFrom(catalog).filter((c) => c.slug !== category.slug).slice(0, 4);
+  const cmsPage = await getResolvedPage(`category-${slug}`);
+  const hubBody = (cmsPage?.body?.trim() || categoryHubBodies[category.slug] || "").trim();
 
   return (
     <div className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6">
@@ -75,6 +79,12 @@ export default async function CategoryPage({
       <div className="mt-10">
         <AdSlot />
       </div>
+
+      {hubBody ? (
+        <section className="mx-auto mt-12 max-w-[720px]">
+          <MarkdownBody text={hubBody} />
+        </section>
+      ) : null}
 
       {relatedGuides.length > 0 && (
         <section className="mt-10">

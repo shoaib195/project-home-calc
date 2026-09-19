@@ -5,42 +5,50 @@ export const categories: Category[] = [
   {
     slug: "construction",
     name: "Construction",
-    description: "Concrete, gravel, sand, brick, and cost tools for slabs, pads, footings, and masonry.",
+    description:
+      "Concrete, gravel, sand, brick, and cost tools for slabs, pads, footings, and masonry — with formulas and worked examples on every page.",
   },
   {
     slug: "landscaping",
     name: "Landscaping",
-    description: "Mulch, topsoil, pavers, and yard material volumes from bed area and depth.",
+    description:
+      "Mulch, topsoil, pavers, and yard material volumes from bed area and depth, including bedding sand for patio stacks.",
   },
   {
     slug: "flooring",
     name: "Flooring",
-    description: "Flooring boxes and floor tile counts with a waste allowance for cuts.",
+    description:
+      "Flooring boxes and floor tile counts with a waste allowance for cuts, doorways, and pattern layouts.",
   },
   {
     slug: "painting",
     name: "Painting",
-    description: "Wall paint and wallpaper roll counts from room size, openings, and coats or pattern waste.",
+    description:
+      "Wall paint and wallpaper roll counts from room size, openings, coats, and pattern waste — plus a paint cost band.",
   },
   {
     slug: "roofing",
     name: "Roofing",
-    description: "Footprint and pitch to approximate squares or packs for planning.",
+    description:
+      "Footprint and pitch to approximate roof area, squares, or packs for planning — with waste you can edit.",
   },
   {
     slug: "deck-fence",
     name: "Deck & Fence",
-    description: "Decking board count and fence panel, post, and rail planning.",
+    description:
+      "Decking board counts and fence panel, post, and rail planning for straight runs on level ground.",
   },
   {
     slug: "home-improvement",
     name: "Home Improvement",
-    description: "Drywall sheet counts, insulation rolls, and room boarding jobs.",
+    description:
+      "Drywall sheet counts, insulation rolls, and room boarding jobs from wall or ceiling area.",
   },
   {
     slug: "cost-estimation",
     name: "Cost Estimation",
-    description: "Materials, labour, and markup rolled into a planning cost range.",
+    description:
+      "Materials, labour, markup, and contingency rolled into a planning cost range you can compare to quotes.",
   },
 ];
 
