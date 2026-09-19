@@ -34,7 +34,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .map((t) => ({
       url: `${SITE_URL}/calculators/${t.category}/${t.slug}`,
       lastModified: new Date(t.updated),
-      changeFrequency: "monthly" as const,
+      changeFrequency: "weekly" as const,
       priority: 0.9,
     }));
 
@@ -43,8 +43,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     .map((g) => ({
       url: `${SITE_URL}/guides/${g.slug}`,
       lastModified: new Date(g.updated),
-      changeFrequency: "monthly" as const,
-      priority: 0.7,
+      changeFrequency: "weekly" as const,
+      priority: 0.75,
     }));
 
   return [...staticRoutes, ...categoryRoutes, ...toolRoutes, ...guideRoutes];

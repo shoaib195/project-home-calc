@@ -236,10 +236,21 @@ export default async function HomePage() {
           </Link>
         </div>
         <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          {guides.slice(0, 4).map((g) => (
+          {guides.slice(0, 8).map((g) => (
             <GuideCard key={g.slug} guide={g} />
           ))}
         </div>
+        <p className="mt-5 text-[14.5px] text-text-2">
+          Looking for topsoil, wallpaper, ready-mix vs bags, or room measuring? See the{" "}
+          <Link href="/guides" className="font-semibold text-accent-strong hover:underline">
+            full guides list
+          </Link>{" "}
+          ({guides.length} articles) or jump to{" "}
+          <Link href="/calculators" className="font-semibold text-accent-strong hover:underline">
+            all calculators
+          </Link>
+          .
+        </p>
         <Link href="/guides" className="mt-4 inline-block text-[14px] font-semibold text-accent-strong hover:underline sm:hidden">
           View all guides →
         </Link>

@@ -470,7 +470,7 @@ export const extraTools: Tool[] = [
     ],
     relatedTools: ["mulch-calculator", "gravel-calculator", "sand-calculator"],
     relatedGuides: ["how-much-topsoil-do-you-need", "how-much-mulch-do-you-need"],
-    updated: "2026-09-12",
+    updated: "2026-09-19",
   },
   {
     slug: "wallpaper-calculator",
@@ -534,6 +534,6 @@ export const extraTools: Tool[] = [
     ],
     relatedTools: ["paint-calculator", "paint-cost-calculator", "drywall-calculator"],
     relatedGuides: ["how-many-wallpaper-rolls-for-a-room", "how-much-paint-for-a-room", "how-to-measure-a-room-for-materials"],
-    updated: "2026-09-12",
+    updated: "2026-09-19",
   },
 ];

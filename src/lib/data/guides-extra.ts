@@ -1630,7 +1630,7 @@ export const extraGuides: Guide[] = [
     title: "How Much Topsoil Do You Need?",
     description:
       "Turn bed or lawn measurements into cubic yards or metres — depths for new beds vs topdressing, bags vs bulk, and what topsoil calculators leave out.",
-    updated: "2026-09-12",
+    updated: "2026-09-19",
     relatedTools: ["topsoil-calculator", "mulch-calculator", "gravel-calculator", "sand-calculator"],
     metaTitle: "How Much Topsoil Do You Need? Beds, Lawns & Cubic Yards",
     metaDescription:
@@ -1732,7 +1732,7 @@ export const extraGuides: Guide[] = [
     title: "How Many Wallpaper Rolls for a Room?",
     description:
       "Measure walls the way a paperhanger does — openings, pattern match, roll coverage — and stop guessing from floor area alone.",
-    updated: "2026-09-12",
+    updated: "2026-09-19",
     relatedTools: ["wallpaper-calculator", "paint-calculator", "paint-cost-calculator", "drywall-calculator"],
     metaTitle: "How Many Wallpaper Rolls for a Room? Pattern Waste Guide",
     metaDescription:
@@ -1841,7 +1841,7 @@ export const extraGuides: Guide[] = [
     title: "Ready-Mix vs Bagged Concrete: Which Should You Order?",
     description:
       "An honest break-even around one cubic yard — labour time, short-load fees, colour consistency, and when bags beat a truck for posts and small pads.",
-    updated: "2026-09-14",
+    updated: "2026-09-19",
     relatedTools: [
       "concrete-calculator",
       "concrete-bag-calculator",
@@ -1957,7 +1957,7 @@ export const extraGuides: Guide[] = [
     title: "How to Measure a Room for Paint, Flooring, and Wallpaper",
     description:
       "Practical tape-measure steps for walls vs floors, openings, L-shapes, ceiling height mistakes, and when a quick sketch saves a wrong order.",
-    updated: "2026-09-14",
+    updated: "2026-09-19",
     relatedTools: [
       "paint-calculator",
       "flooring-calculator",
