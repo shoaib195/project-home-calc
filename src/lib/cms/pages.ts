@@ -102,19 +102,53 @@ Bugs, missing tools, guide corrections, or privacy requests: [contact](/contact)
     slug: "contact",
     path: "/contact",
     title: "Contact",
-    body: `Use this page for calculator corrections, guide feedback, missing-tool requests, and privacy questions.
+    body: `Use this page for calculator corrections, guide feedback, missing-tool requests, accessibility problems, and privacy questions. A useful message gives us enough detail to reproduce the issue or understand the request without guessing.
 
 ## Email
 
-Write to [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}). We aim to reply to clear, actionable messages. The form below sends your message by email — we do not keep a separate database of submissions.
+Write to [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}). The form below sends your message to the same address; we do not keep a separate customer-support database or require an account.
 
-## What to include
+Use a clear subject such as **Concrete calculator error**, **Guide correction**, **Calculator request**, or **Privacy request**. Please send one main issue per message where possible. That makes it easier to test a calculation, check a source, or route a privacy question correctly.
 
-- The calculator or guide URL
-- The inputs you used (if reporting a calculation issue)
-- What you expected versus what you saw
+## Reporting a calculator problem
 
-For privacy or data requests, say so in the subject line so we can prioritise them.`,
+If a result looks wrong, include:
+
+- The full calculator URL and tool name
+- Whether you selected US or UK units
+- Every input exactly as entered, including waste, price, coverage, and depth
+- The result displayed on the page
+- What you expected and how you calculated that expectation
+- Your browser and device if the Calculate button, unit switch, or layout failed
+- A screenshot if it shows the problem clearly, with personal details removed
+
+Small details matter. “Concrete result is wrong” is difficult to test; “10 ft × 10 ft × 4 in in US mode returned X yd³, but I expected Y” gives us a repeatable case. Do not send payment details, account passwords, contractor bank information, or documents containing information we do not need.
+
+We check formula defects separately from differences in supplier practice. A gravel yard may use a different density, a paint tin may state lower coverage, and a flooring brand may package an unusual area per box. If the arithmetic is correct but the default does not fit your product, send the label value or public product sheet. We may update the site-wide assumption, add a note, or explain why the field should be overridden.
+
+## Guide corrections and editorial feedback
+
+For a guide correction, link the article and quote the sentence or section. If your correction depends on a building code, manufacturer instruction, or supplier specification, include a public source and the region it applies to. US and UK practices are not always interchangeable, and local rules can differ within each country.
+
+We welcome spelling fixes, broken-link reports, unclear worked examples, and suggestions for information a homeowner genuinely needs before ordering. We do not accept paid guest posts, pre-written promotional articles, undisclosed affiliate placements, or requests to insert unrelated links.
+
+## Response expectations
+
+We aim to read clear, actionable messages promptly, but this is not an emergency or live trade-advice service. Complex reports may take longer because we reproduce the inputs, inspect both unit systems, and check related examples before changing public copy. We may not reply individually to vague solicitations, bulk marketing mail, repeated messages, or requests already answered on the site.
+
+Do not delay urgent safety work while waiting for us. Gas leaks, electrical hazards, structural movement, active flooding, and unsafe roofs need the relevant emergency service or qualified local professional. We cannot approve designs, interpret a site-specific code requirement, or validate a contractor’s work from an email.
+
+## Privacy and data requests
+
+Put **Privacy request** in the subject. Explain whether you want access to, correction of, or deletion of personal information you previously sent us, and identify the email address used. Calculator inputs normally stay in your browser, so there may be no server-side calculation record to provide. We may need limited information to verify that a request relates to you, but we will not ask for more than is reasonably necessary.
+
+Contact messages contain whatever you choose to send and are handled through email. Keep attachments relevant and remove addresses, phone numbers, signatures, and project documents that are not needed. For more detail, read the [Privacy Policy](/legal/privacy) and [Cookie Policy](/legal/cookies).
+
+## Calculator ideas
+
+If the tool does not exist yet, use the [Suggest a Calculator](/suggest-calculator) page before emailing. Include the job, measurable inputs, expected output, and whether both US and UK units are needed. A clear request is much easier to assess than “please add more calculators.”
+
+Sending a message does not create a professional-client relationship, a guaranteed response time, or approval to begin work. Calculator results remain planning estimates; confirm final quantities, prices, and specifications with the supplier or qualified trade responsible for the job.`,
     meta_title: "Contact",
     meta_description: `Get in touch with ${SITE_NAME} about calculator errors, missing tools, or privacy requests.`,
     meta_keywords: "contact, support",
@@ -377,16 +411,29 @@ Confirm brick size on the pallet label. Guides: [How many bricks for a garden wa
     slug: "suggest-calculator",
     path: "/suggest-calculator",
     title: "Suggest a Calculator",
-    body: `Missing a tool on ${SITE_NAME}? Tell us what you were trying to estimate. We build calculators when the formula is clear, the inputs are measurable with a tape, and the result helps a homeowner or small planner order materials without guessing.
+    body: `Missing a tool on ${SITE_NAME}? Tell us about the decision you were trying to make, not only the name you would put on the button. We add calculators when the inputs can be measured or copied from a product label, the method can be shown in plain language, and the result helps someone plan a real home project.
 
 ## What to send
 
-- The material or job (e.g. "asphalt driveway tonnage", "fence post concrete", "render coverage")
-- The inputs you would want to enter (length, depth, price, bag size, and so on)
+- The material or job, such as asphalt tonnage, render coverage, fence stain, or shed roofing
+- The question the result should answer: volume, pack count, weight, cost, spacing, or comparison
+- Inputs a homeowner can realistically know, such as length, width, depth, coverage, bag size, or local price
+- The output unit you would expect to take to a supplier
 - Whether you need US units, UK units, or both
-- A link to a similar calculator on another site, if one exists — optional, for scope only
+- An example with numbers, if you have one
+- A public manufacturer sheet, code reference, or similar calculator if it helps explain the method
 
 Use the [contact form](/contact) or email [${CONTACT_EMAIL}](mailto:${CONTACT_EMAIL}) with **Calculator request** in the subject.
+
+## How the roadmap works
+
+Requests feed an editorial roadmap rather than an automatic voting queue. We group similar needs, check whether an existing tool already solves the quantity, and look for a formula we can explain and test in both unit systems. A request mentioned once can still move quickly if it fills an obvious gap; repeated requests help, but they do not override safety or data-quality concerns.
+
+We usually favour tools that sit beside an existing project journey. A deck-board calculator can support a joist-spacing guide; a paint calculator can lead into coverage labels and cost planning. That connection gives users a way to understand the assumptions instead of landing on a bare form with no context.
+
+Some requests are better answered with a guide or an extra input on an existing calculator. For example, a question about choosing gravel type is not mainly arithmetic, while a different bag yield may only require an editable product field. We may adapt the idea rather than publish the exact page title suggested.
+
+We do not promise a delivery date or publish a public ranking of requests. New tools need formula review, unit testing, mobile checks, worked examples, FAQs, accessibility review, and enough original supporting copy to stand on their own. A smaller set of dependable calculators is more useful than dozens of near-duplicates.
 
 ## What we build first
 
@@ -394,22 +441,40 @@ We prioritise tools that:
 
 1. Fit the home-improvement / small-project scope
 2. Use a clear formula we can show on the page
-3. Do not duplicate an existing tool without a good reason
-4. Can ship with a worked example and FAQ so the page is useful without ads
+3. Use inputs a non-specialist can obtain safely
+4. Produce an order quantity or planning comparison someone can act on
+5. Work honestly in both US and UK units, or have a clear reason to be regional
+6. Do not duplicate an existing tool without a meaningful difference
+7. Can ship with assumptions, exclusions, a worked example, and useful guidance
 
-We do not add tools that require live regional pricing APIs, structural engineering sign-off, licensed trade calculations, or scraped third-party content.
+Clear scope matters more than novelty. “How many fence stain tins for 180 ft of six-foot privacy fence, two coats, at label coverage X” is testable. “How much will my whole house renovation cost?” depends on too many unmeasured choices to turn into one trustworthy number.
 
 ## What already exists
 
 Browse [all calculators](/calculators) before requesting a duplicate. Construction, landscaping, flooring, painting, roofing, deck and fence, insulation/drywall, and cost tools are live. Guides cover patio cost, waste factors, roofing squares, fence posts, brick counts, and more — check [Guides](/guides) if your question is “how” rather than “how many.”
 
-## Recently added
+If an existing calculator is close but missing a field, name that tool and explain what the extra field changes. Include a worked example showing the current result and the desired calculation. That can be more useful than proposing a second calculator with a slightly different title.
 
-Sand, concrete bags, tile, brick, paint cost, gravel cost, concrete cost, insulation, fence, and paver calculators joined the library in 2026. Editorial guides continue to expand alongside the tools so each calculator page has context, not only a widget.
+## What we will not build
 
-## How we decide
+We do not build:
 
-If several people ask for the same takeoff and we can state the method in plain language, it goes on the queue. Niche one-off engineering problems stay offline — those need a professional, not a browser form.`,
+- Structural sizing tools that could be mistaken for an engineer’s design, including beam, foundation, retaining-wall, or load-bearing approvals
+- Electrical service, gas, combustion, or other licensed-trade calculations where site conditions and local code control the answer
+- Tools that diagnose hazardous materials, damp, subsidence, or building defects from a few form fields
+- Live property valuations, mortgage recommendations, insurance estimates, or investment promises
+- Price scrapers that copy retailer data or pretend a national default is a current local quote
+- Calculators built mainly to promote a product, collect leads, or host paid links
+- Near-duplicate pages created only to target slightly different search phrases
+- Forms that require sensitive personal data, an exact home address, financial account details, or documents unrelated to the arithmetic
+
+We may publish a safe planning calculator near a regulated topic when the boundary is clear. Counting roof tiles from area is different from approving rafters. Estimating concrete volume is different from choosing a foundation. The page must state that boundary without burying it.
+
+## What happens after you suggest one
+
+We may reply with a clarification, point you to an existing tool or guide, place the idea on the roadmap, or explain why it falls outside scope. We cannot review confidential plans or promise that a submitted idea will be built. Suggestions do not transfer ownership of private technical material; please send only information you are entitled to share.
+
+If we publish the calculator, it will use independently written copy and a method we can verify. We may combine several requests, rename the tool, or narrow the scope so the result remains understandable. The best submissions describe a common, repeatable measuring problem and the supplier decision that follows from it.`,
     meta_title: "Suggest a Calculator",
     meta_description: "Request a new home project calculator or improvement to an existing tool on Project Home Calc.",
     meta_keywords: "suggest calculator, request tool, new calculator",

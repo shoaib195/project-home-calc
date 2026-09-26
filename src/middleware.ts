@@ -16,6 +16,13 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(url, 308);
   }
 
+  // Legacy / typo URL — avoid 404 for reviewers and bookmarks
+  if (pathname === "/about-us" || pathname === "/about-us/") {
+    const url = request.nextUrl.clone();
+    url.pathname = "/about";
+    return NextResponse.redirect(url, 308);
+  }
+
   if (pathname.startsWith("/admin")) {
     return updateSession(request);
   }

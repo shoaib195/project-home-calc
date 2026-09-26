@@ -15,21 +15,38 @@ export default async function CalculatorsIndexPage() {
     <div className="mx-auto max-w-[1280px] px-4 py-10 sm:px-6">
       <Breadcrumb items={[{ label: "Home", href: "/" }, { label: "Calculators" }]} />
       <h1 className="mt-3 text-[36px] font-extrabold tracking-[-0.015em] text-text">All calculators</h1>
-      <div className="mt-3 max-w-3xl space-y-3 text-[16px] leading-relaxed text-text-2">
+      <div className="mt-3 max-w-3xl space-y-4 text-[16px] leading-relaxed text-text-2">
         <p>
           {catalog.tools.length} free calculators across {liveCategories.length} categories — concrete, gravel, sand,
-          topsoil, mulch, paint, wallpaper, flooring, roofing, decking, fencing, and planning costs.
+          topsoil, mulch, paint, wallpaper, flooring, roofing, decking, fencing, and planning costs. Each tool is built
+          for the same job: turn tape-measure inputs into an order quantity you can take to a supplier.
         </p>
         <p>
-          Every tool page shows the formula, a worked example, and a FAQ. US and UK units are supported. Results are
-          planning figures: confirm with a supplier or contractor before you order. For the “why” behind waste and
-          thickness, see the{" "}
+          Every tool page shows the method <em>before</em> the interactive calculator, then a formula, worked example,
+          and FAQ. US (feet/inches, yards, tons) and UK (metres, cubic metres, tonnes) units are supported; switching
+          units converts what you already typed. Cost lines are planning bands from editable national defaults — not a
+          live quote and not a promise of what you will pay locally.
+        </p>
+        <p>
+          Start with a category below if you know the trade, or use search in the header for “concrete”, “paint”, or
+          “roof”. When two contractor quotes disagree on thickness, waste, or base depth, open a{" "}
           <a href="/guides" className="font-semibold text-accent-strong hover:underline">
-            guides
+            guide
+          </a>{" "}
+          for the context behind the number. See also{" "}
+          <a href="/methodology" className="font-semibold text-accent-strong hover:underline">
+            how we calculate
+          </a>{" "}
+          and the{" "}
+          <a href="/legal/disclaimer" className="font-semibold text-accent-strong hover:underline">
+            disclaimer
           </a>
           .
         </p>
-        <p>Browse by category below, or use search in the header to jump straight to a tool.</p>
+        <p>
+          These tools do not replace a site visit, structural design, or building-control approval. Confirm quantities
+          before you order, especially for load-bearing slabs, roofs, and retaining work.
+        </p>
       </div>
 
       <div className="mt-10 flex flex-col gap-14">

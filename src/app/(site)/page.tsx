@@ -44,7 +44,7 @@ const homeFaq = [
   {
     question: "Is this site free to use?",
     answer:
-      "Yes. Calculators and guides are free. If ads are turned on later, they’re labelled and kept off the Calculate controls.",
+      "Yes. Calculators and guides are free. When ads are shown, they are labelled Advertisement and kept away from Calculate controls and results.",
   },
 ];
 
@@ -199,7 +199,7 @@ export default async function HomePage() {
               The calculator, the formula in plain text, a worked example, and the assumptions behind any cost range.
               If the number looks odd, you can see why — then change an input or ask a supplier.
             </p>
-            <Link href="/about" className="mt-4 inline-block text-[14px] font-semibold text-accent-strong hover:underline">
+            <Link href="/methodology" className="mt-4 inline-block text-[14px] font-semibold text-accent-strong hover:underline">
               How we calculate →
             </Link>
           </div>

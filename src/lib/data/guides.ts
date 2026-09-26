@@ -1,6 +1,7 @@
 import type { Guide } from "@/lib/types";
 import { extraGuides } from "@/lib/data/guides-extra";
 import { batch2Guides } from "@/lib/data/guides-batch2";
+import { batch3Guides } from "@/lib/data/guides-batch3";
 
 const coreGuides: Guide[] = [
   {
@@ -405,7 +406,7 @@ const coreGuides: Guide[] = [
   },
 ];
 
-export const guides: Guide[] = [...coreGuides, ...extraGuides, ...batch2Guides];
+export const guides: Guide[] = [...coreGuides, ...extraGuides, ...batch2Guides, ...batch3Guides];
 
 export function getGuide(slug: string): Guide | undefined {
   return guides.find((g) => g.slug === slug);

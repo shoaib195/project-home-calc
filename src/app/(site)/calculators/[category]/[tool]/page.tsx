@@ -76,17 +76,8 @@ export default async function ToolPage({
       <h1 className="mt-3 text-[32px] font-extrabold tracking-[-0.015em] text-text sm:text-[38px]">{tool.name}</h1>
       <p className="mt-2 max-w-2xl text-[16px] leading-relaxed text-text-2">{tool.intro}</p>
 
-      <div className="mt-6">
-        {CalculatorComponent ? (
-          <CalculatorComponent />
-        ) : (
-          <div className="rounded-[var(--radius-md)] border border-dashed border-border-strong bg-surface-2 p-8 text-center text-[14px] text-text-2">
-            This calculator is being built. Check back soon.
-          </div>
-        )}
-      </div>
-
-      <article className="mt-14 flex flex-col gap-10">
+      {/* Content before the widget — AdSense reviewers often stop at the form if this is empty. */}
+      <article className="mt-10 flex flex-col gap-8 border-b border-border pb-10">
         <section>
           <h2 className="text-[22px] font-bold tracking-[-0.01em] text-text">How this is calculated</h2>
           <div className="mt-3 flex flex-col gap-3">
@@ -117,7 +108,34 @@ export default async function ToolPage({
             ))}
           </ol>
         </section>
+      </article>
 
+      <div className="mt-10">
+        <h2 className="text-[22px] font-bold tracking-[-0.01em] text-text">Calculator</h2>
+        <p className="mt-2 max-w-2xl text-[14.5px] leading-relaxed text-text-2">
+          Enter your dimensions below. Results update as you type. Costs are planning ranges — confirm with a local
+          supplier before you order.
+        </p>
+        <div className="mt-5">
+          {CalculatorComponent ? (
+            <CalculatorComponent />
+          ) : (
+            <div className="rounded-[var(--radius-md)] border border-dashed border-border-strong bg-surface-2 p-8 text-center text-[14px] text-text-2">
+              This tool is not available right now.{" "}
+              <Link href="/contact" className="font-semibold text-accent-strong hover:underline">
+                Contact us
+              </Link>{" "}
+              if you need it, or browse other{" "}
+              <Link href={`/calculators/${category.slug}`} className="font-semibold text-accent-strong hover:underline">
+                {category.name} calculators
+              </Link>
+              .
+            </div>
+          )}
+        </div>
+      </div>
+
+      <article className="mt-14 flex flex-col gap-10">
         <AdSlot />
 
         <section>
@@ -127,7 +145,17 @@ export default async function ToolPage({
           </div>
         </section>
 
-        <p className="text-[12.5px] text-text-3">Last updated {tool.updated}. Formulas are planning methods — confirm with a supplier before you order.</p>
+        <p className="text-[12.5px] text-text-3">
+          Last updated {tool.updated}. Formulas are planning methods — confirm with a supplier before you order. See{" "}
+          <Link href="/methodology" className="font-semibold text-accent-strong hover:underline">
+            how we calculate
+          </Link>{" "}
+          and the{" "}
+          <Link href="/legal/disclaimer" className="font-semibold text-accent-strong hover:underline">
+            disclaimer
+          </Link>
+          .
+        </p>
       </article>
 
       {(relatedTools.length > 0 || relatedGuides.length > 0) && (

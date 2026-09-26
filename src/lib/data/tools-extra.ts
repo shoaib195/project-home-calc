@@ -12,7 +12,7 @@ export const extraTools: Tool[] = [
     keywords: "sand calculator, paver sand, cubic yards of sand, tons of sand, sandbox sand",
     shortDescription: "Volume and weight for paver bedding, sandboxes, and screed layers.",
     intro:
-      "Sand is sold by the ton or in bags, but you usually measure the job in area and depth. Enter the footprint and how deep you want the bed to get cubic yards or cubic metres, an estimated tonnage, and a bag count for smaller patches.",
+      "This calculator converts an area and depth into sand volume, estimated bulk weight, and a bag count for smaller jobs. Use it for paver bedding, a sandbox, a screed layer, or general fill once you know which grade of sand the job requires. It does not select the sand type, include compacted gravel below it, calculate mortar proportions, or price excavation, delivery, spreading, and labour. US mode reports cubic yards and short tons, while UK mode uses cubic metres and tonnes; the bag result is only as accurate as the bag yield entered. Moisture and grading change bulk density, so take the calculated volume to your merchant or quarry and ask them to confirm the weight, bag coverage, and product suitability.",
     synonyms: ["paver sand", "bedding sand", "sandbox", "screed", "mortar sand"],
     formulaExplanation: [
       "Sand volume uses the same length × width × depth formula as gravel. The difference is density — dry sand runs lighter than compacted crushed stone, so the tonnage line uses a lower factor.",
@@ -54,11 +54,13 @@ export const extraTools: Tool[] = [
     keywords: "concrete bag calculator, how many bags of concrete, 60 lb concrete bags, 80 lb concrete bags",
     shortDescription: "Bag counts for 60 lb, 80 lb, or 25 kg concrete on small pours.",
     intro:
-      "Bagged mix suits post holes, small pads, and repair patches where a ready-mix truck is not worth the call-out. Enter the pour size to see how many bags to pick up, with a waste allowance you can adjust.",
+      "This calculator turns a small concrete pour into counts of 60 lb, 80 lb, or 25 kg premixed bags, including an adjustable waste allowance. Use it for post holes, steps, repair pads, and other pours where a ready-mix truck minimum would cost more than hand mixing. It does not design the footing, choose a mix strength, include reinforcement, gravel, forms, mixer hire, water, or the labour of placing repeated batches. US mode uses feet, inches, and common pound bags; UK mode uses metric dimensions and 25 kg bags, with yield based on a typical product. Bag yields vary by manufacturer, so check the printed yield or ask the retailer to confirm the count before loading the order.",
     synonyms: ["bagged concrete", "post hole concrete", "quick set concrete", "premix bags"],
     formulaExplanation: [
       "Each bag yields a fixed volume once mixed — about 0.45 ft³ for a 60 lb bag and 0.60 ft³ for an 80 lb bag in US sizing. Divide your total volume (with waste) by that yield and round up.",
       "Once you pass roughly one cubic yard (0.75 m³), ready-mix delivery usually beats the cost and labour of hand-mixing dozens of bags. The result note flags that threshold.",
+      "For several post holes, calculate one hole from its real diameter and depth, then multiply before adding waste. Do not use the outside post dimensions as the concrete volume without subtracting the post itself when accuracy matters.",
+      "Every bag count rounds up because partial bags are not dependable planning units. Compare the final bag weight and number of batches with access, mixer capacity, and the time available to place concrete before it begins setting.",
     ],
     methodology: "Volume = L × W × D × (1 + waste %). Bags = ceil(Volume ÷ bag yield).",
     workedExample: {
@@ -92,11 +94,13 @@ export const extraTools: Tool[] = [
     keywords: "tile calculator, how many tiles do I need, floor tile boxes, tile waste factor",
     shortDescription: "Tile count and box quantity from room area and tile size.",
     intro:
-      "Floor tile is sold by the box, but you measure the room in feet or metres. Enter both sizes, set a waste allowance for cuts, and read off how many tiles and boxes to put on your order.",
+      "This calculator converts a floor area and tile dimensions into individual tiles and whole boxes, with waste for cuts and breakage. Use it for bathrooms, kitchens, halls, and simple rectangular floors once the tile size, pack count, and laying pattern are chosen. It does not include wall tile, adhesive, grout, backer board, levelling compound, trims, waterproofing, or installation labour. US mode accepts room dimensions in feet and tiles in inches, while UK mode uses metres and centimetres; both round boxes up to a full pack. Tile calibres, batch shades, and pack coverage vary, so take the result to your tile supplier and ask them to confirm box coverage, pattern waste, and whether spare unopened boxes can be returned.",
     synonyms: ["floor tile", "ceramic tile", "porcelain tile", "tile boxes", "tiling"],
     formulaExplanation: [
       "Room area divided by the area of one tile gives a raw tile count. Diagonal layouts, niches, and breakage mean you almost never order that exact number — the waste field adds the buffer trades use.",
       "Boxes are rounded up because stores do not sell half a box. If your tile comes in a different pack size, change the tiles-per-box field in the cost section.",
+      "For L-shaped rooms, closets, or shower floors, split the layout into rectangles and total the areas before waste. Deduct fixed cabinets only when tile will definitely stop at their bases.",
+      "Nominal tile size may include the intended grout joint or differ slightly from the actual fired size. A supplier can confirm whether the stated box coverage already reflects joints and how a chosen pattern changes cuts.",
     ],
     methodology: "Tiles = ceil((Room area ÷ Tile area) × (1 + waste %)). Boxes = ceil(Tiles ÷ tiles per box).",
     workedExample: {
@@ -117,7 +121,7 @@ export const extraTools: Tool[] = [
       { question: "UK and US sizes?", answer: "Use the unit toggle. Enter tile size in inches or centimetres as printed on the box." },
     ],
     relatedTools: ["flooring-calculator", "paint-calculator", "cost-estimator"],
-    relatedGuides: ["how-to-estimate-flooring-with-waste", "planning-a-small-bathroom-refit-budget"],
+    relatedGuides: ["how-to-estimate-flooring-with-waste", "planning-a-small-bathroom-refit-budget", "how-many-tiles-for-a-bathroom-floor"],
     updated: "2026-09-01",
   },
   {
@@ -130,7 +134,7 @@ export const extraTools: Tool[] = [
     keywords: "brick calculator, how many bricks for a wall, brick wall estimate, mortar bags",
     shortDescription: "Brick count and rough mortar for a straight wall.",
     intro:
-      "Brick walls are counted by the piece, but you plan from wall dimensions. Enter the run, height, and the brick size on your pallet to get a brick order count and a rough mortar bag guide.",
+      "This calculator estimates bricks and a rough mortar allowance for a straight rectangular wall from its dimensions, brick size, joint width, and waste. Use it for early planning of a garden wall, single-leaf wall, or brick veneer before asking a merchant for pallet quantities. It does not design foundations, check wall thickness or stability, subtract openings automatically, count special shapes, or include lintels, ties, coping, reinforcement, delivery, and labour. US mode accepts feet and inch brick sizes, while UK mode uses metres and millimetres; standard brick dimensions and joint conventions differ between the two markets. Give the result, bond pattern, and wall drawing to your brick supplier or mason so they can confirm pack quantities, matching batches, mortar type, and extra units for corners.",
     synonyms: ["brick wall", "masonry", "face brick", "common brick", "bricklaying"],
     formulaExplanation: [
       "Bricks per row is the wall length divided by brick length plus one mortar joint. Rows are wall height divided by brick height plus joint. Multiply and add waste for cuts at ends and openings.",
@@ -172,11 +176,13 @@ export const extraTools: Tool[] = [
     keywords: "paint cost calculator, room painting cost, interior painting estimate, painter cost per room",
     shortDescription: "Materials plus labour for painting a room's walls.",
     intro:
-      "Paint quotes split into tins and labour. Enter room size, coats, and your local rates to see a planning total you can compare against a decorator's estimate — not a binding quote.",
+      "This calculator estimates an interior room's wall-paint quantity, material cost, and labour from dimensions, coats, openings, and local rates. Use it to build a planning budget or compare the scope behind decorator quotes before work begins. It excludes ceilings, trim, doors, extensive repairs, specialist primers, scaffolding, furniture removal, tax, and exterior work unless those costs are added separately. US mode uses square feet, gallons, and your dollar rates, while UK mode uses square metres, litres, and pound rates; coverage still comes from the chosen product. Labour and paint prices vary sharply, so confirm coverage and tin sizes with the retailer and ask the painter to state preparation, coats, and exclusions in writing.",
     synonyms: ["painting estimate", "decorator cost", "room paint price", "labour and materials"],
     formulaExplanation: [
       "Wall area follows perimeter × ceiling height, minus standard deductions for doors and windows. Paint volume uses the same coverage rates as the Paint Calculator — about 350 ft² per US gallon per coat.",
       "Labour is entered as a rate per square foot or square metre of wall area. That is how many decorators think about a straightforward box room, though trim, prep, and ceiling work are often priced separately.",
+      "The wall-area labour rate is a comparison device, not a universal quoting method. Some decorators price by day or by room, so convert only when the scope includes the same preparation and number of finish coats.",
+      "Round paint up to purchasable tin sizes and keep primer or stain blocker as a separate material line. A lower-cost paint that needs an extra coat can cost more once another day of labour is included.",
     ],
     methodology: "Net wall area = (2 × (L + W) × H) − door/window deductions. Paint = area × coats ÷ coverage. Total = paint cost + (area × labour rate).",
     workedExample: {
@@ -210,7 +216,7 @@ export const extraTools: Tool[] = [
     keywords: "gravel cost calculator, driveway gravel price, gravel delivery cost, cost per ton gravel",
     shortDescription: "Gravel tonnage with material and delivery cost.",
     intro:
-      "Gravel quotes combine weight and haulage. Enter the area you are covering, how deep the layer is, your supplier's price per ton, and a delivery fee to get a materials-plus-delivery planning figure.",
+      "This calculator estimates gravel tonnage, material cost, and a delivery line from the area, compacted depth, and supplier price you enter. Use it for a driveway, path, drainage strip, or base layer after choosing the correct aggregate and requesting a local price per ton or tonne. It does not include excavation, geotextile, separate surface layers, compaction loss, machine hire, spreading labour, or minimum-load surcharges unless entered in the fee. US mode works in cubic yards and short tons with dollar pricing; UK mode uses cubic metres and metric tonnes with pound pricing. Because density and haulage vary by product and distance, send the result to the delivering yard and ask them to confirm load weight, minimum charge, and tipping access.",
     synonyms: ["driveway gravel cost", "aggregate price", "crushed stone cost", "gravel delivery"],
     formulaExplanation: [
       "Volume converts to weight using the same density factors as the Gravel Calculator. Suppliers price by the ton, so the cost line multiplies weight by your per-ton figure.",
@@ -252,7 +258,7 @@ export const extraTools: Tool[] = [
     keywords: "concrete cost calculator, concrete slab price, ready mix concrete cost, patio concrete cost",
     shortDescription: "Ready-mix volume with materials, labour, and pump fees.",
     intro:
-      "A concrete quote is rarely just the truck. Enter slab size, your ready-mix rate, a labour line per cubic yard or cubic metre, and any pump or short-load fee to build a planning total before you call suppliers.",
+      "This calculator combines concrete volume with ready-mix pricing, a labour allowance, and pump or short-load fees to produce a planning cost. Use it for a slab, patio, pad, or similar rectangular pour when you have current rates from a plant and at least a rough installation quote. It does not include excavation, gravel base, reinforcement, forms, drainage, permits, decorative finishes, tax, or structural design unless you add those in a wider project budget. US mode prices cubic yards and UK mode prices cubic metres, so keep every rate in the matching unit and currency. Confirm the calculated order, mix specification, delivery window, minimum load, and access fees directly with the concrete supplier and installer before booking.",
     synonyms: ["slab cost", "ready mix price", "concrete pour cost", "patio concrete price"],
     formulaExplanation: [
       "Volume and waste follow the same method as the Concrete Calculator. Materials multiply order quantity by your ready-mix price — the number on the quote sheet from the plant.",
@@ -294,7 +300,7 @@ export const extraTools: Tool[] = [
     keywords: "insulation calculator, batt insulation rolls, insulation coverage, how much insulation do I need",
     shortDescription: "Batt roll count from wall or ceiling area.",
     intro:
-      "Insulation batts are sold in rolls with a coverage figure on the label. Measure the wall or ceiling rectangle, allow for cuts around framing, and read how many rolls to buy.",
+      "This calculator turns a measured wall, ceiling, or floor area into whole rolls or packs of batt insulation using the product's stated coverage. Use it once the required thermal value, thickness, and framing width have been selected under local rules. It does not choose an R-value or U-value, calculate heat loss, cover blown-in or spray systems, or include membranes, fixings, ventilation work, PPE, and labour. US mode uses square feet and common R-value products, while UK mode uses square metres and metric pack coverage; always replace the default with the exact label figure. Give the area and assembly details to the insulation merchant or installer so they can confirm product suitability, pack coverage, number of layers, and vapour-control requirements.",
     synonyms: ["fibreglass batt", "mineral wool", "wall insulation", "loft insulation rolls"],
     formulaExplanation: [
       "Roll count is net area plus waste, divided by the coverage printed on the packaging. Standard US batts often cover about 40 ft² per roll; UK rolls vary more — change the assumption to match your product.",
@@ -335,7 +341,7 @@ export const extraTools: Tool[] = [
     keywords: "fence calculator, fence panel calculator, how many fence posts, fence material estimate",
     shortDescription: "Panel, post, and rail counts for a straight fence run.",
     intro:
-      "Fence materials are counted in panels and posts, but you measure the property line in linear feet or metres. Enter the run length, panel width, and post spacing to get a parts list and a rough materials cost.",
+      "This calculator estimates panels, posts, and rails for a straight fence run from its length, panel width, and post spacing. Use it while planning a level boundary fence or comparing pre-made panel systems before buying materials. It does not verify the legal boundary, design for wind load, count gates and corners automatically, size foundations, or include gravel boards, caps, fixings, concrete, delivery, and labour. US mode uses feet and common 6 or 8 ft bays, while UK mode uses metres and typical metric panel widths; the same whole-bay rounding applies. Site slope and manufacturer systems change the parts list, so take the result and a sketch to your fencing supplier or installer and ask them to confirm post type, bay spacing, gate hardware, and concrete.",
     synonyms: ["fence panels", "fence posts", "picket fence", "privacy fence", "garden fence"],
     formulaExplanation: [
       "Panels are the fence length divided by panel width, rounded up. Posts are the length divided by post spacing, plus one end post. Most panel systems use two horizontal rails per section.",
@@ -376,7 +382,7 @@ export const extraTools: Tool[] = [
     keywords: "paver calculator, patio pavers needed, paving slab calculator, paver patio estimate",
     shortDescription: "Paver count and sand bedding for a rectangular patio.",
     intro:
-      "Pavers are sold individually or by the pallet, but you layout from patio dimensions. Enter the patio footprint, paver size, joint width, and waste to get a count and a rough sand bedding volume.",
+      "This calculator estimates individual pavers and a rough bedding-sand volume from patio dimensions, paver size, joint width, and waste. Use it for a rectangular patio or path after selecting the paving product and laying pattern. It does not include compacted gravel sub-base, jointing compound, edge restraints, drainage, excavation, geotextile, cutting equipment, delivery, or labour. US mode accepts feet and inch pavers, while UK mode uses metres and centimetres; mixed-size patterns need the manufacturer's module coverage rather than one nominal unit. Pavers are often sold by layer or pallet and actual dimensions can vary, so show the result to the merchant and confirm pallet coverage, pattern waste, bedding specification, and batch colour.",
     synonyms: ["paving slabs", "patio pavers", "concrete pavers", "paving stones"],
     formulaExplanation: [
       "Each paver plus its joint gap occupies a rectangle on the ground. Patio area divided by that footprint gives the raw count; waste covers cuts along edges and breakage.",
@@ -419,11 +425,13 @@ export const extraTools: Tool[] = [
       "topsoil calculator, how much topsoil do I need, cubic yards of topsoil, topsoil for garden bed, lawn topdressing calculator",
     shortDescription: "Cubic yards or metres of topsoil from bed area and depth.",
     intro:
-      "Topsoil is sold by the cubic yard or tonne, but you measure the job as a rectangle and a depth. Enter the bed or lawn footprint and how thick you want the layer — new beds need more than a light lawn topdress — then read volume, a planning weight, and a rough cost band.",
+      "This calculator turns a garden bed, raised area, or lawn footprint and depth into topsoil volume, approximate weight, and a planning cost. Use it for a new planting bed, levelling work, or a light topdressing after deciding how much finished depth the plants or lawn need. It does not test soil quality, choose a topsoil blend, subtract existing soil, or include compost, mulch, excavation, delivery access, spreading, and settlement beyond the waste you enter. US mode shows cubic yards and short tons, while UK mode shows cubic metres and tonnes; bag counts depend on the volume printed on each product. Moisture and soil composition change weight, so send the volume to a local soil supplier and ask them to confirm load size, screened quality, and delivered coverage.",
     synonyms: ["garden soil", "fill dirt vs topsoil", "lawn topdressing", "raised bed soil", "screened topsoil"],
     formulaExplanation: [
       "Volume is length × width × depth in consistent units. Imperial jobs convert cubic feet to cubic yards (÷ 27). Metric jobs stay in cubic metres when depth is in centimetres.",
       "Weight is only a planning figure. Wet clay topsoil and dry sandy loam do not weigh the same. Use your supplier’s coverage chart when you have a product name.",
+      "If you are filling several beds, calculate each rectangle at its own depth and add the volumes. A single average depth can hide a low corner that consumes much more soil than the rest.",
+      "Fresh soil settles after placement, particularly when tipped loose or laid over disturbed ground. Use the waste setting as a settlement allowance, then confirm whether the supplier sells by loose volume, bag volume, or weight.",
     ],
     methodology:
       "Volume = L × W × D. yd³ = ft³ ÷ 27. Planning weight ≈ yd³ × 1.1 tons (US) or m³ × 1.3 tonnes (UK). Apply waste % for settlement.",
@@ -483,11 +491,13 @@ export const extraTools: Tool[] = [
       "wallpaper calculator, how many rolls of wallpaper, wallpaper roll calculator, wallpaper estimator, wallpaper coverage",
     shortDescription: "Wallpaper roll count from room size, openings, and pattern match waste.",
     intro:
-      "Wallpaper is sold by the roll, but you measure walls in feet or metres. Enter the room size, subtract doors and windows, add pattern-match waste, and read how many rolls to order — then check the coverage on your actual product label.",
+      "This calculator estimates wallpaper rolls from room perimeter, wall height, openings, usable roll coverage, and pattern-match waste. Use it after choosing a paper and reading its roll dimensions and repeat, whether covering a whole room or measuring one feature wall separately. It does not lay out individual drops, guarantee pattern alignment, or include paste, liner, primer, tools, ceiling paper, damaged walls, and hanging labour. US mode works in feet and typical single-roll coverage, while UK mode uses metres and common metric rolls; labels may package or describe rolls differently. Before ordering, give the wall height and result to the wallpaper supplier or installer and ask them to confirm usable drops per roll, match type, batch number, and return policy.",
     synonyms: ["wallpaper rolls", "wall covering", "paperhanging", "vinyl wallpaper", "pattern repeat"],
     formulaExplanation: [
       "Net wall area is perimeter × height minus door and window openings. Pattern repeats and trimming waste mean you never order the exact area divided by roll coverage.",
       "Default usable coverage assumes a typical single roll after trim. Large repeats and drop matches need a higher waste percent — or the coverage number printed on your roll.",
+      "Area division is a useful planning method, but professional paperhangers often count full-height drops because a leftover strip may be too short for the next wall. Tall rooms and large repeats can therefore need more rolls than net area suggests.",
+      "Buy all rolls from the same batch or dye-lot code for walls seen together. Confirm whether a US 'double roll' is sold as one physical bolt so pack wording does not accidentally halve or double the order.",
     ],
     methodology:
       "Net area = (2 × (L + W) × H) − openings. Adjusted = net × (1 + waste %). Rolls = ceil(adjusted ÷ coverage per roll).",

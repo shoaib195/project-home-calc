@@ -12,11 +12,13 @@ const coreTools: Tool[] = [
     keywords: "concrete calculator, cubic yards concrete, concrete slab calculator, how much concrete do I need",
     shortDescription: "Work out how much ready-mix concrete a slab, footing, or column needs.",
     intro:
-      "Enter the length, width, and depth of the area you're pouring to get the concrete volume, a recommended order quantity with waste allowance, and an estimated material cost.",
+      "This calculator works out the concrete volume for a slab, patio, footing, pad, or rectangular pour, then adds your chosen waste allowance and gives a planning cost. Use it once the finished length, width, and depth are known, especially before comparing bagged mix with a ready-mix delivery. It does not design reinforcement, choose slab thickness, price excavation, or include a gravel sub-base, pump fee, forms, and labour unless you add those elsewhere. US mode reports cubic feet and cubic yards, while UK mode uses cubic metres; depth can stay in inches or centimetres as it appears on most drawings. Before ordering, send the result and dimensions to your ready-mix plant or bag supplier so they can confirm yield, minimum-load charges, and the mix suitable for the job.",
     synonyms: ["slab", "driveway", "footing", "patio base", "foundation", "cement"],
     formulaExplanation: [
       "Concrete volume is length × width × depth, with all three dimensions converted to the same unit before multiplying. Depth is usually the smallest of the three, so it's easy to enter it in the wrong unit — this calculator keeps depth in inches (or centimetres) specifically because that's how depth is specified on a real set of plans.",
       "Ready-mix suppliers and bagged concrete are both sold in fixed volume increments, so this calculator adds a waste allowance on top of the raw volume before recommending an order quantity — pouring exactly the calculated volume with no allowance for spillage, an uneven subgrade, or over-excavation almost always comes up short.",
+      "The calculator treats the pour as a clean geometric shape. Thickened edges, steps, piers, trenches, and sloping slabs should be measured as separate sections and added rather than hidden inside an average depth.",
+      "Order units differ by market: US plants normally quote cubic yards, while UK suppliers quote cubic metres. A supplier can also tell you whether the calculated load falls below a truck minimum or needs rounding to the nearest deliverable quantity.",
     ],
     methodology:
       "Volume = Length × Width × Depth. Cubic yards = Volume (ft³) ÷ 27. Recommended order = Volume × (1 + waste %).",
@@ -75,11 +77,13 @@ const coreTools: Tool[] = [
     keywords: "gravel calculator, tons of gravel, driveway gravel, crushed stone calculator, gravel coverage",
     shortDescription: "Estimate gravel volume and weight for a driveway, path, or sub-base.",
     intro:
-      "Enter the area's length, width, and desired depth to get the gravel volume and an estimated weight, since gravel is typically sold and delivered by the ton.",
+      "This calculator turns a driveway, path, drainage strip, or sub-base area into a gravel volume and estimated delivery weight. Use it after choosing the compacted layer depth and before asking a quarry or landscape yard for a delivered price. It does not choose the correct aggregate, allow automatically for compaction, or include excavation, geotextile, edging, spreading, and machine hire. US results show cubic yards and short tons; UK results show cubic metres and metric tonnes, with depth entered in inches or centimetres. Stone density varies enough to move the final load, so give your dimensions and calculated volume to the supplier and ask them to confirm the tonnage for the exact crushed stone or gravel product.",
     synonyms: ["driveway base", "sub-base", "aggregate", "crushed stone", "path"],
     formulaExplanation: [
       "Like concrete, gravel volume is length × width × depth. Because gravel is priced and delivered by weight rather than volume in most of the US and UK, this calculator converts the volume to an estimated tonnage using a typical compacted-gravel density.",
       "Density varies by material — crushed limestone, pea gravel, and river rock all settle differently — so the weight shown here is a planning estimate. Your supplier can give an exact figure for the specific material you're ordering.",
+      "Enter the finished compacted depth, then increase the order if the yard quotes loose volume and expects settlement during rolling. For a driveway built in two grades, calculate the structural base and decorative surface as separate layers.",
+      "Irregular areas are best split into rectangles and added together. Curves, soft spots, and an uneven formation can consume more stone than a single length × width rectangle suggests.",
     ],
     methodology:
       "Volume = Length × Width × Depth. Weight (US tons) ≈ Volume (yd³) × 1.4. Weight (tonnes) ≈ Volume (m³) × 1.6.",
@@ -133,11 +137,13 @@ const coreTools: Tool[] = [
     keywords: "mulch calculator, how much mulch do I need, mulch bags, garden bed mulch, cubic yards mulch",
     shortDescription: "Find out how many bags or cubic yards of mulch a garden bed needs.",
     intro:
-      "Enter the length and width of your garden bed and a target depth to get the mulch volume, plus how many standard bags that works out to.",
+      "This calculator estimates how much bark, wood chip, or similar mulch is needed to cover a garden bed at a chosen depth. Use it for a new bed, a seasonal top-up, or to compare bagged material with bulk delivery before visiting the garden centre. It does not assess plant needs, remove the volume of existing mulch, or include landscape fabric, edging, delivery, and spreading labour. US mode shows cubic feet, cubic yards, and typical 2 ft³ bags; UK mode uses cubic metres and litres where appropriate, with depth entered in centimetres. Bag sizes and bulk coverage vary, so check the label or send the result to your supplier to confirm how many bags or loose cubic metres they recommend.",
     synonyms: ["garden bed", "wood chips", "landscaping bark", "flower bed"],
     formulaExplanation: [
       "Mulch is spread much thinner than concrete or gravel — typically 2 to 4 inches — so small depth errors change the total by a large percentage. This calculator keeps depth as its own clearly labeled field rather than folding it into a single 'thickness' guess.",
       "Because mulch is most often bought in bags of a fixed volume, the result also converts the total cubic yardage into a bag count using a standard 2 cubic foot bag, so you know how many bags to actually put in the cart.",
+      "For an existing bed, measure the depth already in place and enter only the top-up needed. Adding a fresh 3 inches every year without checking the old layer can leave roots and stems buried too deeply.",
+      "Bulk mulch settles and can be heaped differently by each yard, while bagged coverage depends on the printed bag volume. Confirm the actual bag size or loader-bucket measure before paying.",
     ],
     methodology:
       "Volume = Area × Depth. Cubic yards = Volume (ft³) ÷ 27. Bags (2 ft³ each) = Volume (ft³) ÷ 2, rounded up.",
@@ -187,11 +193,13 @@ const coreTools: Tool[] = [
     keywords: "paint calculator, how much paint for a room, gallons of paint, wall paint coverage, litres of paint",
     shortDescription: "Estimate how much paint a room needs, based on wall area and coats.",
     intro:
-      "Enter your room's dimensions, how many coats you're applying, and any doors or windows to deduct, to get the paint quantity needed.",
+      "This calculator estimates the wall paint needed for a room from its perimeter, ceiling height, openings, coat count, and coverage rate. Use it before buying paint for a refresh, colour change, or newly finished room, and adjust the coverage to match the tin. It excludes ceilings, trim, doors as painted surfaces, primer, repair products, masking supplies, and labour unless you calculate those separately. US mode reports gallons and square feet, while UK mode reports litres and square metres; both use the same net-wall-area method. Rough plaster, texture, and bare drywall can reduce coverage, so take the result to your paint retailer or decorator and confirm the correct product, container sizes, and number of coats.",
     synonyms: ["room paint", "wall paint", "coverage", "gallons of paint", "litres of paint"],
     formulaExplanation: [
       "Wall area starts from the room's perimeter (2 × (length + width)) multiplied by ceiling height, then subtracts a standard allowance for each door and window — painters call this the 'gross-to-net' area, and skipping the deduction is the most common reason people over-buy paint.",
       "Paint coverage is quoted per coat, so the net wall area is multiplied by the number of coats before converting to gallons or litres using a standard coverage rate. Textured walls, unprimed drywall, and strong color changes all reduce real coverage below the can's rated figure.",
+      "The fixed opening deductions are planning values, not measurements of every door and window. For patio doors, bay windows, or a mostly glazed wall, calculate the opening area directly and adjust your room takeoff.",
+      "Paint is purchased in whole containers, so round up to an available tin size and keep enough from the same batch for continuous walls. Primer and ceiling paint should each be calculated as separate products with their own coverage rates.",
     ],
     methodology:
       "Net area = (2 × (Length + Width) × Height) − (Doors × 21 ft² + Windows × 15 ft²). Paint needed = Net area × Coats ÷ 350 ft² per gallon.",
@@ -241,11 +249,13 @@ const coreTools: Tool[] = [
     keywords: "flooring calculator, laminate boxes, hardwood flooring estimate, flooring waste factor, vinyl plank boxes",
     shortDescription: "Work out how many boxes of flooring to buy for a room, with waste included.",
     intro:
-      "Enter your room's dimensions, a waste allowance, and how much area one box covers, to get the number of boxes to order.",
+      "This calculator converts a room area into whole boxes of laminate, engineered wood, vinyl plank, or another packaged floor covering. Use it after measuring every floor section and reading the coverage printed on the exact box you plan to buy. It does not include underlay, adhesive, trims, thresholds, stairs, subfloor repairs, fitting labour, or a spare box for future damage unless you add one. US mode works in square feet and UK mode in square metres, while the box count always rounds up because retailers do not split packs. Product coverage and batch availability differ, so show the result to the flooring supplier and confirm the pack coverage, waste for your laying pattern, and whether an unopened spare can be returned.",
     synonyms: ["laminate", "hardwood", "vinyl plank", "tile", "square footage"],
     formulaExplanation: [
       "Flooring is sold by the box, and boxes cover a fixed area — so the calculation isn't just room area, it's room area plus a waste allowance, divided by box coverage and rounded up, since a partial box still has to be bought in full.",
       "The waste allowance exists because flooring is cut to fit around the room's edges, and every cut produces an offcut that usually can't be reused. Diagonal layouts and rooms with lots of alcoves need a higher allowance than a simple rectangular room.",
+      "Measure closets, bays, and connecting sections as separate rectangles, then add their areas before applying waste. Permanent cabinets may be deducted only when the chosen flooring is not meant to run beneath them.",
+      "Nominal pack coverage is the controlling figure, not the number of boards visible through the wrapper. Confirm coverage and dye or production lot with the retailer before buying, particularly for open-plan rooms.",
     ],
     methodology:
       "Area = Length × Width. Total with waste = Area × (1 + waste %). Boxes = Total with waste ÷ coverage per box, rounded up.",
@@ -293,11 +303,13 @@ const coreTools: Tool[] = [
     keywords: "deck calculator, deck boards needed, composite decking calculator, deck board count",
     shortDescription: "Estimate how many deck boards you need for a given deck area.",
     intro:
-      "Enter your deck's length and width plus your board width, to get the total board count assuming boards run the length of the deck.",
+      "This calculator estimates the number of surface boards needed for a rectangular deck from its dimensions, board face width, gap, and waste allowance. Use it once the board direction and available stock lengths are known, particularly when comparing timber with composite decking. It does not design joists, beams, footings, ledgers, stairs, railings, fixings, or account automatically for picture-frame borders and breaker boards. US mode accepts feet and inches, while UK mode accepts metres and millimetres; board count is still rounded to whole purchasable lengths. Stock lengths and manufacturer gap rules can change the cutting plan, so take the result to your timber merchant or decking supplier and ask them to confirm lengths, clips, waste, and any product-specific spacing.",
     synonyms: ["deck boards", "composite decking", "patio deck", "boardwalk"],
     formulaExplanation: [
       "This calculator assumes the common layout where boards run the full length of the deck, laid side-by-side across its width — the number of boards is the deck's width divided by a single board's face width (plus its gap), rounded up.",
       "A waste allowance is added on top for trimming board ends and any cutting around posts or stairs — composite and hardwood boards both lose some usable length to end-cuts.",
+      "If no stock board spans the full run, plan the joins over supported framing and calculate the required linear footage by available length. Randomly treating two short offcuts as one full board can leave seams without a joist.",
+      "Picture frames, diagonal fields, and breaker boards need their own takeoff because they change both direction and cut loss. The calculator's rectangular result is the base field count, not a complete structural or trim schedule.",
     ],
     methodology:
       "Boards across width = Deck width ÷ (Board face width + gap), rounded up. Total boards = Boards across width × (1 + waste %), rounded up.",
@@ -346,11 +358,13 @@ const coreTools: Tool[] = [
     keywords: "roofing calculator, roof squares calculator, shingle bundles, roof pitch calculator, how many bundles of shingles",
     shortDescription: "Estimate roof area, squares, and shingle bundles from a plan footprint and pitch.",
     intro:
-      "Enter the roof's plan length and width plus the pitch rise. The calculator converts that footprint into sloped area, adds waste, and reports squares (US) or square metres (UK) with a bundle count.",
+      "This calculator converts a building footprint and roof pitch into approximate sloped area, waste-adjusted roofing squares, and a field-material bundle count. Use it for early budgeting or to check a simple gable-roof quote from safe ground measurements or drawings. It does not measure dormers, separate pitches, valleys, ridge length, flashing, underlayment, tear-off, rotten decking, access equipment, or structural work. US mode reports square feet, roofing squares, and typical asphalt bundles; UK mode reports square metres, where tile or slate pack coverage must come from the product sheet. Roof products differ and complex roofs need a measured takeoff, so share the result with your roofer or merchant and have them confirm waste, pack coverage, accessories, and safe installation requirements.",
     synonyms: ["shingles", "roof squares", "asphalt shingles", "roof pitch", "tiles", "re-roof"],
     formulaExplanation: [
       "Roofing is quoted from the sloped surface, not the floor-plan rectangle. A 6/12 pitch is longer than a flat rectangle of the same footprint — the pitch factor is √(1 + (rise ÷ run)²), using a 12-inch run, which is how US roofers write pitch.",
       "Materials are sold in squares of 100 square feet in the US (typically three bundles per square) and by pack coverage in the UK. A waste allowance covers hips, valleys, starter courses, and ridge caps — a simple gable needs less than a roof with dormers.",
+      "For an L-shaped building or roof sections at different pitches, calculate each plane group separately and add the adjusted areas. Drawing one large rectangle around the whole outline can substantially overstate or miss material.",
+      "The bundle conversion is a common asphalt-shingle planning assumption only. Ridge, starter, underlayment, membranes, battens, and tiles with product-specific laps need separate quantities confirmed from the manufacturer's data.",
     ],
     methodology:
       "Footprint = Length × Width. Pitch factor = √(1 + (rise/12)²). Roof area = Footprint × pitch factor. With waste = Roof area × (1 + waste %). Squares = area (ft²) ÷ 100. Bundles ≈ squares × 3, rounded up.",
@@ -399,11 +413,13 @@ const coreTools: Tool[] = [
     keywords: "drywall calculator, plasterboard sheets, sheetrock calculator, how many drywall sheets",
     shortDescription: "Work out how many plasterboard or drywall sheets a room needs, including the ceiling.",
     intro:
-      "Enter the room's length, width, and ceiling height. The calculator totals wall area, optionally adds the ceiling, applies waste, and rounds up to full 4×8 ft (or 1200×2400 mm) sheets.",
+      "This calculator estimates drywall or plasterboard sheets for a room's walls and, when selected, its ceiling. Use it once room dimensions and board size are known, before planning delivery or comparing a hanger's materials list. It does not count screws, adhesive, joint tape, compound, corner bead, insulation, framing, fire-rated layers, moisture-resistant boards, or labour. US mode defaults to 4 × 8 ft sheets, while UK mode uses 1200 × 2400 mm boards; choose the actual size stocked for your job where the tool allows. Board orientation and full-sheet delivery access affect real waste, so give the result to your drywall supplier or installer and ask them to confirm sheet size, type, number of layers, and finishing materials.",
     synonyms: ["plasterboard", "sheetrock", "gypsum board", "wallboard", "boarding"],
     formulaExplanation: [
       "Wall area is the room perimeter times ceiling height: 2 × (length + width) × height. The ceiling is the floor rectangle. Openings are not deducted because offcuts from doors and windows rarely equal a full sheet, and leftover pieces are useful for soffits and patches.",
       "Sheets are sold in fixed sizes. Dividing total area by one sheet and rounding up is how suppliers count an order. A waste allowance covers miscuts and damaged boards.",
+      "Area alone cannot optimise every seam. Horizontal or vertical hanging, stud spacing, ceiling joists, and whether long sheets can reach the room all affect the practical board schedule.",
+      "Multi-layer fire or acoustic assemblies need the calculated sheet count for each layer. Confirm board type and fixing pattern with the specified system rather than multiplying a standard-room order blindly.",
     ],
     methodology:
       "Wall area = 2 × (Length + Width) × Height. Ceiling = Length × Width (if included). Total with waste = (walls + ceiling) × (1 + waste %). Sheets = Total ÷ sheet area, rounded up.",
@@ -452,11 +468,13 @@ const coreTools: Tool[] = [
     keywords: "project cost estimator, home renovation budget, contractor quote comparison, renovation cost calculator",
     shortDescription: "Roll materials, labor, delivery, waste, and optional markup into a planning total.",
     intro:
-      "Enter the cost lines you already know. The estimator adds waste to materials, then labour and delivery, applies optional markup, and shows a range so the figure is clearly an estimate — not a contractor quote.",
+      "This estimator combines known material costs, waste, labour, delivery, and optional markup into a project planning total and range. Use it after running the relevant quantity calculators and collecting current local prices, or to place contractor quotes into the same cost structure. It does not discover regional rates, inspect the site, price permits, predict hidden defects, calculate finance charges, or replace a written scope and fixed quotation. The arithmetic works the same in US dollars or UK pounds, but you must enter every figure in one currency and avoid mixing tax-inclusive with pre-tax prices. Before committing, send the quantities and scope to suppliers and trades so they can confirm current prices, delivery minimums, exclusions, and how long each quote remains valid.",
     synonyms: ["budget", "quote", "estimate", "markup", "project cost", "renovation budget"],
     formulaExplanation: [
       "A project total is not a single material quantity. It is materials (with waste), labour, delivery or skip hire, and — for trades — markup. Keeping those lines separate makes it obvious which part of a quote you can check with a calculator and which part is labour.",
       "The result is shown as a ±10% range because local rates and unforeseen work move the number. This tool does not look up regional prices; you supply the inputs from supplier quotes or from the material calculators on this site.",
+      "Waste and contingency solve different problems. Waste covers cut material or unavoidable loss, while a separate project contingency should remain available for hidden damage, design changes, and price movement.",
+      "Markup is normally zero for a homeowner adding personal costs, but may be relevant when a trade prepares a selling price. Taxes, permits, and finance costs should be entered explicitly if they belong in your decision.",
     ],
     methodology:
       "Materials with waste = Materials × (1 + waste %). Subtotal = materials with waste + labor + delivery. Total = Subtotal × (1 + markup %). Range = Total × 0.9 to Total × 1.1.",

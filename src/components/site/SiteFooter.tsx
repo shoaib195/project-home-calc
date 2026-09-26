@@ -67,7 +67,6 @@ export function SiteFooter({ tools, categories }: { tools?: Tool[]; categories?:
               <li><Link href="/reference-charts" className="text-[13.5px] text-text-2 hover:text-accent-strong">Reference charts</Link></li>
               <li><Link href="/data-sources" className="text-[13.5px] text-text-2 hover:text-accent-strong">Data sources</Link></li>
               <li><Link href="/suggest-calculator" className="text-[13.5px] text-text-2 hover:text-accent-strong">Suggest a calculator</Link></li>
-              <li><Link href="/about" className="text-[13.5px] text-text-2 hover:text-accent-strong">About</Link></li>
               <li><Link href="/sitemap" className="text-[13.5px] text-text-2 hover:text-accent-strong">Sitemap</Link></li>
             </ul>
           </div>
