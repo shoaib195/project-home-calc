@@ -7,7 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/search", "/account", "/admin", "/projects"],
+        // /projects and /account redirect to live pages — crawling them lets
+        // Google retire the old URLs instead of holding them as blocked.
+        disallow: ["/search", "/admin"],
       },
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

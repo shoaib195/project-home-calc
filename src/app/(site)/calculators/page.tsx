@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ToolCard } from "@/components/ui/ToolCard";
 import { getCatalog, liveCategoriesFrom, pageSeoMetadata } from "@/lib/cms/catalog";
@@ -30,17 +31,17 @@ export default async function CalculatorsIndexPage() {
         <p>
           Start with a category below if you know the trade, or use search in the header for “concrete”, “paint”, or
           “roof”. When two contractor quotes disagree on thickness, waste, or base depth, open a{" "}
-          <a href="/guides" className="font-semibold text-accent-strong hover:underline">
+          <Link href="/guides" className="font-semibold text-accent-strong hover:underline">
             guide
-          </a>{" "}
+          </Link>{" "}
           for the context behind the number. See also{" "}
-          <a href="/methodology" className="font-semibold text-accent-strong hover:underline">
+          <Link href="/methodology" className="font-semibold text-accent-strong hover:underline">
             how we calculate
-          </a>{" "}
+          </Link>{" "}
           and the{" "}
-          <a href="/legal/disclaimer" className="font-semibold text-accent-strong hover:underline">
+          <Link href="/legal/disclaimer" className="font-semibold text-accent-strong hover:underline">
             disclaimer
-          </a>
+          </Link>
           .
         </p>
         <p>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { GuideCard } from "@/components/ui/GuideCard";
 import { getCatalog, pageSeoMetadata } from "@/lib/cms/catalog";
@@ -29,28 +30,28 @@ export default async function GuidesIndexPage() {
         </p>
         <p>
           Prefer a calculator first? Browse the{" "}
-          <a href="/calculators" className="font-semibold text-accent-strong hover:underline">
+          <Link href="/calculators" className="font-semibold text-accent-strong hover:underline">
             full calculator list
-          </a>
+          </Link>
           , then come back here when the result needs context. For site-wide assumptions, see{" "}
-          <a href="/methodology" className="font-semibold text-accent-strong hover:underline">
+          <Link href="/methodology" className="font-semibold text-accent-strong hover:underline">
             how we calculate
-          </a>
+          </Link>
           ,{" "}
-          <a href="/data-sources" className="font-semibold text-accent-strong hover:underline">
+          <Link href="/data-sources" className="font-semibold text-accent-strong hover:underline">
             data sources
-          </a>
+          </Link>
           , and{" "}
-          <a href="/reference-charts" className="font-semibold text-accent-strong hover:underline">
+          <Link href="/reference-charts" className="font-semibold text-accent-strong hover:underline">
             reference charts
-          </a>
+          </Link>
           .
         </p>
         <p>
           Spotted an error in a worked example or a missing topic?{" "}
-          <a href="/contact" className="font-semibold text-accent-strong hover:underline">
+          <Link href="/contact" className="font-semibold text-accent-strong hover:underline">
             Contact us
-          </a>{" "}
+          </Link>{" "}
           with the guide URL and what you expected — we update pages when defaults or methods change.
         </p>
       </div>

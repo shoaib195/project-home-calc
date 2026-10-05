@@ -1,4 +1,16 @@
-const DEFAULT_SITE_URL = "https://www.projecthomecalc.com";
+const PRODUCTION_APEX = "projecthomecalc.com";
+const DEFAULT_SITE_URL = `https://www.${PRODUCTION_APEX}`;
+
+/**
+ * The apex domain 308-redirects to the www host, so emitting apex canonicals,
+ * sitemap entries, or OG URLs points Google at a URL that redirects away from
+ * the page being crawled. Normalise regardless of how the env var is set.
+ */
+function canonicalOrigin(origin: string): string {
+  const url = new URL(origin);
+  if (url.hostname === PRODUCTION_APEX) url.hostname = `www.${PRODUCTION_APEX}`;
+  return url.origin;
+}
 
 function isUsableSiteUrl(value: string): boolean {
   try {
@@ -43,7 +55,7 @@ function resolveSiteUrl(): string {
 }
 
 export const SITE_NAME = "Project Home Calc";
-export const SITE_URL = resolveSiteUrl();
+export const SITE_URL = canonicalOrigin(resolveSiteUrl());
 export const CONTACT_EMAIL =
   process.env.CONTACT_EMAIL?.trim() || process.env.SMTP_TO?.trim() || "shoaib.octachat@gmail.com";
 export const SITE_TAGLINE = "Free calculators for material quantities and planning costs.";
