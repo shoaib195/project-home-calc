@@ -9,12 +9,15 @@ export function pageMetadata({
   path,
   index = true,
   keywords,
+  ogType = "website",
 }: {
   title: string;
   description: string;
   path: string;
   index?: boolean;
   keywords?: string;
+  /** "article" lets Pinterest and social crawlers treat guides as editorial content. */
+  ogType?: "website" | "article";
 }): Metadata {
   const url = absoluteUrl(path);
   const keywordList = keywords
@@ -40,7 +43,7 @@ export function pageMetadata({
       url,
       siteName: SITE_NAME,
       locale: "en_US",
-      type: "website",
+      type: ogType,
       images: [ogImage],
     },
     twitter: {

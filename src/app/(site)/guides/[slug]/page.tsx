@@ -28,6 +28,7 @@ export async function generateMetadata({
     path: `/guides/${guide.slug}`,
     index: guide.index !== false,
     keywords: guide.keywords,
+    ogType: "article",
   });
 }
 

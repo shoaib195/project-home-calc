@@ -70,6 +70,9 @@ export const metadata: Metadata = {
   alternates: { canonical: SITE_URL },
   verification: {
     google: "KMJuEOoNN44G5ovF-Fr9_CMZwuSWJ-nZXh5VCsgRKBk",
+    other: {
+      "p:domain_verify": "3b6fe4346901c61a4650324e72fd3c08",
+    },
   },
 };
 
