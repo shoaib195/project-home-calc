@@ -9,6 +9,7 @@ const links = [
   { href: "/admin/guides", label: "Guides" },
   { href: "/admin/pages", label: "Pages" },
   { href: "/admin/indexing", label: "Indexing" },
+  { href: "/admin/pins", label: "Pinterest pins" },
   { href: "/admin/audit", label: "Activity" },
   { href: "/admin/settings", label: "Settings" },
 ];

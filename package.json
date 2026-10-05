@@ -6,7 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "export:pins": "node scripts/export-pins.mjs",
+    "export:pin-copy": "node scripts/generate-pin-copy.mjs",
+    "export:pinterest-csv": "node scripts/generate-pinterest-bulk-csv.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.3.4",
